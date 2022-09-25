@@ -1,0 +1,112 @@
+#menu-main-menu {
+  > li {
+    > a {
+      @apply block leading-[56px] border-b-4 border-transparent px-1 hover:border-[#01CEC2] hover:text-[#01CEC2] transition-all duration-200;
+    }
+  }
+  .current-menu-item {
+    > a {
+      @apply text-[#01CEC2] border-[#01CEC2];
+    }
+  }
+}
+
+.slider--button-prev,
+.slider--button-next,
+.casestudy-filter--button-prev,
+.casestudy-filter--button-next,
+.news-filter--button-prev,
+.news-filter--button-next,
+.button-prev,
+.button-next {
+  &.swiper-button-lock {
+    @apply hidden;
+  }
+  &.swiper-button-disabled {
+    @apply opacity-30;
+    @apply hover:bg-white hover:text-gray-500;
+  }
+}
+
+.help-links {
+  > div {
+    @apply pl-10;
+    &:first-child {
+      @apply pl-0;
+    }
+  }
+  .help-links--description {
+    a {
+      @apply underline text-fiap-teal hover:text-fiap-teal-hover;
+    }
+  }
+}
+
+.accordion {
+  .accordion-item {
+    &:not(:first-of-type) {
+      @apply border border-gray-300 border-solid;
+    }
+  }
+  .accordion-header {
+    margin-bottom: 0px !important;
+  }
+  .accordion-button {
+    &::after {
+      display: none;
+      margin-top: 3px;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f1694c'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+    &:not(.collapsed) {
+      @apply text-black;
+      box-shadow: inset 0 -1px 0 #d1d5db;
+      &::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f1694c'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+      .collapsed-arrow {
+        @apply hidden;
+      }
+      .not-collapsed-arrow {
+        @apply block;
+      }
+    }
+    &.collapsed {
+      .collapsed-arrow {
+        @apply block;
+      }
+      .not-collapsed-arrow {
+        @apply hidden;
+      }
+    }
+  }
+  .accordion-body {
+    @apply text-black;
+  }
+}
+
+.modal-dialog {
+  @apply max-w-4xl px-4;
+}
+
+.card-hover {
+  .card-image {
+    @apply h-full w-full object-cover absolute inset-0;
+  }
+  .card-text {
+    @apply transition-all duration-300 bg-fiap-darkblue bg-opacity-80 p-6 h-full w-full text-white relative translate-y-3/4;
+  }
+  .card-title {
+    @apply text-2xl font-semibold line-clamp-2;
+  }
+  .card-excerpt {
+    @apply mt-10 text-base opacity-0 transition duration-300;
+  }
+  &:hover {
+    .card-text {
+      @apply pt-16 translate-y-0;
+    }
+    .card-excerpt {
+      @apply opacity-100 mt-8;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "settings": {
+    "layout": {
+      "contentSize": "960px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "palette": [
+        {
+          "name": "FIAP Dark Blue",
+          "slug": "fiap-darkblue",
+          "color": "#002F56"
+        },
+        {
+          "name": "FIAP Orange",
+          "slug": "fiap-orange",
+          "color": "#F5813C"
+        },
+        {
+          "name": "FIAP Yellow",
+          "slug": "fiap-yellow",
+          "color": "#FFD400"
+        },
+        {
+          "name": "FIAP Red",
+          "slug": "fiap-red",
+          "color": "#BF2031"
+        },
+        {
+          "name": "FIAP Red Hover",
+          "slug": "fiap-red-hover",
+          "color": "#D80118"
+        },
+        {
+          "name": "FIAP Teal",
+          "slug": "fiap-teal",
+          "color": "#00A79D"
+        },
+        {
+          "name": "FIAP Teal Hover",
+          "slug": "fiap-teal-hover",
+          "color": "#017972"
+        },
+        {
+          "name": "FIAP Gray",
+          "slug": "fiap-gray",
+          "color": "#58595B"
+        },
+        {
+          "name": "FIAP Light",
+          "slug": "fiap-light",
+          "color": "#F3F1EF"
+        }
+      ]
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "0.875rem"
+        },
+        {
+          "slug": "regular",
+          "name": "Regular",
+          "size": "1.5rem"
+        },
+        {
+          "slug": "large",
+          "name": "Large",
+          "size": "1.125rem"
+        },
+        {
+          "slug": "xl",
+          "name": "XL",
+          "size": "1.25rem"
+        },
+        {
+          "slug": "xxl",
+          "name": "2XL",
+          "size": "1.5rem"
+        },
+        {
+          "slug": "xxxl",
+          "name": "3XL",
+          "size": "1.875rem"
+        }
+      ]
+    }
+  }
+}

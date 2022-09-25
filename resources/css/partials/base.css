@@ -1,0 +1,31 @@
+h1 {
+  @apply text-[54px] font-light leading-[1.1em];
+}
+h2 {
+  @apply text-[45px] font-semibold leading-[1.1em];
+}
+h3 {
+  @apply text-[34px] font-semibold leading-[1.1em];
+}
+h4 {
+  @apply text-[28px] font-semibold leading-[1.1em];
+}
+h5 {
+  @apply text-[24px] font-normal leading-[1.1em];
+}
+h6 {
+  @apply text-[18px] font-black leading-[1.1em];
+}
+h7 {
+  @apply text-[18px] font-medium leading-[1.1em];
+}
+
+.prose :where([class~='lead']):not(:where([class~='not-prose'] *)) {
+  @apply text-black font-medium;
+}
+
+.site-footer {
+  a {
+    @apply hover:underline hover:text-fiap-teal;
+  }
+}
