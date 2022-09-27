@@ -46,7 +46,8 @@ function fiap_enqueue_scripts()
   wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), '8.2.2');
   //wp_enqueue_script('tw-elements', 'https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js', array(), $theme->get('Version'));
   wp_enqueue_style('fiap', fiap_asset('css/app.css'), array(), $theme->get('Version'));
-  wp_enqueue_script('fiap', fiap_asset('js/app.js'), array(), $theme->get('Version'));
+  wp_enqueue_script('tw-elements', fiap_asset('js/tw-elements.js'), array(), $theme->get('Version'));
+  wp_enqueue_script('fiap', fiap_asset('js/app.js'), array('jquery'), $theme->get('Version'));
 }
 
 add_action('wp_enqueue_scripts', 'fiap_enqueue_scripts');
@@ -131,4 +132,5 @@ require get_template_directory() . '/inc/utilities.php';
 require get_template_directory() . '/inc/card.php';
 require get_template_directory() . '/inc/acf.php';
 require get_template_directory() . '/inc/breadcrumb.php';
+require get_template_directory() . '/inc/filters.php';
 //require get_template_directory() . '/inc/acf-debug.php';

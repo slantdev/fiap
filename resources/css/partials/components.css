@@ -110,3 +110,10 @@
     }
   }
 }
+
+.filter-news,
+.filter-case-study {
+  &.filter-active {
+    @apply bg-fiap-teal text-white border-fiap-teal;
+  }
+}

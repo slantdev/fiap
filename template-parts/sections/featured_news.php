@@ -29,16 +29,16 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
     <?php if (get_sub_field('show_filter_nav')) { ?>
       <div class="px-14 relative">
         <div id="news-filter" class="swiper mt-10 px-2 pt-2 pb-4">
-          <div class="swiper-wrapper ">
+          <div class="swiper-wrapper filter-news-buttons">
             <?php
             $taxonomies = get_terms(array(
               'taxonomy' => 'news_category',
               'hide_empty' => false
             ));
             if (!empty($taxonomies)) :
-              $output = '<div class="swiper-slide w-auto"><button type="button" class="rounded-full px-10 py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-term-id="all">All</button></div>';
+              $output = '<div class="swiper-slide w-auto"><a href="#" class="filter-news filter-active inline-block rounded-full px-10 py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-id="all">All</a></div>';
               foreach ($taxonomies as $category) {
-                $output .= '<div class="swiper-slide w-auto"><button type="button" class="rounded-full px-10 py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-term-id="' . esc_attr($category->term_id) . '">' . esc_attr($category->name) . '</button></div>';
+                $output .= '<div class="swiper-slide w-auto"><a href="#" class="filter-news inline-block rounded-full px-10 py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-id="' . esc_attr($category->term_id) . '">' . esc_attr($category->name) . '</a></div>';
               }
               echo $output;
             endif;
@@ -56,7 +56,6 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
           </svg>
         </button>
       </div>
-
       <script>
         const news_filter = new Swiper('#news-filter', {
           slidesPerView: 'auto',
@@ -81,29 +80,39 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
         });
       </script>
     <?php } ?>
-    <?php
-    $args = array(
-      'post_type' => 'news',
-      'posts_per_page' => -1,
-    );
-    $the_query = new WP_Query($args);
-    if ($the_query->have_posts()) {
-      echo '<div class="grid grid-cols-3 gap-10 mt-12">';
-      while ($the_query->have_posts()) {
-        $the_query->the_post();
-        $excerpt = wp_trim_words(get_the_excerpt(), $num_words = 30, $more = null);
-        $atts = array(
-          'img_src' => get_the_post_thumbnail_url(get_the_ID(), 'large'),
-          'title' => get_the_title(),
-          'date' => get_the_date('jS F Y'),
-          'excerpt' => $excerpt,
-          'link' => get_the_permalink(),
-        );
-        echo card_article($atts);
+    <div class="filter-news-loader pt-2 pb-4">
+      <div class="flex items-center justify-center">
+        <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 text-fiap-teal rounded-full opacity-0" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-grid relative">
+      <?php
+      $args = array(
+        'post_type' => 'news',
+        'posts_per_page' => -1,
+      );
+      $the_query = new WP_Query($args);
+      if ($the_query->have_posts()) {
+        echo '<div class="grid grid-cols-3 gap-10">';
+        while ($the_query->have_posts()) {
+          $the_query->the_post();
+          $excerpt = wp_trim_words(get_the_excerpt(), $num_words = 30, $more = null);
+          $atts = array(
+            'img_src' => get_the_post_thumbnail_url(get_the_ID(), 'large'),
+            'title' => get_the_title(),
+            'date' => get_the_date('jS F Y'),
+            'excerpt' => $excerpt,
+            'link' => get_the_permalink(),
+          );
+          echo card_article($atts);
+        }
+        echo '</div>';
       }
-      echo '</div>';
-    }
-    wp_reset_postdata();
-    ?>
+      wp_reset_postdata();
+      ?>
+      <div class="blocker absolute inset-0 bg-white bg-opacity-40" style="display: none;"></div>
+    </div>
   </div>
 </section>
