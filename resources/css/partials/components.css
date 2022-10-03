@@ -1,7 +1,7 @@
 #menu-main-menu {
   > li {
     > a {
-      @apply block leading-[56px] border-b-4 border-transparent px-1 hover:border-[#01CEC2] hover:text-[#01CEC2] transition-all duration-200;
+      @apply block leading-[56px] border-b-4 border-transparent px-1 whitespace-nowrap hover:border-[#01CEC2] hover:text-[#01CEC2] transition-all duration-200;
     }
   }
   .current-menu-item {

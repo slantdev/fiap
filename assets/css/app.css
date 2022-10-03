@@ -9278,6 +9278,7 @@ h7 {
 
 #menu-main-menu > li > a {
   display: block;
+  white-space: nowrap;
   border-bottom-width: 4px;
   border-color: transparent;
   padding-left: 0.25rem;
