@@ -1,15 +1,5 @@
 <?php
 /*
- * Page Settings Variables
- */
-$term_id = get_queried_object()->term_id;
-if ($term_id) {
-  $the_id = 'term_' . $term_id;
-} else {
-  $the_id = get_the_ID();
-}
-
-/*
  * Section Settings Variables
  */
 $section_settings = get_sub_field('section_settings');

@@ -1,0 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'partials/base.css';
+@import 'partials/components.css';
+@import 'partials/datatable.css';
+@import 'custom.css';
+
+.acf-layout {
+  @apply font-sans;
+  p {
+    @apply text-base;
+  }
+}
