@@ -9276,6 +9276,10 @@ h7 {
           text-decoration-line: underline;
 }
 
+#menu-main-menu > li {
+  position: relative;
+}
+
 #menu-main-menu > li > a {
   display: block;
   white-space: nowrap;
@@ -9303,15 +9307,64 @@ h7 {
   color: rgb(1 206 194 / var(--tw-text-opacity));
 }
 
-.slider--button-prev.swiper-button-lock,  .slider--button-next.swiper-button-lock,  .casestudy-filter--button-prev.swiper-button-lock,  .casestudy-filter--button-next.swiper-button-lock,  .news-filter--button-prev.swiper-button-lock,  .news-filter--button-next.swiper-button-lock,  .button-prev.swiper-button-lock,  .button-next.swiper-button-lock {
+#menu-main-menu > .menu-item-has-children .sub-menu {
+  visibility: hidden;
+  position: absolute;
+  top: 68px;
+  z-index: -20;
+  display: flex;
+  flex-direction: column;
+}
+
+#menu-main-menu > .menu-item-has-children .sub-menu > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+  border-color: rgb(255 255 255 / var(--tw-divide-opacity));
+  --tw-divide-opacity: 0.2;
+}
+
+#menu-main-menu > .menu-item-has-children .sub-menu {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 47 86 / var(--tw-bg-opacity));
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+#menu-main-menu > .menu-item-has-children .sub-menu > li > a {
+  display: block;
+  white-space: nowrap;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  line-height: 48px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+#menu-main-menu > .menu-item-has-children .sub-menu > li > a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(1 206 194 / var(--tw-text-opacity));
+}
+
+#menu-main-menu > .menu-item-has-children:hover > .sub-menu {
+  visibility: visible;
+  top: 60px;
+  z-index: 20;
+  opacity: 1;
+}
+
+.slider--button-prev.swiper-button-lock,  .slider--button-next.swiper-button-lock,  .casestudy-filter--button-prev.swiper-button-lock,  .casestudy-filter--button-next.swiper-button-lock,  .news-filter--button-prev.swiper-button-lock,  .news-filter--button-next.swiper-button-lock,  .fiapmembers-filter--button-prev.swiper-button-lock,  .fiapmembers-filter--button-next.swiper-button-lock,  .button-prev.swiper-button-lock,  .button-next.swiper-button-lock {
   display: none;
 }
 
-.slider--button-prev.swiper-button-disabled,  .slider--button-next.swiper-button-disabled,  .casestudy-filter--button-prev.swiper-button-disabled,  .casestudy-filter--button-next.swiper-button-disabled,  .news-filter--button-prev.swiper-button-disabled,  .news-filter--button-next.swiper-button-disabled,  .button-prev.swiper-button-disabled,  .button-next.swiper-button-disabled {
+.slider--button-prev.swiper-button-disabled,  .slider--button-next.swiper-button-disabled,  .casestudy-filter--button-prev.swiper-button-disabled,  .casestudy-filter--button-next.swiper-button-disabled,  .news-filter--button-prev.swiper-button-disabled,  .news-filter--button-next.swiper-button-disabled,  .fiapmembers-filter--button-prev.swiper-button-disabled,  .fiapmembers-filter--button-next.swiper-button-disabled,  .button-prev.swiper-button-disabled,  .button-next.swiper-button-disabled {
   opacity: 0.3;
 }
 
-.slider--button-prev.swiper-button-disabled:hover,  .slider--button-next.swiper-button-disabled:hover,  .casestudy-filter--button-prev.swiper-button-disabled:hover,  .casestudy-filter--button-next.swiper-button-disabled:hover,  .news-filter--button-prev.swiper-button-disabled:hover,  .news-filter--button-next.swiper-button-disabled:hover,  .button-prev.swiper-button-disabled:hover,  .button-next.swiper-button-disabled:hover {
+.slider--button-prev.swiper-button-disabled:hover,  .slider--button-next.swiper-button-disabled:hover,  .casestudy-filter--button-prev.swiper-button-disabled:hover,  .casestudy-filter--button-next.swiper-button-disabled:hover,  .news-filter--button-prev.swiper-button-disabled:hover,  .news-filter--button-next.swiper-button-disabled:hover,  .fiapmembers-filter--button-prev.swiper-button-disabled:hover,  .fiapmembers-filter--button-next.swiper-button-disabled:hover,  .button-prev.swiper-button-disabled:hover,  .button-next.swiper-button-disabled:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -9453,13 +9506,33 @@ h7 {
   opacity: 1;
 }
 
-.filter-news.filter-active,  .filter-case-study.filter-active {
+.filter-news.filter-active,  .filter-case-study.filter-active,  .filter-fiapmembers.filter-active {
   --tw-border-opacity: 1;
   border-color: rgb(0 167 157 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(0 167 157 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.fiapmembers-grid .card-hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.fiapmembers-grid .card-hover .card-image {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.single-fiap_members .wp-post-image {
+  aspect-ratio: 1 / 1;
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 #table_1_wrapper.wpDataTablesWrapper {

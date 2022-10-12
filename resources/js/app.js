@@ -65,4 +65,32 @@ jQuery(function ($) {
       },
     });
   });
+
+  // FIAP Members Filter
+  $('.filter-fiapmembers').on('click', function (event) {
+    $('.filter-fiapmembers-buttons .filter-fiapmembers').removeClass(
+      'filter-active'
+    );
+    $(this).addClass('filter-active');
+    $('.filter-fiapmembers-loader .spinner-border')
+      .removeClass('opacity-0')
+      .addClass('opacity-100');
+    $('.fiapmembers-grid .blocker').show();
+    event.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: '/wp-admin/admin-ajax.php',
+      dataType: 'html',
+      data: {
+        action: 'filter_fiapmembers',
+        category: $(this).data('id'),
+      },
+      success: function (res) {
+        $('.fiapmembers-grid').html(res);
+        $('.filter-fiapmembers-loader .spinner-border')
+          .removeClass('opacity-100')
+          .addClass('opacity-0');
+      },
+    });
+  });
 });

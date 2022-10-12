@@ -50,6 +50,9 @@ if (have_rows('section', $the_id)) :
     elseif (get_row_layout() == 'fiap_journey') :
       get_template_part('template-parts/sections/fiap_journey');
 
+    elseif (get_row_layout() == 'fiap_members') :
+      get_template_part('template-parts/sections/fiap_members');
+
     elseif (get_row_layout() == 'help_links') :
       get_template_part('template-parts/sections/help_links');
 

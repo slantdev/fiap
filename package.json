@@ -16,7 +16,7 @@
     "production:css-editor": "cross-env NODE_ENV=development tailwindcss -i ./resources/css/editor-style.css -o ./assets/css/editor-style.css --postcss --minify",
     "production:css-acf": "cross-env NODE_ENV=development tailwindcss -i ./resources/css/acf-layouts.css -o ./assets/css/acf-layouts.css --postcss --minify",
     "production:css-admin": "cross-env NODE_ENV=development tailwindcss -i ./resources/css/admin-style.css -o ./assets/css/admin-style.css --postcss --minify",
-    "production:js-app": "cross-env NODE_ENV=development ./node_modules/.bin/esbuild ./resources/js/app.js --bundle --outfile=./js/app.js --minify",
+    "production:js-app": "cross-env NODE_ENV=development ./node_modules/.bin/esbuild ./resources/js/app.js --bundle --outfile=./assets/js/app.js --minify",
     "production:js-twelements": "cross-env NODE_ENV=development ./node_modules/.bin/esbuild ./resources/js/tw-elements.js --bundle --outfile=./assets/js/tw-elements.js --minify",
     "dev:css-app": "cross-env NODE_ENV=development tailwindcss -i ./resources/css/app.css -o ./assets/css/app.css --postcss",
     "dev:css-editor": "cross-env NODE_ENV=development tailwindcss -i ./resources/css/editor-style.css -o ./assets/css/editor-style.css --postcss",

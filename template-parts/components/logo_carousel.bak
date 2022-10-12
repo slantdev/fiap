@@ -27,25 +27,23 @@ if ($carousel_autoplay) {
   ';
 }
 $carousel_id = uniqid('carousel-');
+?>
 
-$args = array(
-  'post_type' => 'fiap_members',
-  'posts_per_page' => -1,
-);
-$the_query = new WP_Query($args);
-
-if ($the_query->have_posts()) { ?>
+<?php if ($carousel_images) { ?>
   <div id="<?php echo $carousel_id ?>" class="swiper overflow-visible px-8 <?php echo $class ?>">
     <div class="swiper-wrapper">
-      <?php
-      while ($the_query->have_posts()) {
-        $the_query->the_post(); ?>
+      <?php foreach ($carousel_images as $image) : ?>
         <div class="swiper-slide">
-          <a href="<?php echo get_the_permalink() ?>" class="bg-white shadow-lg rounded-lg pt-8 pb-8 px-8 flex flex-col items-center justify-center">
-            <img class="" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="<?php echo get_the_title() ?>" />
-          </a>
+          <div class="bg-white shadow-lg rounded-lg pt-8 pb-4 px-8 flex flex-col items-center justify-center">
+            <img class="mb-4" src="<?php echo esc_url($image['url']) ?>" alt="<?php echo esc_attr($image['alt']) ?>" />
+            <?php
+            if ($carousel_caption) {
+              echo '<div class="text-center mt-2 text-gray-500">' . $image['caption'] . '</div>';
+            }
+            ?>
+          </div>
         </div>
-      <?php } ?>
+      <?php endforeach; ?>
     </div>
     <div class="flex items-center justify-center gap-x-4 mt-8">
       <button type="button" class="<?php echo $carousel_id ?>--button-prev button-prev w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md hover:bg-fiap-teal text-gray-500 hover:text-white transition-all duration-200">
@@ -83,7 +81,7 @@ if ($the_query->have_posts()) { ?>
       nextEl: ".' . $carousel_id . '--button-next",
       prevEl: ".' . $carousel_id . '--button-prev",
     },';
-  //echo 'loop: ' . $carousel_loop . ',';
+  echo 'loop: ' . $carousel_loop . ',';
   echo $carousel_autoplay_setting;
   echo '});';
   echo '</script>';
