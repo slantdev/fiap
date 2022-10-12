@@ -83,7 +83,7 @@ if ($the_query->have_posts()) { ?>
       nextEl: ".' . $carousel_id . '--button-next",
       prevEl: ".' . $carousel_id . '--button-prev",
     },';
-  //echo 'loop: ' . $carousel_loop . ',';
+  echo 'loop: ' . $carousel_loop . ',';
   echo $carousel_autoplay_setting;
   echo '});';
   echo '</script>';
