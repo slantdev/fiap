@@ -31,7 +31,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
                     <h2 class="text-[54px] font-light leading-[1.1em] mb-4"><?php echo $slide['title'] ?></h2>
                   <?php } ?>
                   <?php if ($slide['description']) { ?>
-                    <div class="text-lg mb-8"><?php echo $slide['description'] ?></div>
+                    <div class="prose max-w-none text-white text-lg mb-8"><?php echo $slide['description'] ?></div>
                   <?php } ?>
                   <?php
                   $button = $slide['button'];
