@@ -77,6 +77,9 @@ if (have_rows('section', $the_id)) :
     elseif (get_row_layout() == 'text_centered') :
       get_template_part('template-parts/sections/text_centered');
 
+    elseif (get_row_layout() == 'timeline') :
+      get_template_part('template-parts/sections/timeline');
+
     elseif (get_row_layout() == 'white_papers') :
       get_template_part('template-parts/sections/white_papers');
 
