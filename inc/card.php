@@ -147,6 +147,39 @@ function card_papers($atts = array())
   return $output;
 }
 
+function card_fiap_members($atts = array())
+{
+  $atts = shortcode_atts(array(
+    'img_src'  => '',
+    'title'  => '',
+    'excerpt'  => '',
+    'link'  => '#',
+  ), $atts);
+
+  $img_src = $atts['img_src'];
+  $title = $atts['title'];
+  $excerpt = $atts['excerpt'];
+  $link = $atts['link'];
+
+  $output = '';
+  $output .= '<a href="' . $link . '" class="card-fiap-member h-full rounded-xl aspect-[5/4] bg-white relative overflow-hidden cursor-pointer border border-solid border-slate-200 shadow-md">';
+  $output .= '<div class="w-full h-3/4 p-6">';
+  $output .= '<img class="card-image h-full w-full object-scale-down" src="' . $img_src . '" alt="' . $title . '">';
+  $output .= '</div>';
+  $output .= '<div class="card-text transition-all duration-300 bg-fiap-darkblue bg-opacity-80 p-6 h-full w-full text-white absolute top-3/4 left-0 right-0">
+      <h3 class="card-title text-2xl font-semibold line-clamp-1">' . $title . '</h3>
+      <div class="card-excerpt mt-10 text-base opacity-0 transition duration-300">
+      ' . $excerpt . '
+      </div>
+      <button type="button" class="bg-white p-4 absolute right-6 bottom-6 rounded-full w-12 h-12">
+        <span class="block w-4 h-1 bg-fiap-darkblue absolute top-1/2 -translate-y-1/2"></span>
+        <span class="block w-1 h-4 bg-fiap-darkblue absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"></span>
+      </button>
+    </div>
+  </a>';
+  return $output;
+}
+
 function card_team_member($atts = array())
 {
   $atts = shortcode_atts(array(

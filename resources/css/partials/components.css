@@ -129,6 +129,17 @@
   }
 }
 
+.card-fiap-member {
+  &:hover {
+    .card-text {
+      @apply pt-8 top-0;
+    }
+    .card-excerpt {
+      @apply opacity-100 mt-6;
+    }
+  }
+}
+
 .filter-news,
 .filter-case-study,
 .filter-fiapmembers {

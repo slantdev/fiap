@@ -97,7 +97,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
             'excerpt' => $excerpt,
             'link' => get_the_permalink(),
           );
-          echo card_hover($atts);
+          echo card_fiap_members($atts);
         }
         echo '</div>';
       }

@@ -4813,12 +4813,20 @@ textarea.form-control.is-invalid {
   top: -2.25rem;
 }
 
-.top-0 {
-  top: 0px;
+.top-3\/4 {
+  top: 75%;
 }
 
 .left-0 {
   left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .top-4 {
@@ -4839,10 +4847,6 @@ textarea.form-control.is-invalid {
 
 .top-\[13px\] {
   top: 13px;
-}
-
-.right-0 {
-  right: 0px;
 }
 
 .bottom-10 {
@@ -5907,6 +5911,10 @@ textarea.form-control.is-invalid {
   margin-bottom: 5rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -5985,10 +5993,6 @@ textarea.form-control.is-invalid {
 
 .-mt-px {
   margin-top: -1px;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
 }
 
 .mt-0\.5 {
@@ -7047,6 +7051,14 @@ textarea.form-control.is-invalid {
   aspect-ratio: 1 / 1;
 }
 
+.aspect-\[5\/4\] {
+  aspect-ratio: 5/4;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
 .aspect-\[3\/4\] {
   aspect-ratio: 3/4;
 }
@@ -7133,6 +7145,10 @@ textarea.form-control.is-invalid {
 
 .h-\[6rem\] {
   height: 6rem;
+}
+
+.h-3\/4 {
+  height: 75%;
 }
 
 .max-h-\[512px\] {
@@ -7740,6 +7756,10 @@ textarea.form-control.is-invalid {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-80 {
+  --tw-bg-opacity: 0.8;
+}
+
 .bg-opacity-40 {
   --tw-bg-opacity: 0.4;
 }
@@ -7784,12 +7804,21 @@ textarea.form-control.is-invalid {
      object-fit: cover;
 }
 
+.object-scale-down {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
 .p-3 {
   padding: 0.75rem;
 }
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .p-1 {
@@ -7822,10 +7851,6 @@ textarea.form-control.is-invalid {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
 }
 
 .p-7 {
@@ -8342,8 +8367,8 @@ textarea.form-control.is-invalid {
   padding-bottom: 8rem;
 }
 
-.pb-4 {
-  padding-bottom: 1rem;
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .pt-4 {
@@ -8366,6 +8391,10 @@ textarea.form-control.is-invalid {
   padding-bottom: 0px;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -8384,10 +8413,6 @@ textarea.form-control.is-invalid {
 
 .pt-2 {
   padding-top: 0.5rem;
-}
-
-.pb-8 {
-  padding-bottom: 2rem;
 }
 
 .pr-8 {
@@ -9077,12 +9102,12 @@ textarea.form-control.is-invalid {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.opacity-50 {
-  opacity: 0.5;
-}
-
 .opacity-0 {
   opacity: 0;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .opacity-100 {
@@ -9219,6 +9244,13 @@ textarea.form-control.is-invalid {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 h1 {
@@ -9503,6 +9535,16 @@ h7 {
 
 .card-hover:hover .card-excerpt {
   margin-top: 2rem;
+  opacity: 1;
+}
+
+.card-fiap-member:hover .card-text {
+  top: 0px;
+  padding-top: 2rem;
+}
+
+.card-fiap-member:hover .card-excerpt {
+  margin-top: 1.5rem;
   opacity: 1;
 }
 
