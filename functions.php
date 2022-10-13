@@ -58,7 +58,7 @@ function fiap_admin_styles()
   $current_page = get_current_screen();
   $theme = wp_get_theme();
   wp_enqueue_style('admin_css', get_template_directory_uri() . '/assets/css/admin-style.css', false, $theme->get('Version'));
-  wp_enqueue_style('poppins', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,900;1,300;1,400;1,500;1,600;1,900&display=swap', false, $theme->get('Version'));
+  wp_enqueue_style('poppins', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap', false, $theme->get('Version'));
 
   if (($current_page->post_type === 'page' && ($pagenow === 'post-new.php' || $pagenow === 'post.php'))) {
     wp_enqueue_style('acf_layouts', get_template_directory_uri() . '/assets/css/acf-layouts.css', false, $theme->get('Version'));
