@@ -19,6 +19,23 @@
             "endpoint": 0
         },
         {
+            "key": "field_6348c6fe6115d",
+            "label": "(Column 8\/12)",
+            "name": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "columns": "8\/12",
+            "endpoint": 0
+        },
+        {
             "key": "field_632b40527ab0b",
             "label": "Heading",
             "name": "heading",
@@ -41,7 +58,10 @@
             "prefix_name": 0,
             "acfe_seamless_style": 0,
             "acfe_clone_modal": 0,
-            "acfe_settings": ""
+            "acfe_settings": "",
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
         },
         {
             "key": "field_632b40527ab22",
@@ -66,7 +86,72 @@
             "prefix_name": 0,
             "acfe_seamless_style": 0,
             "acfe_clone_modal": 0,
-            "acfe_settings": ""
+            "acfe_settings": "",
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        },
+        {
+            "key": "field_6348c70f6115e",
+            "label": "(Column 4\/12)",
+            "name": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "columns": "4\/12",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6348c6a56115c",
+            "label": "Image",
+            "name": "image",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "clone": [
+                "group_62af712d9256f"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0,
+            "acfe_seamless_style": 0,
+            "acfe_clone_modal": 0,
+            "acfe_settings": "",
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        },
+        {
+            "key": "field_6348c7166115f",
+            "label": "(Column Endpoint)",
+            "name": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "endpoint": 1,
+            "columns": "6\/12"
         },
         {
             "key": "field_632bbcc08a088",
@@ -150,7 +235,10 @@
             "prefix_label": 0,
             "prefix_name": 0,
             "acfe_seamless_style": 1,
-            "acfe_clone_modal": 0
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
         }
     ],
     "location": [
@@ -179,7 +267,7 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1663810868,
+    "modified": 1665714196,
     "acfe_categories": {
         "layout": "Layout"
     }

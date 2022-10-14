@@ -18657,6 +18657,16 @@ h7 {
     row-gap: 3rem;
   }
 
+  .lg\:gap-x-10 {
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
+  }
+
+  .lg\:gap-x-14 {
+    -moz-column-gap: 3.5rem;
+         column-gap: 3.5rem;
+  }
+
   .lg\:p-0 {
     padding: 0px;
   }
