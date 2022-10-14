@@ -7055,10 +7055,6 @@ textarea.form-control.is-invalid {
   aspect-ratio: 5/4;
 }
 
-.aspect-video {
-  aspect-ratio: 16 / 9;
-}
-
 .aspect-\[3\/4\] {
   aspect-ratio: 3/4;
 }
@@ -7097,6 +7093,10 @@ textarea.form-control.is-invalid {
 
 .h-\[4\.5rem\] {
   height: 4.5rem;
+}
+
+.h-3\/4 {
+  height: 75%;
 }
 
 .h-3 {
@@ -7143,16 +7143,12 @@ textarea.form-control.is-invalid {
   height: 700px;
 }
 
-.h-\[6rem\] {
-  height: 6rem;
-}
-
-.h-3\/4 {
-  height: 75%;
-}
-
 .h-96 {
   height: 24rem;
+}
+
+.h-\[6rem\] {
+  height: 6rem;
 }
 
 .max-h-\[512px\] {
@@ -8434,6 +8430,14 @@ textarea.form-control.is-invalid {
   padding-top: 0.5rem;
 }
 
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
 .pr-8 {
   padding-right: 2rem;
 }
@@ -8548,10 +8552,6 @@ textarea.form-control.is-invalid {
 
 .pr-5 {
   padding-right: 1.25rem;
-}
-
-.pr-6 {
-  padding-right: 1.5rem;
 }
 
 .pr-7 {
@@ -8776,10 +8776,6 @@ textarea.form-control.is-invalid {
 
 .pl-7 {
   padding-left: 1.75rem;
-}
-
-.pl-8 {
-  padding-left: 2rem;
 }
 
 .pl-9 {
@@ -15907,6 +15903,10 @@ h7 {
     padding-right: 1rem;
   }
 
+  .md\:pr-0 {
+    padding-right: 0px;
+  }
+
   .md\:pt-0 {
     padding-top: 0px;
   }
@@ -16037,10 +16037,6 @@ h7 {
 
   .md\:pt-3\.5 {
     padding-top: 0.875rem;
-  }
-
-  .md\:pr-0 {
-    padding-right: 0px;
   }
 
   .md\:pr-1 {
@@ -19156,6 +19152,18 @@ h7 {
     padding-right: 1.5rem;
   }
 
+  .lg\:pt-14 {
+    padding-top: 3.5rem;
+  }
+
+  .lg\:pl-24 {
+    padding-left: 6rem;
+  }
+
+  .lg\:pb-24 {
+    padding-bottom: 6rem;
+  }
+
   .lg\:pt-0 {
     padding-top: 0px;
   }
@@ -19202,10 +19210,6 @@ h7 {
 
   .lg\:pt-12 {
     padding-top: 3rem;
-  }
-
-  .lg\:pt-14 {
-    padding-top: 3.5rem;
   }
 
   .lg\:pt-16 {
@@ -19492,10 +19496,6 @@ h7 {
     padding-bottom: 5rem;
   }
 
-  .lg\:pb-24 {
-    padding-bottom: 6rem;
-  }
-
   .lg\:pb-28 {
     padding-bottom: 7rem;
   }
@@ -19622,10 +19622,6 @@ h7 {
 
   .lg\:pl-20 {
     padding-left: 5rem;
-  }
-
-  .lg\:pl-24 {
-    padding-left: 6rem;
   }
 
   .lg\:pl-28 {

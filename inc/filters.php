@@ -135,6 +135,7 @@ function filter_fiapmembers()
     $response .= '<div class="grid grid-cols-3 gap-10">';
 
     while ($ajaxposts->have_posts()) : $ajaxposts->the_post();
+
       $excerpt = wp_trim_words(get_the_excerpt(), $num_words = 30, $more = null);
       $atts = array(
         'img_src' => get_the_post_thumbnail_url(get_the_ID(), 'large'),
@@ -142,7 +143,7 @@ function filter_fiapmembers()
         'excerpt' => $excerpt,
         'link' => get_the_permalink(),
       );
-      $response .= card_hover($atts);
+      $response .= card_fiap_members($atts);
 
     endwhile;
 
