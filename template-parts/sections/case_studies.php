@@ -33,7 +33,8 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
             <?php
             $taxonomies = get_terms(array(
               'taxonomy' => 'case_study_category',
-              'hide_empty' => false
+              'hide_empty' => false,
+              'orderby' => 'term_order'
             ));
             if (!empty($taxonomies)) :
               $output = '<div class="swiper-slide w-auto"><button type="button" class="filter-case-study filter-active inline-block rounded-full px-10 py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-id="all">All</button></div>';
@@ -92,6 +93,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
       $args = array(
         'post_type' => 'case_study',
         'posts_per_page' => -1,
+        'orderby' => 'menu_order'
       );
       $the_query = new WP_Query($args);
       if ($the_query->have_posts()) {

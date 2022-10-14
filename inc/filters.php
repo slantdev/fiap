@@ -7,12 +7,14 @@ function filter_news()
   if ($catID == 'all') {
     $ajaxposts = new WP_Query([
       'post_type' => 'news',
-      'posts_per_page' => -1
+      'posts_per_page' => -1,
+      'orderby' => 'menu_order'
     ]);
   } else {
     $ajaxposts = new WP_Query([
       'post_type' => 'news',
       'posts_per_page' => -1,
+      'orderby' => 'menu_order',
       'tax_query' => array(
         array(
           'taxonomy' => 'news_category',
@@ -60,12 +62,14 @@ function filter_case_study()
   if ($catID == 'all') {
     $ajaxposts = new WP_Query([
       'post_type' => 'case_study',
-      'posts_per_page' => -1
+      'posts_per_page' => -1,
+      'orderby' => 'menu_order'
     ]);
   } else {
     $ajaxposts = new WP_Query([
       'post_type' => 'case_study',
       'posts_per_page' => -1,
+      'orderby' => 'menu_order',
       'tax_query' => array(
         array(
           'taxonomy' => 'case_study_category',
@@ -112,12 +116,14 @@ function filter_fiapmembers()
   if ($catID == 'all') {
     $ajaxposts = new WP_Query([
       'post_type' => 'fiap_members',
-      'posts_per_page' => -1
+      'posts_per_page' => -1,
+      'orderby' => 'menu_order'
     ]);
   } else {
     $ajaxposts = new WP_Query([
       'post_type' => 'fiap_members',
       'posts_per_page' => -1,
+      'orderby' => 'menu_order',
       'tax_query' => array(
         array(
           'taxonomy' => 'member_category',

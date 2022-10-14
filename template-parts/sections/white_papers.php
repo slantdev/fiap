@@ -33,6 +33,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
     $args = array(
       'post_type' => 'white_paper',
       'posts_per_page' => -1,
+      'orderby' => 'term_order'
     );
     $the_query = new WP_Query($args);
     if ($the_query->have_posts()) {
