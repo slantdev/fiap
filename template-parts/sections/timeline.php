@@ -30,7 +30,7 @@ $section_container_class = $section_padding_top . ' ' . $section_padding_bottom 
         <div class="flex overflow-hidden gap-x-6">
           <?php
           while (have_rows('timeline')) : the_row();
-            echo '<div class="max-w-md h-[420px] flex-none">';
+            echo '<div class="max-w-md h-[432px] flex-none">';
             echo '<div class="w-full h-full bg-white rounded-lg shadow-md py-10 pl-10 pr-6 flex flex-col gap-y-6">';
             if (get_sub_field('title')) {
               echo '<h4 class="font-semibold text-xl leading-snug">' . get_sub_field('title') . '</h4>';
@@ -39,7 +39,7 @@ $section_container_class = $section_padding_top . ' ' . $section_padding_bottom 
               echo '<img class="rounded-full h-20 w-20 object-cover" src="' . get_sub_field('thumbnail')['url'] . '" />';
             }
             if (get_sub_field('description')) {
-              echo '<div class="prose max-w-none overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-50 scrollbar-thumb-rounded-full scrollbar-track-rounded-full pr-8">
+              echo '<div class="prose max-w-none lg:prose-lg overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-50 scrollbar-thumb-rounded-full scrollbar-track-rounded-full pr-8">
             ' . get_sub_field('description') . '
             </div>';
             }
@@ -66,7 +66,7 @@ $section_container_class = $section_padding_top . ' ' . $section_padding_bottom 
           <div class="swiper-wrapper">
             <?php
             while (have_rows('timeline')) : the_row();
-              echo '<div class="swiper-slide max-w-md h-[420px]">';
+              echo '<div class="swiper-slide max-w-md h-[432px]">';
               echo '<div class="w-full h-full bg-white rounded-lg shadow-md py-10 pl-10 pr-6 flex flex-col gap-y-6">';
               if (get_sub_field('title')) {
                 echo '<h4 class="font-semibold text-xl leading-snug">' . get_sub_field('title') . '</h4>';

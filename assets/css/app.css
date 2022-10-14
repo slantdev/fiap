@@ -7163,6 +7163,10 @@ textarea.form-control.is-invalid {
   height: 5rem;
 }
 
+.h-\[432px\] {
+  height: 432px;
+}
+
 .max-h-\[512px\] {
   max-height: 512px;
 }
