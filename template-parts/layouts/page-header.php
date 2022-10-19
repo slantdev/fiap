@@ -53,15 +53,10 @@ if ($enabled) :
     <div class="bg-fiap-light py-6">
       <div class="container mx-auto">
         <?php
-        // if (function_exists('yoast_breadcrumb')) {
-        //   yoast_breadcrumb('<div class="breadcrumbs inline-block bg-white bg-opacity-50 py-2 px-4 text-black text-sm">', '</p>');
-        // }
+        if (function_exists('yoast_breadcrumb')) {
+          yoast_breadcrumb('<div class="breadcrumbs inline-block text-black text-base">', '</div>');
+        }
         ?>
-        <ul class="flex text-base">
-          <li><a href="<?php echo site_url() ?>" class="hover:underline">Home</a></li>
-          <li class="px-4">/</li>
-          <li><?php echo get_the_title() ?></li>
-        </ul>
       </div>
     </div>
   </section>

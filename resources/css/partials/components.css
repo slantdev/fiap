@@ -162,3 +162,9 @@
     @apply object-contain aspect-square border border-solid border-slate-200;
   }
 }
+
+.breadcrumbs {
+  a {
+    @apply hover:underline;
+  }
+}
