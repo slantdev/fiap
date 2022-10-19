@@ -70,7 +70,7 @@ function card_hover($atts = array())
       <div class="card-excerpt">
       ' . $excerpt . '
       </div>
-      <button type="button" class="bg-white p-4 absolute right-6 bottom-6 rounded-full w-12 h-12">
+      <button type="button" class="bg-white p-4 absolute right-6 bottom-6 rounded-full w-8 h-8 xl:w-12 xl:h-12">
         <span class="block w-4 h-1 bg-fiap-darkblue absolute top-1/2 -translate-y-1/2"></span>
         <span class="block w-1 h-4 bg-fiap-darkblue absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"></span>
       </button>
@@ -100,14 +100,14 @@ function card_article($atts = array())
   $output .= '<div class="aspect-[16/11] flex-none">';
   $output .= '<img class="w-full h-full object-cover" src="' . $img_src . '" alt="' . $title . '">';
   $output .= '</div>';
-  $output .= '<div class="flex flex-col px-6 pt-12 pb-6 relative grow">';
-  $output .= '<div class="bg-fiap-teal text-white rounded-full flex w-[4.5rem] h-[4.5rem] items-center justify-center p-4 absolute right-8 -top-9">'
-    . fiap_icon(array('icon' => 'news', 'group' => 'brand', 'size' => '64', 'class' => 'text-white')) .
+  $output .= '<div class="flex flex-col px-6 pt-8 pb-6 xl:pt-12 relative grow">';
+  $output .= '<div class="bg-fiap-teal text-white rounded-full flex w-16 h-16 xl:w-[4.5rem] xl:h-[4.5rem] items-center justify-center p-4 absolute right-6 xl:right-8 -top-9">'
+    . fiap_icon(array('icon' => 'news', 'group' => 'brand', 'size' => '64', 'class' => 'text-white w-14 h-14 xl:w-16 xl:h-16')) .
     '</div>';
-  $output .= '<div class="font-medium text-base mb-4 text-gray-500">' . $date . '</div>
+  $output .= '<div class="font-medium mb-4 text-gray-500 text-sm xl:text-base">' . $date . '</div>
       <h3 class="text-[24px] font-semibold leading-[1.25em] mb-4 line-clamp-2">' . $title . '</h3>
-      <div class="card-excerpt mb-8 text-gray-500">' . $excerpt . '</div>
-      <button type="button" class="mt-auto text-fiap-teal text-left">LEARN MORE</button>
+      <div class="card-excerpt mb-8 text-gray-500 text-sm xl:text-base">' . $excerpt . '</div>
+      <button type="button" class="mt-auto text-fiap-teal text-left text-sm xl:text-base">LEARN MORE</button>
     </div>
   </a>';
   return $output;

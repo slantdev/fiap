@@ -24,22 +24,22 @@ switch ($spacing_top) {
     $section_padding_top = 'pt-4 lg:pt-8 xl:pt-8';
     break;
   case "sm":
-    $section_padding_top = 'pt-6 xl:pt-14';
+    $section_padding_top = 'pt-4 lg:pt-6 xl:pt-14';
     break;
   case "md":
-    $section_padding_top = 'pt-12 xl:pt-20';
+    $section_padding_top = 'pt-8 lg:pt-12 xl:pt-20';
     break;
   case "lg":
-    $section_padding_top = 'pt-16 xl:pt-28';
+    $section_padding_top = 'pt-10 lg:pt-16 xl:pt-28';
     break;
   case "xl":
-    $section_padding_top = 'pt-20 xl:pt-36';
+    $section_padding_top = 'pt-12 lg:pt-20 xl:pt-36';
     break;
   case "2xl":
-    $section_padding_top = 'pt-24 xl:pt-44';
+    $section_padding_top = 'pt-16 lg:pt-24 xl:pt-44';
     break;
   default:
-    $section_padding_top = 'pt-20 xl:pt-36';
+    $section_padding_top = 'pt-12 lg:pt-20 xl:pt-36';
 }
 $section_padding_bottom = '';
 switch ($spacing_bottom) {
@@ -50,22 +50,22 @@ switch ($spacing_bottom) {
     $section_padding_bottom = 'pb-4 xl:pb-8';
     break;
   case "sm":
-    $section_padding_bottom = 'pb-6 xl:pb-14';
+    $section_padding_bottom = 'pb-4 lg:pb-6 xl:pb-14';
     break;
   case "md":
-    $section_padding_bottom = 'pb-12 xl:pb-20';
+    $section_padding_bottom = 'pb-8 lg:pb-12 xl:pb-20';
     break;
   case "lg":
-    $section_padding_bottom = 'pb-16 xl:pb-28';
+    $section_padding_bottom = 'pb-10 lg:pb-16 xl:pb-28';
     break;
   case "xl":
-    $section_padding_bottom = 'pb-20 xl:pb-36';
+    $section_padding_bottom = 'pb-12 lg:pb-20 xl:pb-36';
     break;
   case "2xl":
-    $section_padding_bottom = 'pb-24 xl:pb-44';
+    $section_padding_bottom = 'pb-16 lg:pb-24 xl:pb-44';
     break;
   default:
-    $section_padding_bottom = 'pb-20 xl:pb-36';
+    $section_padding_bottom = 'pb-12 lg:pb-20 xl:pb-36';
 }
 
 $section_fullwidth = $section_settings['section_full_width'];

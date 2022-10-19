@@ -31,28 +31,28 @@ switch ($heading_size) {
     $heading_class .= ' text-xs';
     break;
   case "sm":
-    $heading_class .= ' text-sm';
+    $heading_class .= ' text-xs xl:text-sm';
     break;
   case "md":
-    $heading_class .= ' text-md';
+    $heading_class .= ' text-sm xl:text-md';
     break;
   case "lg":
-    $heading_class .= ' text-lg';
+    $heading_class .= ' text-md xl:text-lg';
     break;
   case "xl":
-    $heading_class .= ' text-xl';
+    $heading_class .= ' text-lg xl:text-xl';
     break;
   case "2xl":
-    $heading_class .= ' text-2xl';
+    $heading_class .= ' text-xl xl:text-2xl';
     break;
   case "3xl":
-    $heading_class .= ' text-3xl';
+    $heading_class .= ' text-2xl xl:text-3xl';
     break;
   case "4xl":
-    $heading_class .= ' text-4xl';
+    $heading_class .= ' text-3xl xl:text-4xl';
     break;
   case "5xl":
-    $heading_class .= ' text-5xl';
+    $heading_class .= ' text-4xl xl:text-5xl';
     break;
   default:
     $heading_class .= '';

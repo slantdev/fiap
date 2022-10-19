@@ -65,11 +65,14 @@ if (have_rows('section', $the_id)) :
     elseif (get_row_layout() == 'logo_carousel') :
       get_template_part('template-parts/sections/logo_carousel');
 
+    elseif (get_row_layout() == 'select_services') :
+      get_template_part('template-parts/sections/select_services');
+
     elseif (get_row_layout() == 'slider_two_columns') :
       get_template_part('template-parts/sections/slider_two_columns');
 
-    elseif (get_row_layout() == 'select_services') :
-      get_template_part('template-parts/sections/select_services');
+    elseif (get_row_layout() == 'stakeholder_cards') :
+      get_template_part('template-parts/sections/stakeholder_cards');
 
     elseif (get_row_layout() == 'team') :
       get_template_part('template-parts/sections/team');

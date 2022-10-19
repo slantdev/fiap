@@ -44,19 +44,19 @@ if ($buttons_repeater) {
         $button_class = 'px-4 py-2 rounded-md text-xs font-semibold leading-none';
         break;
       case "sm":
-        $button_class = 'px-4 py-2 rounded-md text-sm font-semibold leading-none';
+        $button_class = 'px-4 py-2 xl:px-4 xl:py-2 rounded-md text-sm font-semibold leading-none';
         break;
       case "md":
-        $button_class = 'px-5 py-3 rounded-md text-base font-semibold leading-none';
+        $button_class = 'px-4 py-2.5 text-sm xl:px-5 xl:py-3 rounded-md xl:text-base font-semibold leading-none';
         break;
       case "lg":
-        $button_class = 'px-8 py-4 rounded-lg text-lg font-semibold leading-none';
+        $button_class = 'px-6 py-4 rounded-md text-base xl:px-8 xl:py-4 xl:rounded-lg xl:text-lg font-semibold leading-none';
         break;
       case "xl":
-        $button_class = 'px-10 py-5 rounded-xl text-xl font-semibold leading-none';
+        $button_class = 'px-8 py-4 rounded-lg text-lg xl:px-10 xl:py-5 xl:rounded-xl xl:text-xl font-semibold leading-none';
         break;
       default:
-        $button_class = 'px-8 py-4 rounded-lg text-lg font-semibold leading-none';
+        $button_class = 'px-6 py-3 rounded-md text-base xl:px-8 xl:py-4 xl:rounded-lg xl:text-lg font-semibold leading-none';
     }
     $button_style = '';
     if ($button_bg_color) {

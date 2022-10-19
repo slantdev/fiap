@@ -24,18 +24,18 @@
     <header>
 
       <div class="mx-auto container">
-        <div class="lg:flex lg:justify-between lg:items-center pt-11 pb-6">
+        <div class="py-4 lg:flex lg:justify-between lg:items-center lg:pt-11 lg:pb-6">
           <div class="flex w-full justify-between items-center">
             <div>
-              <a href="<?php echo site_url() ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo-fiap.svg'  ?>" alt="FIAP" class=""></a>
+              <a href="<?php echo site_url() ?>"><img class="h-14 lg:h-auto" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo-fiap.svg'  ?>" alt="FIAP" class=""></a>
             </div>
 
-            <div class="flex items-center gap-x-4">
+            <div class="hidden xl:flex items-center gap-x-4">
               <button type="button" class="bg-fiap-teal text-white text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-transparent shadow-md hover:bg-fiap-teal-hover hover:shadow-lg transition-all duration-300">Member Login</button>
               <button type="button" class="bg-white text-fiap-darkblue text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-fiap-darkblue shadow-md hover:border-transparent hover:bg-fiap-darkblue hover:text-white hover:shadow-lg transition-all duration-300">Contact Us</button>
               <button type="button" class="text-white bg-fiap-darkblue rounded-full p-3 shadow-md hover:shadow-lg transition-all duration-300"><?php echo fiap_icon(array('icon' => 'accessibility', 'group' => 'utility', 'size' => '24', 'class' => '')) ?></button>
             </div>
-            <div class="lg:hidden">
+            <div class="xl:hidden">
               <a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
                 <svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
@@ -50,7 +50,7 @@
         </div>
       </div>
 
-      <div class="bg-fiap-darkblue">
+      <div class="hidden xl:block bg-fiap-darkblue">
         <div class="mx-auto container">
           <div class="flex justify-between items-end">
             <?php
