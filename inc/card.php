@@ -200,12 +200,12 @@ function card_team_member($atts = array())
 
   $output = '';
   if ($atts['layout'] == 'layout-01') {
-    $output .= '<button type="button" class="block w-full text-left bg-white border border-solid border-slate-200 py-8 px-12" data-bs-toggle="modal" data-bs-target="#' . $slug . '">';
+    $output .= '<button type="button" class="block w-full text-left bg-white border border-solid border-slate-200 py-8 px-6 xl:px-12" data-bs-toggle="modal" data-bs-target="#' . $slug . '">';
   } else {
     $output .= '<button type="button" class="block w-full text-left" data-bs-toggle="modal" data-bs-target="#' . $slug . '">';
   }
   $output .= '<div class="max-w-xs mx-auto">';
-  $output .= '<div class="mb-2 xl:mb-4"><img class="rounded-full mx-auto" src="' . $atts['team_photo'] . '" alt=""></div>';
+  $output .= '<div class="mb-3 max-w-[200px] mx-auto xl:mb-4"><img class="rounded-full mx-auto" src="' . $atts['team_photo'] . '" alt=""></div>';
   $output .= '<div class="flex">
       <div>
         <h4 class="text-lg font-thin text-black xl:text-2xl">' . $atts['team_name'] . '</h4>
@@ -228,12 +228,12 @@ function card_team_member($atts = array())
               </div>
             </div>
             <div class="w-full md:w-1/2">
-              <div class="flex flex-col py-6 px-4 max-h-[512px] md:p-8">
+              <div class="flex flex-col py-6 px-6 max-h-[512px] md:p-8">
                 <div class="pt-0 mb-4 md:pt-4 md:mb-8">
                   <h4 class="text-black text-2xl font-thin md:text-3x;">' . $atts['team_name'] . '</h4>
                   <h5 class="text-black text-xl font-semibold md:text-2xl">' . $atts['team_position'] . '</h5>
                 </div>
-                <div class="overflow-y-auto">' . $atts['team_bio'] . '</div>
+                <div class="overflow-y-auto text-base">' . $atts['team_bio'] . '</div>
                 <div class="mt-auto pt-6 md:pt-8">
                   <ul class="flex items-center gap-x-4">
                     <li><a href="' . $atts['team_linkedin'] . '" class="inline-block">' . fiap_icon(array('icon' => 'team-linkedin', 'group' => 'utility', 'size' => false, 'class' => 'text-black')) . '</a></li>

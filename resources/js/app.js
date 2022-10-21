@@ -93,4 +93,49 @@ jQuery(function ($) {
       },
     });
   });
+
+  $('#mobilemenuToggle').on('click', function (event) {
+    event.preventDefault;
+    $(this).toggleClass('active');
+    $('body').toggleClass('overflow-hidden');
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('not-active');
+    } else {
+      $(this).addClass('not-active');
+    }
+    $('#mobilemenuDrawer').toggleClass('open');
+  });
+  $('#menu-mobile-menu .submenu-toggle').on('click', function (event) {
+    $(this).toggleClass('open');
+    $(this)
+      .closest('.menu-item')
+      .find('.sub-menu:first')
+      .slideToggle('slow', function () {
+        // Animation complete.
+      });
+  });
+});
+
+jQuery(function ($) {
+  // Sticky & Shrink Site Header
+  var didScroll, offset, scrollPosition;
+  //offset = $('#site-header').position().top;
+  offset = 160;
+  didScroll = false;
+  scrollPosition = $(document).scrollTop();
+  if (scrollPosition > offset) {
+    didScroll = true;
+  }
+  $(window).on('scroll touchmove', function () {
+    return (didScroll = true);
+  });
+  return setInterval(function () {
+    if (didScroll) {
+      $('#site-header').toggleClass(
+        'header-shrink',
+        $(document).scrollTop() > offset
+      );
+      return (didScroll = false);
+    }
+  }, 20);
 });

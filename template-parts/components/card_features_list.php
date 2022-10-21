@@ -10,7 +10,7 @@ if ($field) {
 
 //preint_r($features_list_cards);
 if ($features_list_cards) : ?>
-  <div class="grid grid-cols-3 gap-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3 xl:gap-10">
     <?php foreach ($features_list_cards as $card) : ?>
       <?php
       $icon_svg = $card['icon_svg'];
@@ -22,17 +22,17 @@ if ($features_list_cards) : ?>
         $icon_style = 'color: ' . $icon_color;
       }
       ?>
-      <div class="rounded-xl bg-white px-8 py-12 shadow-lg border border-neutral-200">
+      <div class="rounded-xl bg-white px-5 py-6 xl:px-8 xl:py-12 shadow-lg border border-neutral-200">
         <?php if ($icon_svg) : ?>
           <div style="<?php echo $icon_style ?>">
             <?php echo fiap_icon(array('icon' => $icon_svg, 'group' => 'brand', 'size' => '64', 'class' => 'mb-4')); ?>
           </div>
         <?php endif; ?>
         <?php if ($card_title) : ?>
-          <h3 class="text-2xl"><?php echo $card_title ?></h3>
+          <h3 class="text-xl xl:text-2xl"><?php echo $card_title ?></h3>
         <?php endif; ?>
         <?php if ($feature_list) : ?>
-          <ul class="flex flex-col gap-y-4 mt-12 text-base">
+          <ul class="flex flex-col gap-y-3 mt-4 text-sm xl:gap-y-4 xl:mt-12 xl:text-base">
             <?php foreach ($feature_list as $list) : ?>
               <li class="flex">
                 <div style="<?php echo $icon_style ?>">

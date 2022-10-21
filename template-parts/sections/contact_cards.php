@@ -14,9 +14,9 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
     <div>
       <?php get_template_part('template-parts/components/heading', '', array('field' => 'heading', 'class' => '')); ?>
     </div>
-    <div class="flex gap-x-16">
-      <div class="w-1/2">
-        <div class="w-full h-full bg-white border border-solid border-fiap-teal py-12 px-16 shadow-md">
+    <div class="flex flex-wrap gap-8 lg:flex-nowrap lg:gap-16">
+      <div class="w-full lg:w-1/2">
+        <div class="w-full h-full bg-white border border-solid border-fiap-teal p-6 md:py-12 md:px-16 shadow-md">
           <h4 class="text-fiap-teal font-semibold text-[30px] mb-8">Victoria</h4>
           <ul class="flex flex-col gap-y-4 text-xl">
             <li class="flex items-center">
@@ -40,8 +40,8 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
           </ul>
         </div>
       </div>
-      <div class="w-1/2">
-        <div class="w-full h-full bg-white border border-solid border-fiap-teal py-12 px-16 shadow-md">
+      <div class="w-full lg:w-1/2">
+        <div class="w-full h-full bg-white border border-solid border-fiap-teal p-6 md:py-12 md:px-16 shadow-md">
           <h4 class="text-fiap-teal font-semibold text-[30px] mb-8">Book a meeting with us:</h4>
           <ul class="flex flex-col gap-y-4">
             <li class="flex">

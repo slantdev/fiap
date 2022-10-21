@@ -10,14 +10,14 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
 ?>
 <section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>">
   <div class="<?php echo $section_container_class ?>">
-    <div class="flex gap-x-24">
-      <div class="w-2/3">
+    <div class="flex flex-wrap lg:flex-nowrap lg:gap-x-24">
+      <div class="w-full lg:w-2/3">
         <?php get_template_part('template-parts/components/heading', '', array('field' => 'heading', 'class' => '')); ?>
         <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'xl:prose-lg')); ?>
       </div>
     </div>
     <?php if (get_sub_field('show_search_bar')) { ?>
-      <div class="flex gap-x-4 items-center mt-8">
+      <div class="hidden lg:flex flex-wrap lg:flex-nowrap gap-x-4 items-center mt-8">
         <input class="w-full h-[55px] rounded-md shadow-inner py-3 px-6 bg-neutral-100 border border-neutral-200 focus:ring-0 focus:outline-none focus:border-neutral-200" type="text" placeholder="Search query">
         <span class="inline-block flex-none">In</span>
         <select class="flex-none w-52 h-[55px] rounded-md shadow-md py-3 px-6 bg-neutral-100 border border-neutral-200 focus:ring-0 focus:outline-none focus:border-neutral-200" name="" id="">
@@ -37,7 +37,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
     );
     $the_query = new WP_Query($args);
     if ($the_query->have_posts()) {
-      echo '<div class="grid grid-cols-3 gap-10 mt-16">';
+      echo '<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8 2xl:gap-10">';
       while ($the_query->have_posts()) {
         $the_query->the_post();
         $terms = get_the_terms(get_the_ID(), 'white_paper_category');

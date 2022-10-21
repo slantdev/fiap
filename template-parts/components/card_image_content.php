@@ -9,7 +9,7 @@ if ($field) {
 }
 
 if ($cards_repeater) : ?>
-  <div class="mt-12 grid grid-cols-2 gap-32">
+  <div class="mt-4 lg:mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 xl:gap-32">
     <?php foreach ($cards_repeater as $card) : ?>
       <?php
       $card_image = $card['card_image_content']['card_image'];

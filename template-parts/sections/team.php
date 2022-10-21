@@ -33,7 +33,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
     if ($the_query->have_posts()) {
 
       if ($team_layout == 'layout-01') {
-        echo '<div class="grid grid-cols-2 gap-x-6 gap-y-8 mt-8 md:grid-cols-3 md:gap-x-8 md:gap-y-10 lg:gap-x-24 lg:gap-y-12 lg:mt-12 xl:gap-x-0 xl:gap-y-0">';
+        echo '<div class="grid grid-cols-1 gap-y-0 mt-8 md:grid-cols-3 md:gap-y-10 lg:gap-y-12 lg:mt-12 xl:gap-y-0">';
       } else {
         echo '<div class="grid grid-cols-2 gap-x-6 gap-y-8 mt-8 md:grid-cols-4 md:gap-x-8 md:gap-y-10 lg:gap-x-24 lg:gap-y-12 lg:mt-20 xl:gap-x-44 xl:gap-y-16">';
       }

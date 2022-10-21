@@ -17,48 +17,57 @@
 
   <?php do_action('fiap_site_before'); ?>
 
-  <div id="page" class="min-h-screen flex flex-col">
+  <div id="page" class="min-h-screen flex flex-col pt-[88px] lg:pt-[112px] xl:pt-0">
 
     <?php do_action('fiap_header'); ?>
 
-    <header>
+    <header id="site-header" class="site-header fixed top-0 left-0 w-full z-40 bg-transparent xl:relative">
 
-      <div class="mx-auto container">
-        <div class="py-4 lg:flex lg:justify-between lg:items-center lg:pt-11 lg:pb-6">
-          <div class="flex w-full justify-between items-center">
-            <div>
-              <a href="<?php echo site_url() ?>"><img class="h-14 lg:h-auto" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo-fiap.svg'  ?>" alt="FIAP" class=""></a>
-            </div>
-
-            <div class="hidden xl:flex items-center gap-x-4">
-              <button type="button" class="bg-fiap-teal text-white text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-transparent shadow-md hover:bg-fiap-teal-hover hover:shadow-lg transition-all duration-300">Member Login</button>
-              <button type="button" class="bg-white text-fiap-darkblue text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-fiap-darkblue shadow-md hover:border-transparent hover:bg-fiap-darkblue hover:text-white hover:shadow-lg transition-all duration-300">Contact Us</button>
-              <button type="button" class="text-white bg-fiap-darkblue rounded-full p-3 shadow-md hover:shadow-lg transition-all duration-300"><?php echo fiap_icon(array('icon' => 'accessibility', 'group' => 'utility', 'size' => '24', 'class' => '')) ?></button>
-            </div>
-            <div class="xl:hidden">
-              <a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
-                <svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-                    <g id="icon-shape">
-                      <path d="M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z" id="Combined-Shape"></path>
-                    </g>
-                  </g>
-                </svg>
-              </a>
-            </div>
+      <div class="header-top bg-white">
+        <div class="flex w-full justify-between items-center">
+          <div class="site-logo">
+            <a href="<?php echo site_url() ?>"><img class="" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo-fiap.svg'  ?>" alt="FIAP"></a>
           </div>
+          <div class="site-header-buttons hidden xl:flex items-center gap-x-4">
+            <button type="button" class="bg-fiap-teal text-white text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-transparent shadow-md hover:bg-fiap-teal-hover hover:shadow-lg transition-all duration-300">Member Login</button>
+            <button type="button" class="bg-white text-fiap-darkblue text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-fiap-darkblue shadow-md hover:border-transparent hover:bg-fiap-darkblue hover:text-white hover:shadow-lg transition-all duration-300">Contact Us</button>
+            <button type="button" class="text-white bg-fiap-darkblue rounded-full p-3 shadow-md hover:shadow-lg transition-all duration-300"><?php echo fiap_icon(array('icon' => 'accessibility', 'group' => 'utility', 'size' => '24', 'class' => '')) ?></button>
+          </div>
+          <button id="mobilemenuToggle" class="xl:hidden">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div id="mobilemenuDrawer" class="">
+        <div class="px-6 pt-24 pb-6">
+          <?php
+          wp_nav_menu(
+            array(
+              'container_id'    => 'mobile-menu',
+              'container_class' => '',
+              'menu_id'         => 'menu-mobile-menu',
+              'menu_class'      => '',
+              'theme_location'  => 'primary',
+              'li_class'        => '',
+              'fallback_cb'     => false,
+              'walker' => new Mobile_Menu_Walker(),
+            )
+          );
+          ?>
         </div>
       </div>
 
-      <div class="hidden xl:block bg-fiap-darkblue">
+      <div class="site-nav hidden xl:block bg-fiap-darkblue">
         <div class="mx-auto container">
           <div class="flex justify-between items-end">
             <?php
             wp_nav_menu(
               array(
-                'container_id'    => 'primary-menu',
+                'container_id'    => 'desktop-menu',
                 'container_class' => '',
-                'menu_class'      => 'flex text-white items-end gap-x-14 text-base',
+                'menu_class'      => 'flex text-white items-end gap-x-8 text-base 2xl:gap-x-14',
                 'theme_location'  => 'primary',
                 'li_class'        => '',
                 'fallback_cb'     => false,

@@ -20,7 +20,7 @@ $journey_cards = get_sub_field('journey_cards');
       </div>
     <?php } ?>
     <?php if ($journey_cards) { ?>
-      <div class="grid grid-cols-3 gap-x-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 lg:gap-10">
         <?php foreach ($journey_cards as $card) : ?>
           <div class="px-8 pt-12 pb-8 rounded-xl bg-white xl:px-12 xl:pt-16 xl:pb-12">
             <h4 class="mb-4"><?php echo $card['card_title'] ?></h4>

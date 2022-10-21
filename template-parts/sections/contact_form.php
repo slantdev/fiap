@@ -14,11 +14,11 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
     <div>
       <?php get_template_part('template-parts/components/heading', '', array('field' => 'heading', 'class' => '')); ?>
     </div>
-    <div class="flex gap-x-20">
-      <div class="w-1/2">
+    <div class="flex flex-wrap lg:flex-nowrap lg:gap-x-20">
+      <div class="w-full lg:w-1/2">
         <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'xl:prose-lg')); ?>
       </div>
-      <div class="w-1/2">
+      <div class="w-full lg:w-1/2">
         <div class="flex flex-col gap-y-4">
           <div>
             <label class="block mb-1" for="">Name <span class="text-red-500">*</span></label>

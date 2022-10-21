@@ -19,10 +19,10 @@ if ($big_image_column) {
 <section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>">
   <div class="relative container mx-auto <?php echo $section_padding_top . ' ' . $section_padding_bottom ?>">
     <div class="flex flex-wrap lg:flex-nowrap lg:gap-x-16 xl:gap-x-24 3xl:gap-x-36">
-      <div class="w-full order-2 <?php echo $column_image_class ?>">
+      <div class="w-full order-1 lg:order-2 <?php echo $column_image_class ?>">
         <?php get_template_part('template-parts/components/image', '', array('class' => 'aspect-square lg:aspect-[3/4] object-cover')); ?>
       </div>
-      <div class="w-full order-1 <?php echo $column_text_class ?>">
+      <div class="w-full order-2 lg:order-1 <?php echo $column_text_class ?>">
         <?php get_template_part('template-parts/components/heading', '', array('field' => 'heading', 'class' => '')); ?>
         <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'max-w-none xl:prose-lg')); ?>
         <?php get_template_part('template-parts/components/buttons', '', array('field' => 'buttons', 'class' => 'mt-6 xl:mt-12')); ?>

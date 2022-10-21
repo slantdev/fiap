@@ -11,9 +11,9 @@
   <?php do_action('fiap_footer'); ?>
 
   <div class="container mx-auto border-b border-neutral-300 py-12 md:py-16 lg:py-24">
-    <div class="flex flex-wrap gap-y-6 lg:flex-nowrap lg:gap-x-24 xl:gap-x-32 items-center">
+    <div class="flex flex-wrap gap-y-10 lg:flex-nowrap lg:gap-x-24 xl:gap-x-32 items-center">
       <div class="w-full lg:w-3/5">
-        <div class="flex flex-wrap gap-y-6 md:flex-nowrap md:divide-x md:divide-neutral-300 md:space-x-6">
+        <div class="flex flex-wrap gap-y-10 md:flex-nowrap md:divide-x md:divide-neutral-300 md:space-x-6">
           <img class="h-16 xl:h-20" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo-goodshepherd.svg'  ?>" />
           <img class="h-16 xl:h-20 md:pl-6" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo-fiap.svg'  ?>" />
         </div>

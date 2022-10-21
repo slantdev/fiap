@@ -29,7 +29,7 @@ function filter_news()
 
   if ($ajaxposts->have_posts()) {
 
-    $response .= '<div class="grid grid-cols-3 gap-10">';
+    $response .= '<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8 2xl:gap-10">';
 
     while ($ajaxposts->have_posts()) : $ajaxposts->the_post();
       $excerpt = wp_trim_words(get_the_excerpt(), $num_words = 30, $more = null);
@@ -84,7 +84,7 @@ function filter_case_study()
 
   if ($ajaxposts->have_posts()) {
 
-    $response .= '<div class="grid grid-cols-3 gap-10">';
+    $response .= '<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8 2xl:gap-10">';
 
     while ($ajaxposts->have_posts()) : $ajaxposts->the_post();
       $excerpt = wp_trim_words(get_the_excerpt(), $num_words = 30, $more = null);
@@ -138,7 +138,7 @@ function filter_fiapmembers()
 
   if ($ajaxposts->have_posts()) {
 
-    $response .= '<div class="grid grid-cols-3 gap-10">';
+    $response .= '<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8 2xl:gap-10">';
 
     while ($ajaxposts->have_posts()) : $ajaxposts->the_post();
 

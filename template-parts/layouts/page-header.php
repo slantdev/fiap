@@ -30,18 +30,18 @@ if ($enabled) :
   }
 ?>
   <section>
-    <div class="relative bg-cover bg-no-repeat h-[30rem]" style="<?php echo $hero_bg_style; ?>">
+    <div class="relative bg-cover bg-no-repeat h-96 md:h-[30rem]" style="<?php echo $hero_bg_style; ?>">
       <div class="container mx-auto h-full relative z-10">
-        <div class="flex h-full items-center pt-14">
-          <div class="w-3/5 text-white">
+        <div class="flex h-full items-center pt-6 md:pt-14">
+          <div class="md:w-3/4 lg:w-3/5 text-white">
             <?php
             if ($hero_title) {
-              echo '<h1 class="text-[54px] font-light leading-[1.1em] mb-4">' . $hero_title . '</h1>';
+              echo '<h1 class="text-4xl md:text-5xl lg:text-[54px] font-light leading-[1.1em] mb-4">' . $hero_title . '</h1>';
             }
             ?>
             <?php
             if ($hero_text) {
-              echo '<div class="text-lg">' . $hero_text . '</div>';
+              echo '<div class="text-base md:text-lg">' . $hero_text . '</div>';
             }
             ?>
           </div>

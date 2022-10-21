@@ -140,4 +140,19 @@ require get_template_directory() . '/inc/card.php';
 require get_template_directory() . '/inc/acf.php';
 require get_template_directory() . '/inc/breadcrumb.php';
 require get_template_directory() . '/inc/filters.php';
+require get_template_directory() . '/inc/walker-nav.php';
 //require get_template_directory() . '/inc/acf-debug.php';
+
+function fiap_add_arrow_to_parent_menu_item($sorted_menu_items, $args)
+{
+  if ($args->menu_id == 'menu-mobile-menu') {
+    foreach ($sorted_menu_items as $menu_item) {
+      preint_r($menu_item);
+      if (array_search('menu-item-has-children', $menu_item->classes) != FALSE) {
+        $menu_item->title = $menu_item->title . '<button class="inline-block w-6 h-6 bg-slate-100 rounded text-slate-500"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"/></svg></button>';
+      }
+    }
+  }
+  return $sorted_menu_items;
+}
+//add_filter('wp_nav_menu_objects', 'fiap_add_arrow_to_parent_menu_item', 10, 2);
