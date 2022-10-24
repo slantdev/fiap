@@ -11,7 +11,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
 
 <section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>">
   <div class="<?php echo $section_container_class ?>">
-    <?php get_template_part('template-parts/components/heading', '', array('field' => 'heading', 'class' => 'text-center')); ?>
+    <?php get_template_part('template-parts/components/heading', '', array('field' => 'heading', 'class' => 'text-center max-w-screen-lg mx-auto')); ?>
     <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'max-w-screen-lg xl:prose-lg')); ?>
 
     <?php
@@ -33,7 +33,8 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
     if ($the_query->have_posts()) {
 
       if ($team_layout == 'layout-01') {
-        echo '<div class="grid grid-cols-1 gap-y-0 mt-8 md:grid-cols-3 md:gap-y-10 lg:gap-y-12 lg:mt-12 xl:gap-y-0">';
+        //echo '<div class="grid grid-cols-1 gap-y-0 mt-8 md:grid-cols-3 md:gap-y-10 lg:gap-y-12 lg:mt-12 xl:gap-y-0">';
+        echo '<div class="flex flex-wrap md:flex-nowrap mt-8 lg:mt-12 justify-center">';
       } else {
         echo '<div class="grid grid-cols-2 gap-x-6 gap-y-8 mt-8 md:grid-cols-4 md:gap-x-8 md:gap-y-10 lg:gap-x-24 lg:gap-y-12 lg:mt-20 xl:gap-x-44 xl:gap-y-16">';
       }

@@ -200,7 +200,7 @@ function card_team_member($atts = array())
 
   $output = '';
   if ($atts['layout'] == 'layout-01') {
-    $output .= '<button type="button" class="block w-full text-left bg-white border border-solid border-slate-200 py-8 px-6 xl:px-12" data-bs-toggle="modal" data-bs-target="#' . $slug . '">';
+    $output .= '<button type="button" class="block w-full max-w-md text-left bg-white border border-solid border-slate-200 py-8 px-6 xl:px-12" data-bs-toggle="modal" data-bs-target="#' . $slug . '">';
   } else {
     $output .= '<button type="button" class="block w-full text-left" data-bs-toggle="modal" data-bs-target="#' . $slug . '">';
   }
