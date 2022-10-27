@@ -164,3 +164,89 @@ function filter_fiapmembers()
 }
 add_action('wp_ajax_filter_fiapmembers', 'filter_fiapmembers');
 add_action('wp_ajax_nopriv_filter_fiapmembers', 'filter_fiapmembers');
+
+function filter_whitepapers()
+{
+  $search_query = $_POST['query'];
+  $search_filter = $_POST['filter'];
+
+  if ($search_query) {
+    if ($search_filter == 'all') {
+      $args = array(
+        'post_type' => 'white_paper',
+        'posts_per_page' => -1,
+        'orderby' => 'term_order',
+        's' => $search_query
+      );
+    } else {
+      $args = array(
+        'post_type' => 'white_paper',
+        'posts_per_page' => -1,
+        'orderby' => 'term_order',
+        's' => $search_query,
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'white_paper_category',
+            'field'    => 'term_id',
+            'terms'    => $search_filter,
+          ),
+        ),
+      );
+    }
+  } else {
+    if ($search_filter == 'all') {
+      $args = array(
+        'post_type' => 'white_paper',
+        'posts_per_page' => -1,
+        'orderby' => 'term_order',
+      );
+    } else {
+      $args = array(
+        'post_type' => 'white_paper',
+        'posts_per_page' => -1,
+        'orderby' => 'term_order',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'white_paper_category',
+            'field'    => 'term_id',
+            'terms'    => $search_filter,
+          ),
+        ),
+      );
+    }
+  }
+
+  $ajaxposts = new WP_Query($args);
+
+  $response = '';
+
+  if ($ajaxposts->have_posts()) {
+
+    $response .= '<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8 2xl:gap-10">';
+
+    while ($ajaxposts->have_posts()) : $ajaxposts->the_post();
+
+      $terms = get_the_terms(get_the_ID(), 'white_paper_category');
+      $terms_string = join(',', wp_list_pluck($terms, 'name'));
+      $terms_array = explode(',', $terms_string);
+      $atts = array(
+        'title' => get_the_title(),
+        'date' => get_the_date('j M Y'),
+        'link' => get_the_permalink(),
+        'terms' => $terms_array,
+      );
+      $response .= card_papers($atts);
+
+    endwhile;
+
+    $response .= '</div>';
+    $response .= '<div class="blocker absolute inset-0 bg-white bg-opacity-40" style="display: none;"></div>';
+  } else {
+    $response = '<div class="text-center py-4 px-8">No Posts Found</div>';
+  }
+
+  echo $response;
+  exit;
+}
+add_action('wp_ajax_filter_whitepapers', 'filter_whitepapers');
+add_action('wp_ajax_nopriv_filter_whitepapers', 'filter_whitepapers');

@@ -94,6 +94,38 @@ jQuery(function ($) {
     });
   });
 
+  // White Papers Search
+  $('#whitepaper-search-button').on('click', function (event) {
+    let search_query = $('#whitepaper-search').val();
+    let search_filter = $('#whitepaper-filter').find(':selected').val();
+    console.log('Query :', search_query);
+    console.log('Filter :', search_filter);
+
+    $.ajax({
+      type: 'POST',
+      url: '/wp-admin/admin-ajax.php',
+      dataType: 'html',
+      data: {
+        action: 'filter_whitepapers',
+        query: search_query,
+        filter: search_filter,
+      },
+      beforeSend: function () {
+        $('#whitepaper-search-button .spinner-border')
+          .removeClass('opacity-0')
+          .addClass('opacity-100');
+        $('.whitepapers-grid .blocker').show();
+      },
+      success: function (res) {
+        $('.whitepapers-grid').html(res);
+        $('#whitepaper-search-button .spinner-border')
+          .removeClass('opacity-100')
+          .addClass('opacity-0');
+      },
+    });
+  });
+
+  // Mobile Menu
   $('#mobilemenuToggle').on('click', function (event) {
     event.preventDefault;
     $(this).toggleClass('active');

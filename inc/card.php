@@ -129,11 +129,11 @@ function card_papers($atts = array())
 
   $output = '';
 
-  $output .= '<div class="rounded-lg bg-fiap-light py-10 px-10 flex flex-col border border-neutral-200">';
+  $output .= '<div class="rounded-lg bg-fiap-light p-6 xl:py-10 xl:px-10 flex flex-col border border-neutral-200">';
   $output .= '<div class="text-sm uppercase tracking-wider mb-4 text-neutral-500">' . $date . '</div>';
-  $output .= '<h3 class="text-xl mb-6">' . $title . '</h3>';
+  $output .= '<h3 class="text-xl leading-tight mb-6"><a href="' . $link . '" class="hover:underline">' . $title . '</a></h3>';
   if ($terms) {
-    $output .= '<div class="flex gap-3 mb-20">';
+    $output .= '<div class="flex gap-3 mb-10">';
     foreach ($terms as $term) {
       $output .= '<div class="rounded-md border border-fiap-red py-2 px-4 text-sm bg-white text-center text-fiap-red">' . $term . '</div>';
     }
