@@ -24,9 +24,24 @@
     > thead > tr:nth-child(2) > th {
       @apply border border-solid border-fiap-darkblue border-opacity-60 p-3 bg-fiap-darkblue bg-opacity-80;
     }
-    thead th input.text_filter,
-    tfoot td input.text_filter {
-      @apply px-2 min-w-[100px] bg-white !h-8 text-xs leading-tight focus:!bg-white;
+    thead,
+    tfoot {
+      th,
+      td {
+        input.text_filter,
+        .wdt-multiselect-filter {
+          @apply px-2 min-w-[100px] bg-white !h-8 text-xs leading-tight focus:!bg-white;
+        }
+        .wdt-multiselect-filter {
+          @apply pr-5;
+          > .btn-default {
+            @apply p-0 !h-8 text-slate-500;
+            &:before {
+              @apply -right-1 top-0.5;
+            }
+          }
+        }
+      }
     }
     td {
       @apply whitespace-normal p-3 align-top leading-snug border border-solid border-slate-200;
