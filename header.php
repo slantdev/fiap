@@ -84,9 +84,15 @@
             );
             ?>
             <div class="py-3 pl-6">
-              <form class="relative">
+              <!-- <form class="relative">
                 <input type="text" placeholder="Search" class="rounded-md px-3 py-2.5 w-full min-w-[260px] border-transparent" />
                 <?php echo fiap_icon(array('icon' => 'search', 'group' => 'utility', 'size' => '20', 'class' => 'absolute right-3 top-3 text-fiap-dark-blue')) ?>
+              </form> -->
+              <form id="header-searchform" class="flex relative bg-white border border-gray-100 shadow-xl rounded-md" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+                <input id="searchform-input" type="text" class="text-gray-700 px-3 py-2.5 w-full min-w-[260px] bg-transparent border-transparent focus:outline-none focus:border-transparent focus:ring-0" name="s" placeholder="Search" value="<?php echo get_search_query(); ?>">
+                <button class="flex-none w-[46px] h-[46px] flex items-center justify-center text-sm rounded-full bg-primary font-semibold text-fiap-dark-blue hover:bg-opacity-80 whitespace-nowrap cursor-pointer" type="submit">
+                  <?php echo fiap_icon(array('icon' => 'search', 'group' => 'utility', 'size' => '20', 'class' => 'text-fiap-dark-blue')) ?>
+                </button>
               </form>
             </div>
           </div>

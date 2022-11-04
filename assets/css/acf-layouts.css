@@ -4865,6 +4865,10 @@ textarea.form-control.is-invalid {
   top: 33.333333%;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -7215,6 +7219,14 @@ textarea.form-control.is-invalid {
   height: 6rem;
 }
 
+.h-\[46px\] {
+  height: 46px;
+}
+
+.h-\[57vh\] {
+  height: 57vh;
+}
+
 .max-h-\[512px\] {
   max-height: 512px;
 }
@@ -7335,6 +7347,10 @@ textarea.form-control.is-invalid {
   width: 6rem;
 }
 
+.w-\[46px\] {
+  width: 46px;
+}
+
 .min-w-\[260px\] {
   min-width: 260px;
 }
@@ -7413,6 +7429,10 @@ textarea.form-control.is-invalid {
   max-width: 360px;
 }
 
+.max-w-4xl {
+  max-width: 56rem;
+}
+
 .flex-none {
   flex: none;
 }
@@ -7447,6 +7467,11 @@ textarea.form-control.is-invalid {
 
 .rotate-180 {
   --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-0 {
+  --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -7734,6 +7759,16 @@ textarea.form-control.is-invalid {
   border-radius: 0.125rem;
 }
 
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.rounded-l-lg {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -7829,6 +7864,11 @@ textarea.form-control.is-invalid {
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.border-gray-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
 .bg-gray-200 {
@@ -9011,6 +9051,14 @@ textarea.form-control.is-invalid {
   padding-left: 0.875rem;
 }
 
+.pt-\[160px\] {
+  padding-top: 160px;
+}
+
+.pl-\[0\.25em\] {
+  padding-left: 0.25em;
+}
+
 .text-left {
   text-align: left;
 }
@@ -9101,6 +9149,10 @@ textarea.form-control.is-invalid {
 
 .text-\[1\.75rem\] {
   font-size: 1.75rem;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
 }
 
 .font-light {
@@ -9279,6 +9331,10 @@ textarea.form-control.is-invalid {
   opacity: 1;
 }
 
+.opacity-60 {
+  opacity: 0.6;
+}
+
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -9300,6 +9356,12 @@ textarea.form-control.is-invalid {
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -10659,6 +10721,10 @@ h7 {
   --tw-bg-opacity: 0.75;
 }
 
+.hover\:bg-opacity-80:hover {
+  --tw-bg-opacity: 0.8;
+}
+
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -10729,6 +10795,10 @@ h7 {
 .focus\:border-neutral-200:focus {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
+}
+
+.focus\:border-transparent:focus {
+  border-color: transparent;
 }
 
 .focus\:opacity-100:focus {
@@ -16069,8 +16139,16 @@ h7 {
     margin-left: -0.875rem;
   }
 
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:h-12 {
@@ -20939,6 +21017,10 @@ h7 {
     padding-left: 0.875rem;
   }
 
+  .lg\:pt-\[180px\] {
+    padding-top: 180px;
+  }
+
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -23352,6 +23434,10 @@ h7 {
     height: 700px;
   }
 
+  .xl\:h-\[57vh\] {
+    height: 57vh;
+  }
+
   .xl\:w-12 {
     width: 3rem;
   }
@@ -23362,6 +23448,10 @@ h7 {
 
   .xl\:w-16 {
     width: 4rem;
+  }
+
+  .xl\:w-full {
+    width: 100%;
   }
 
   .xl\:min-w-\[360px\] {
@@ -24514,8 +24604,16 @@ h7 {
     line-height: 1;
   }
 
+  .xl\:text-\[50px\] {
+    font-size: 50px;
+  }
+
   .xl\:leading-\[1\.1em\] {
     line-height: 1.1em;
+  }
+
+  .xl\:opacity-100 {
+    opacity: 1;
   }
 }
 
