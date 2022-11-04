@@ -7674,6 +7674,10 @@ textarea.form-control.is-invalid {
   overflow-x: hidden;
 }
 
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
 .overflow-y-visible {
   overflow-y: visible;
 }
