@@ -4865,10 +4865,6 @@ textarea.form-control.is-invalid {
   top: 33.333333%;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .z-40 {
   z-index: 40;
 }
@@ -5907,6 +5903,18 @@ textarea.form-control.is-invalid {
   margin-left: 0px;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
@@ -5917,10 +5925,6 @@ textarea.form-control.is-invalid {
 
 .mt-1 {
   margin-top: 0.25rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
 }
 
 .mt-auto {
@@ -5941,10 +5945,6 @@ textarea.form-control.is-invalid {
 
 .mb-12 {
   margin-bottom: 3rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 
 .mr-8 {
@@ -6009,10 +6009,6 @@ textarea.form-control.is-invalid {
 
 .mt-0 {
   margin-top: 0px;
-}
-
-.mb-0 {
-  margin-bottom: 0px;
 }
 
 .-mt-px {
@@ -7107,6 +7103,10 @@ textarea.form-control.is-invalid {
   height: 1.5rem;
 }
 
+.h-\[46px\] {
+  height: 46px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -7203,14 +7203,6 @@ textarea.form-control.is-invalid {
   height: 6rem;
 }
 
-.h-\[46px\] {
-  height: 46px;
-}
-
-.h-\[57vh\] {
-  height: 57vh;
-}
-
 .max-h-\[512px\] {
   max-height: 512px;
 }
@@ -7233,6 +7225,14 @@ textarea.form-control.is-invalid {
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-\[46px\] {
+  width: 46px;
+}
+
+.w-1\/4 {
+  width: 25%;
 }
 
 .w-8 {
@@ -7269,10 +7269,6 @@ textarea.form-control.is-invalid {
 
 .w-3\/4 {
   width: 75%;
-}
-
-.w-1\/4 {
-  width: 25%;
 }
 
 .w-5 {
@@ -7327,10 +7323,6 @@ textarea.form-control.is-invalid {
   width: 6rem;
 }
 
-.w-\[46px\] {
-  width: 46px;
-}
-
 .min-w-\[260px\] {
   min-width: 260px;
 }
@@ -7373,6 +7365,10 @@ textarea.form-control.is-invalid {
   max-width: 28rem;
 }
 
+.max-w-4xl {
+  max-width: 56rem;
+}
+
 .max-w-xs {
   max-width: 20rem;
 }
@@ -7409,10 +7405,6 @@ textarea.form-control.is-invalid {
   max-width: 360px;
 }
 
-.max-w-4xl {
-  max-width: 56rem;
-}
-
 .flex-none {
   flex: none;
 }
@@ -7447,11 +7439,6 @@ textarea.form-control.is-invalid {
 
 .rotate-180 {
   --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-0 {
-  --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -7699,10 +7686,6 @@ textarea.form-control.is-invalid {
   overflow-x: hidden;
 }
 
-.overflow-y-hidden {
-  overflow-y: hidden;
-}
-
 .overflow-y-visible {
   overflow-y: visible;
 }
@@ -7797,6 +7780,11 @@ textarea.form-control.is-invalid {
   border-color: rgb(0 47 86 / var(--tw-border-opacity));
 }
 
+.border-gray-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-border-opacity));
+}
+
 .border-neutral-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
@@ -7840,11 +7828,6 @@ textarea.form-control.is-invalid {
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
-}
-
-.border-gray-100 {
-  --tw-border-opacity: 1;
-  border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
 .bg-slate-50 {
@@ -8163,6 +8146,11 @@ textarea.form-control.is-invalid {
   padding-bottom: 0.625rem;
 }
 
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -8171,11 +8159,6 @@ textarea.form-control.is-invalid {
 .py-36 {
   padding-top: 9rem;
   padding-bottom: 9rem;
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .py-24 {
@@ -9027,14 +9010,6 @@ textarea.form-control.is-invalid {
   padding-left: 0.875rem;
 }
 
-.pt-\[160px\] {
-  padding-top: 160px;
-}
-
-.pl-\[0\.25em\] {
-  padding-left: 0.25em;
-}
-
 .text-left {
   text-align: left;
 }
@@ -9076,6 +9051,11 @@ textarea.form-control.is-invalid {
   line-height: 1.75rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -9114,21 +9094,12 @@ textarea.form-control.is-invalid {
   font-size: 18px;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .text-\[30px\] {
   font-size: 30px;
 }
 
 .text-\[1\.75rem\] {
   font-size: 1.75rem;
-}
-
-.text-\[32px\] {
-  font-size: 32px;
 }
 
 .font-light {
@@ -9171,6 +9142,10 @@ textarea.form-control.is-invalid {
   line-height: 1;
 }
 
+.leading-\[1\.1em\] {
+  line-height: 1.1em;
+}
+
 .leading-5 {
   line-height: 1.25rem;
 }
@@ -9181,10 +9156,6 @@ textarea.form-control.is-invalid {
 
 .leading-\[1\.25em\] {
   line-height: 1.25em;
-}
-
-.leading-\[1\.1em\] {
-  line-height: 1.1em;
 }
 
 .leading-normal {
@@ -9203,12 +9174,12 @@ textarea.form-control.is-invalid {
   line-height: 1.375;
 }
 
-.tracking-wider {
-  letter-spacing: 0.05em;
-}
-
 .tracking-tight {
   letter-spacing: -0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
 }
 
 .text-gray-800 {
@@ -9231,6 +9202,16 @@ textarea.form-control.is-invalid {
   color: rgb(0 47 86 / var(--tw-text-opacity));
 }
 
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-fiap-teal {
   --tw-text-opacity: 1;
   color: rgb(0 167 157 / var(--tw-text-opacity));
@@ -9251,11 +9232,6 @@ textarea.form-control.is-invalid {
   color: rgb(191 32 49 / var(--tw-text-opacity));
 }
 
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
 .text-current {
   color: currentColor;
 }
@@ -9263,11 +9239,6 @@ textarea.form-control.is-invalid {
 .text-\[\#868686\] {
   --tw-text-opacity: 1;
   color: rgb(134 134 134 / var(--tw-text-opacity));
-}
-
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .text-red-500 {
@@ -9307,13 +9278,15 @@ textarea.form-control.is-invalid {
   opacity: 1;
 }
 
-.opacity-60 {
-  opacity: 0.6;
-}
-
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -9332,12 +9305,6 @@ textarea.form-control.is-invalid {
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-xl {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -10476,6 +10443,1063 @@ h7 {
 .mepr_password_reset_requested {
   max-width: 36rem;
   text-align: center;
+}
+
+#mepr-unauthorized-for-resource {
+  display: none;
+}
+
+.mepr-unauthorized-message {
+  color: #000;
+  max-width: 65ch;
+}
+
+.mepr-unauthorized-message :where([class~="lead"]):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-lead);
+  font-size: 1.25em;
+  line-height: 1.6;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.mepr-unauthorized-message :where(a):not(:where([class~="not-prose"] *)) {
+  color: #00A79D;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.mepr-unauthorized-message :where(a):not(:where([class~="not-prose"] *)):hover {
+  color: #00A79D;
+}
+
+.mepr-unauthorized-message :where(strong):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-bold);
+  font-weight: 600;
+}
+
+.mepr-unauthorized-message :where(a strong):not(:where([class~="not-prose"] *)) {
+  color: inherit;
+}
+
+.mepr-unauthorized-message :where(blockquote strong):not(:where([class~="not-prose"] *)) {
+  color: inherit;
+}
+
+.mepr-unauthorized-message :where(thead th strong):not(:where([class~="not-prose"] *)) {
+  color: inherit;
+}
+
+.mepr-unauthorized-message :where(ol):not(:where([class~="not-prose"] *)) {
+  list-style-type: decimal;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-left: 1.625em;
+}
+
+.mepr-unauthorized-message :where(ol[type="A"]):not(:where([class~="not-prose"] *)) {
+  list-style-type: upper-alpha;
+}
+
+.mepr-unauthorized-message :where(ol[type="a"]):not(:where([class~="not-prose"] *)) {
+  list-style-type: lower-alpha;
+}
+
+.mepr-unauthorized-message :where(ol[type="A" s]):not(:where([class~="not-prose"] *)) {
+  list-style-type: upper-alpha;
+}
+
+.mepr-unauthorized-message :where(ol[type="a" s]):not(:where([class~="not-prose"] *)) {
+  list-style-type: lower-alpha;
+}
+
+.mepr-unauthorized-message :where(ol[type="I"]):not(:where([class~="not-prose"] *)) {
+  list-style-type: upper-roman;
+}
+
+.mepr-unauthorized-message :where(ol[type="i"]):not(:where([class~="not-prose"] *)) {
+  list-style-type: lower-roman;
+}
+
+.mepr-unauthorized-message :where(ol[type="I" s]):not(:where([class~="not-prose"] *)) {
+  list-style-type: upper-roman;
+}
+
+.mepr-unauthorized-message :where(ol[type="i" s]):not(:where([class~="not-prose"] *)) {
+  list-style-type: lower-roman;
+}
+
+.mepr-unauthorized-message :where(ol[type="1"]):not(:where([class~="not-prose"] *)) {
+  list-style-type: decimal;
+}
+
+.mepr-unauthorized-message :where(ul):not(:where([class~="not-prose"] *)) {
+  list-style-type: disc;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-left: 1.625em;
+}
+
+.mepr-unauthorized-message :where(ol > li):not(:where([class~="not-prose"] *))::marker {
+  font-weight: 400;
+  color: var(--tw-prose-counters);
+}
+
+.mepr-unauthorized-message :where(ul > li):not(:where([class~="not-prose"] *))::marker {
+  color: var(--tw-prose-bullets);
+}
+
+.mepr-unauthorized-message :where(hr):not(:where([class~="not-prose"] *)) {
+  border-color: var(--tw-prose-hr);
+  border-top-width: 1px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.mepr-unauthorized-message :where(blockquote):not(:where([class~="not-prose"] *)) {
+  font-weight: 500;
+  font-style: italic;
+  color: var(--tw-prose-quotes);
+  border-left-width: 0.25rem;
+  border-left-color: var(--tw-prose-quote-borders);
+  quotes: "\201C""\201D""\2018""\2019";
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  padding-left: 1em;
+}
+
+.mepr-unauthorized-message :where(blockquote p:first-of-type):not(:where([class~="not-prose"] *))::before {
+  content: open-quote;
+}
+
+.mepr-unauthorized-message :where(blockquote p:last-of-type):not(:where([class~="not-prose"] *))::after {
+  content: close-quote;
+}
+
+.mepr-unauthorized-message :where(h1):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-headings);
+  font-weight: 800;
+  font-size: 2.25em;
+  margin-top: 0;
+  margin-bottom: 0.8888889em;
+  line-height: 1.1111111;
+}
+
+.mepr-unauthorized-message :where(h1 strong):not(:where([class~="not-prose"] *)) {
+  font-weight: 900;
+  color: inherit;
+}
+
+.mepr-unauthorized-message :where(h2):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-headings);
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.3333333;
+}
+
+.mepr-unauthorized-message :where(h2 strong):not(:where([class~="not-prose"] *)) {
+  font-weight: 800;
+  color: inherit;
+}
+
+.mepr-unauthorized-message :where(h3):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  font-size: 1.25em;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+  line-height: 1.6;
+}
+
+.mepr-unauthorized-message :where(h3 strong):not(:where([class~="not-prose"] *)) {
+  font-weight: 700;
+  color: inherit;
+}
+
+.mepr-unauthorized-message :where(h4):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.mepr-unauthorized-message :where(h4 strong):not(:where([class~="not-prose"] *)) {
+  font-weight: 700;
+  color: inherit;
+}
+
+.mepr-unauthorized-message :where(img):not(:where([class~="not-prose"] *)) {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.mepr-unauthorized-message :where(figure > *):not(:where([class~="not-prose"] *)) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mepr-unauthorized-message :where(figcaption):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-captions);
+  font-size: 0.875em;
+  line-height: 1.4285714;
+  margin-top: 0.8571429em;
+}
+
+.mepr-unauthorized-message :where(code):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-code);
+  font-weight: 600;
+  font-size: 0.875em;
+}
+
+.mepr-unauthorized-message :where(code):not(:where([class~="not-prose"] *))::before {
+  content: "`";
+}
+
+.mepr-unauthorized-message :where(code):not(:where([class~="not-prose"] *))::after {
+  content: "`";
+}
+
+.mepr-unauthorized-message :where(a code):not(:where([class~="not-prose"] *)) {
+  color: inherit;
+}
+
+.mepr-unauthorized-message :where(h1 code):not(:where([class~="not-prose"] *)) {
+  color: inherit;
+}
+
+.mepr-unauthorized-message :where(h2 code):not(:where([class~="not-prose"] *)) {
+  color: inherit;
+  font-size: 0.875em;
+}
+
+.mepr-unauthorized-message :where(h3 code):not(:where([class~="not-prose"] *)) {
+  color: inherit;
+  font-size: 0.9em;
+}
+
+.mepr-unauthorized-message :where(h4 code):not(:where([class~="not-prose"] *)) {
+  color: inherit;
+}
+
+.mepr-unauthorized-message :where(blockquote code):not(:where([class~="not-prose"] *)) {
+  color: inherit;
+}
+
+.mepr-unauthorized-message :where(thead th code):not(:where([class~="not-prose"] *)) {
+  color: inherit;
+}
+
+.mepr-unauthorized-message :where(pre):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-pre-code);
+  background-color: var(--tw-prose-pre-bg);
+  overflow-x: auto;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 1.7142857;
+  margin-top: 1.7142857em;
+  margin-bottom: 1.7142857em;
+  border-radius: 0.375rem;
+  padding-top: 0.8571429em;
+  padding-right: 1.1428571em;
+  padding-bottom: 0.8571429em;
+  padding-left: 1.1428571em;
+}
+
+.mepr-unauthorized-message :where(pre code):not(:where([class~="not-prose"] *)) {
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  padding: 0;
+  font-weight: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.mepr-unauthorized-message :where(pre code):not(:where([class~="not-prose"] *))::before {
+  content: none;
+}
+
+.mepr-unauthorized-message :where(pre code):not(:where([class~="not-prose"] *))::after {
+  content: none;
+}
+
+.mepr-unauthorized-message :where(table):not(:where([class~="not-prose"] *)) {
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 0.875em;
+  line-height: 1.7142857;
+}
+
+.mepr-unauthorized-message :where(thead):not(:where([class~="not-prose"] *)) {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--tw-prose-th-borders);
+}
+
+.mepr-unauthorized-message :where(thead th):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  vertical-align: bottom;
+  padding-right: 0.5714286em;
+  padding-bottom: 0.5714286em;
+  padding-left: 0.5714286em;
+}
+
+.mepr-unauthorized-message :where(tbody tr):not(:where([class~="not-prose"] *)) {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--tw-prose-td-borders);
+}
+
+.mepr-unauthorized-message :where(tbody tr:last-child):not(:where([class~="not-prose"] *)) {
+  border-bottom-width: 0;
+}
+
+.mepr-unauthorized-message :where(tbody td):not(:where([class~="not-prose"] *)) {
+  vertical-align: baseline;
+}
+
+.mepr-unauthorized-message :where(tfoot):not(:where([class~="not-prose"] *)) {
+  border-top-width: 1px;
+  border-top-color: var(--tw-prose-th-borders);
+}
+
+.mepr-unauthorized-message :where(tfoot td):not(:where([class~="not-prose"] *)) {
+  vertical-align: top;
+}
+
+.mepr-unauthorized-message {
+  --tw-prose-body: #374151;
+  --tw-prose-headings: #111827;
+  --tw-prose-lead: #4b5563;
+  --tw-prose-links: #111827;
+  --tw-prose-bold: #111827;
+  --tw-prose-counters: #6b7280;
+  --tw-prose-bullets: #d1d5db;
+  --tw-prose-hr: #e5e7eb;
+  --tw-prose-quotes: #111827;
+  --tw-prose-quote-borders: #e5e7eb;
+  --tw-prose-captions: #6b7280;
+  --tw-prose-code: #111827;
+  --tw-prose-pre-code: #e5e7eb;
+  --tw-prose-pre-bg: #1f2937;
+  --tw-prose-th-borders: #d1d5db;
+  --tw-prose-td-borders: #e5e7eb;
+  --tw-prose-invert-body: #d1d5db;
+  --tw-prose-invert-headings: #fff;
+  --tw-prose-invert-lead: #9ca3af;
+  --tw-prose-invert-links: #fff;
+  --tw-prose-invert-bold: #fff;
+  --tw-prose-invert-counters: #9ca3af;
+  --tw-prose-invert-bullets: #4b5563;
+  --tw-prose-invert-hr: #374151;
+  --tw-prose-invert-quotes: #f3f4f6;
+  --tw-prose-invert-quote-borders: #374151;
+  --tw-prose-invert-captions: #9ca3af;
+  --tw-prose-invert-code: #fff;
+  --tw-prose-invert-pre-code: #d1d5db;
+  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+  --tw-prose-invert-th-borders: #4b5563;
+  --tw-prose-invert-td-borders: #374151;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.mepr-unauthorized-message :where(p):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.mepr-unauthorized-message :where(video):not(:where([class~="not-prose"] *)) {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.mepr-unauthorized-message :where(figure):not(:where([class~="not-prose"] *)) {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.mepr-unauthorized-message :where(li):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.mepr-unauthorized-message :where(ol > li):not(:where([class~="not-prose"] *)) {
+  padding-left: 0.375em;
+}
+
+.mepr-unauthorized-message :where(ul > li):not(:where([class~="not-prose"] *)) {
+  padding-left: 0.375em;
+}
+
+.mepr-unauthorized-message :where(.prose > ul > li p):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.mepr-unauthorized-message :where(.prose > ul > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.25em;
+}
+
+.mepr-unauthorized-message :where(.prose > ul > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.25em;
+}
+
+.mepr-unauthorized-message :where(.prose > ol > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.25em;
+}
+
+.mepr-unauthorized-message :where(.prose > ol > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.25em;
+}
+
+.mepr-unauthorized-message :where(ul ul, ul ol, ol ul, ol ol):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.mepr-unauthorized-message :where(hr + *):not(:where([class~="not-prose"] *)) {
+  margin-top: 0;
+}
+
+.mepr-unauthorized-message :where(h2 + *):not(:where([class~="not-prose"] *)) {
+  margin-top: 0;
+}
+
+.mepr-unauthorized-message :where(h3 + *):not(:where([class~="not-prose"] *)) {
+  margin-top: 0;
+}
+
+.mepr-unauthorized-message :where(h4 + *):not(:where([class~="not-prose"] *)) {
+  margin-top: 0;
+}
+
+.mepr-unauthorized-message :where(thead th:first-child):not(:where([class~="not-prose"] *)) {
+  padding-left: 0;
+}
+
+.mepr-unauthorized-message :where(thead th:last-child):not(:where([class~="not-prose"] *)) {
+  padding-right: 0;
+}
+
+.mepr-unauthorized-message :where(tbody td, tfoot td):not(:where([class~="not-prose"] *)) {
+  padding-top: 0.5714286em;
+  padding-right: 0.5714286em;
+  padding-bottom: 0.5714286em;
+  padding-left: 0.5714286em;
+}
+
+.mepr-unauthorized-message :where(tbody td:first-child, tfoot td:first-child):not(:where([class~="not-prose"] *)) {
+  padding-left: 0;
+}
+
+.mepr-unauthorized-message :where(tbody td:last-child, tfoot td:last-child):not(:where([class~="not-prose"] *)) {
+  padding-right: 0;
+}
+
+.mepr-unauthorized-message :where(.prose > :first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 0;
+}
+
+.mepr-unauthorized-message :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 0;
+}
+
+.mepr-unauthorized-message-sm :where(.prose > ul > li p):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.5714286em;
+  margin-bottom: 0.5714286em;
+}
+
+.mepr-unauthorized-message-sm :where(.prose > ul > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.1428571em;
+}
+
+.mepr-unauthorized-message-sm :where(.prose > ul > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.1428571em;
+}
+
+.mepr-unauthorized-message-sm :where(.prose > ol > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.1428571em;
+}
+
+.mepr-unauthorized-message-sm :where(.prose > ol > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.1428571em;
+}
+
+.mepr-unauthorized-message-sm :where(.prose > :first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 0;
+}
+
+.mepr-unauthorized-message-sm :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 0;
+}
+
+.mepr-unauthorized-message-base :where(.prose > ul > li p):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.mepr-unauthorized-message-base :where(.prose > ul > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.25em;
+}
+
+.mepr-unauthorized-message-base :where(.prose > ul > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.25em;
+}
+
+.mepr-unauthorized-message-base :where(.prose > ol > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.25em;
+}
+
+.mepr-unauthorized-message-base :where(.prose > ol > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.25em;
+}
+
+.mepr-unauthorized-message-base :where(.prose > :first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 0;
+}
+
+.mepr-unauthorized-message-base :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 0;
+}
+
+.mepr-unauthorized-message-lg :where(.prose > ul > li p):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.8888889em;
+  margin-bottom: 0.8888889em;
+}
+
+.mepr-unauthorized-message-lg :where(.prose > ul > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.3333333em;
+}
+
+.mepr-unauthorized-message-lg :where(.prose > ul > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.3333333em;
+}
+
+.mepr-unauthorized-message-lg :where(.prose > ol > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.3333333em;
+}
+
+.mepr-unauthorized-message-lg :where(.prose > ol > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.3333333em;
+}
+
+.mepr-unauthorized-message-lg :where(.prose > :first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 0;
+}
+
+.mepr-unauthorized-message-lg :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 0;
+}
+
+.mepr-unauthorized-message-xl :where(.prose > ul > li p):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.mepr-unauthorized-message-xl :where(.prose > ul > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.2em;
+}
+
+.mepr-unauthorized-message-xl :where(.prose > ul > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.2em;
+}
+
+.mepr-unauthorized-message-xl :where(.prose > ol > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.2em;
+}
+
+.mepr-unauthorized-message-xl :where(.prose > ol > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.2em;
+}
+
+.mepr-unauthorized-message-xl :where(.prose > :first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 0;
+}
+
+.mepr-unauthorized-message-xl :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 0;
+}
+
+.mepr-unauthorized-message-2xl :where(.prose > ul > li p):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.8333333em;
+  margin-bottom: 0.8333333em;
+}
+
+.mepr-unauthorized-message-2xl :where(.prose > ul > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.3333333em;
+}
+
+.mepr-unauthorized-message-2xl :where(.prose > ul > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.3333333em;
+}
+
+.mepr-unauthorized-message-2xl :where(.prose > ol > li > *:first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 1.3333333em;
+}
+
+.mepr-unauthorized-message-2xl :where(.prose > ol > li > *:last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 1.3333333em;
+}
+
+.mepr-unauthorized-message-2xl :where(.prose > :first-child):not(:where([class~="not-prose"] *)) {
+  margin-top: 0;
+}
+
+.mepr-unauthorized-message-2xl :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
+  margin-bottom: 0;
+}
+
+.mepr-unauthorized-message {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.mepr-unauthorized-message :where([class~='lead']):not(:where([class~='not-prose'] *)) {
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .mepr-unauthorized-message {
+    font-size: 1.125rem;
+    line-height: 1.7777778;
+  }
+
+  .mepr-unauthorized-message :where(p):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.3333333em;
+    margin-bottom: 1.3333333em;
+  }
+
+  .mepr-unauthorized-message :where([class~="lead"]):not(:where([class~="not-prose"] *)) {
+    font-size: 1.2222222em;
+    line-height: 1.4545455;
+    margin-top: 1.0909091em;
+    margin-bottom: 1.0909091em;
+  }
+
+  .mepr-unauthorized-message :where(blockquote):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.6666667em;
+    margin-bottom: 1.6666667em;
+    padding-left: 1em;
+  }
+
+  .mepr-unauthorized-message :where(h1):not(:where([class~="not-prose"] *)) {
+    font-size: 2.6666667em;
+    margin-top: 0;
+    margin-bottom: 0.8333333em;
+    line-height: 1;
+  }
+
+  .mepr-unauthorized-message :where(h2):not(:where([class~="not-prose"] *)) {
+    font-size: 1.6666667em;
+    margin-top: 1.8666667em;
+    margin-bottom: 1.0666667em;
+    line-height: 1.3333333;
+  }
+
+  .mepr-unauthorized-message :where(h3):not(:where([class~="not-prose"] *)) {
+    font-size: 1.3333333em;
+    margin-top: 1.6666667em;
+    margin-bottom: 0.6666667em;
+    line-height: 1.5;
+  }
+
+  .mepr-unauthorized-message :where(h4):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.7777778em;
+    margin-bottom: 0.4444444em;
+    line-height: 1.5555556;
+  }
+
+  .mepr-unauthorized-message :where(img):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.7777778em;
+    margin-bottom: 1.7777778em;
+  }
+
+  .mepr-unauthorized-message :where(video):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.7777778em;
+    margin-bottom: 1.7777778em;
+  }
+
+  .mepr-unauthorized-message :where(figure):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.7777778em;
+    margin-bottom: 1.7777778em;
+  }
+
+  .mepr-unauthorized-message :where(figure > *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .mepr-unauthorized-message :where(figcaption):not(:where([class~="not-prose"] *)) {
+    font-size: 0.8888889em;
+    line-height: 1.5;
+    margin-top: 1em;
+  }
+
+  .mepr-unauthorized-message :where(code):not(:where([class~="not-prose"] *)) {
+    font-size: 0.8888889em;
+  }
+
+  .mepr-unauthorized-message :where(h2 code):not(:where([class~="not-prose"] *)) {
+    font-size: 0.8666667em;
+  }
+
+  .mepr-unauthorized-message :where(h3 code):not(:where([class~="not-prose"] *)) {
+    font-size: 0.875em;
+  }
+
+  .mepr-unauthorized-message :where(pre):not(:where([class~="not-prose"] *)) {
+    font-size: 0.8888889em;
+    line-height: 1.75;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 0.375rem;
+    padding-top: 1em;
+    padding-right: 1.5em;
+    padding-bottom: 1em;
+    padding-left: 1.5em;
+  }
+
+  .mepr-unauthorized-message :where(ol):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.3333333em;
+    margin-bottom: 1.3333333em;
+    padding-left: 1.5555556em;
+  }
+
+  .mepr-unauthorized-message :where(ul):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.3333333em;
+    margin-bottom: 1.3333333em;
+    padding-left: 1.5555556em;
+  }
+
+  .mepr-unauthorized-message :where(li):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.6666667em;
+    margin-bottom: 0.6666667em;
+  }
+
+  .mepr-unauthorized-message :where(ol > li):not(:where([class~="not-prose"] *)) {
+    padding-left: 0.4444444em;
+  }
+
+  .mepr-unauthorized-message :where(ul > li):not(:where([class~="not-prose"] *)) {
+    padding-left: 0.4444444em;
+  }
+
+  .mepr-unauthorized-message :where(.prose > ul > li p):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.8888889em;
+    margin-bottom: 0.8888889em;
+  }
+
+  .mepr-unauthorized-message :where(.prose > ul > li > *:first-child):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.3333333em;
+  }
+
+  .mepr-unauthorized-message :where(.prose > ul > li > *:last-child):not(:where([class~="not-prose"] *)) {
+    margin-bottom: 1.3333333em;
+  }
+
+  .mepr-unauthorized-message :where(.prose > ol > li > *:first-child):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.3333333em;
+  }
+
+  .mepr-unauthorized-message :where(.prose > ol > li > *:last-child):not(:where([class~="not-prose"] *)) {
+    margin-bottom: 1.3333333em;
+  }
+
+  .mepr-unauthorized-message :where(ul ul, ul ol, ol ul, ol ol):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.8888889em;
+    margin-bottom: 0.8888889em;
+  }
+
+  .mepr-unauthorized-message :where(hr):not(:where([class~="not-prose"] *)) {
+    margin-top: 3.1111111em;
+    margin-bottom: 3.1111111em;
+  }
+
+  .mepr-unauthorized-message :where(hr + *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .mepr-unauthorized-message :where(h2 + *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .mepr-unauthorized-message :where(h3 + *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .mepr-unauthorized-message :where(h4 + *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .mepr-unauthorized-message :where(table):not(:where([class~="not-prose"] *)) {
+    font-size: 0.8888889em;
+    line-height: 1.5;
+  }
+
+  .mepr-unauthorized-message :where(thead th):not(:where([class~="not-prose"] *)) {
+    padding-right: 0.75em;
+    padding-bottom: 0.75em;
+    padding-left: 0.75em;
+  }
+
+  .mepr-unauthorized-message :where(thead th:first-child):not(:where([class~="not-prose"] *)) {
+    padding-left: 0;
+  }
+
+  .mepr-unauthorized-message :where(thead th:last-child):not(:where([class~="not-prose"] *)) {
+    padding-right: 0;
+  }
+
+  .mepr-unauthorized-message :where(tbody td, tfoot td):not(:where([class~="not-prose"] *)) {
+    padding-top: 0.75em;
+    padding-right: 0.75em;
+    padding-bottom: 0.75em;
+    padding-left: 0.75em;
+  }
+
+  .mepr-unauthorized-message :where(tbody td:first-child, tfoot td:first-child):not(:where([class~="not-prose"] *)) {
+    padding-left: 0;
+  }
+
+  .mepr-unauthorized-message :where(tbody td:last-child, tfoot td:last-child):not(:where([class~="not-prose"] *)) {
+    padding-right: 0;
+  }
+
+  .mepr-unauthorized-message :where(.prose > :first-child):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .mepr-unauthorized-message :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mepr-unauthorized-message {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+
+  .mepr-unauthorized-message :where(p):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+  }
+
+  .mepr-unauthorized-message :where([class~="lead"]):not(:where([class~="not-prose"] *)) {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .mepr-unauthorized-message :where(blockquote):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+    padding-left: 1.0666667em;
+  }
+
+  .mepr-unauthorized-message :where(h1):not(:where([class~="not-prose"] *)) {
+    font-size: 2.8em;
+    margin-top: 0;
+    margin-bottom: 0.8571429em;
+    line-height: 1;
+  }
+
+  .mepr-unauthorized-message :where(h2):not(:where([class~="not-prose"] *)) {
+    font-size: 1.8em;
+    margin-top: 1.5555556em;
+    margin-bottom: 0.8888889em;
+    line-height: 1.1111111;
+  }
+
+  .mepr-unauthorized-message :where(h3):not(:where([class~="not-prose"] *)) {
+    font-size: 1.5em;
+    margin-top: 1.6em;
+    margin-bottom: 0.6666667em;
+    line-height: 1.3333333;
+  }
+
+  .mepr-unauthorized-message :where(h4):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.8em;
+    margin-bottom: 0.6em;
+    line-height: 1.6;
+  }
+
+  .mepr-unauthorized-message :where(img):not(:where([class~="not-prose"] *)) {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .mepr-unauthorized-message :where(video):not(:where([class~="not-prose"] *)) {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .mepr-unauthorized-message :where(figure):not(:where([class~="not-prose"] *)) {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .mepr-unauthorized-message :where(figure > *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .mepr-unauthorized-message :where(figcaption):not(:where([class~="not-prose"] *)) {
+    font-size: 0.9em;
+    line-height: 1.5555556;
+    margin-top: 1em;
+  }
+
+  .mepr-unauthorized-message :where(code):not(:where([class~="not-prose"] *)) {
+    font-size: 0.9em;
+  }
+
+  .mepr-unauthorized-message :where(h2 code):not(:where([class~="not-prose"] *)) {
+    font-size: 0.8611111em;
+  }
+
+  .mepr-unauthorized-message :where(h3 code):not(:where([class~="not-prose"] *)) {
+    font-size: 0.9em;
+  }
+
+  .mepr-unauthorized-message :where(pre):not(:where([class~="not-prose"] *)) {
+    font-size: 0.9em;
+    line-height: 1.7777778;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 0.5rem;
+    padding-top: 1.1111111em;
+    padding-right: 1.3333333em;
+    padding-bottom: 1.1111111em;
+    padding-left: 1.3333333em;
+  }
+
+  .mepr-unauthorized-message :where(ol):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    padding-left: 1.6em;
+  }
+
+  .mepr-unauthorized-message :where(ul):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    padding-left: 1.6em;
+  }
+
+  .mepr-unauthorized-message :where(li):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+  }
+
+  .mepr-unauthorized-message :where(ol > li):not(:where([class~="not-prose"] *)) {
+    padding-left: 0.4em;
+  }
+
+  .mepr-unauthorized-message :where(ul > li):not(:where([class~="not-prose"] *)) {
+    padding-left: 0.4em;
+  }
+
+  .mepr-unauthorized-message :where(.prose > ul > li p):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+  }
+
+  .mepr-unauthorized-message :where(.prose > ul > li > *:first-child):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.2em;
+  }
+
+  .mepr-unauthorized-message :where(.prose > ul > li > *:last-child):not(:where([class~="not-prose"] *)) {
+    margin-bottom: 1.2em;
+  }
+
+  .mepr-unauthorized-message :where(.prose > ol > li > *:first-child):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.2em;
+  }
+
+  .mepr-unauthorized-message :where(.prose > ol > li > *:last-child):not(:where([class~="not-prose"] *)) {
+    margin-bottom: 1.2em;
+  }
+
+  .mepr-unauthorized-message :where(ul ul, ul ol, ol ul, ol ol):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+  }
+
+  .mepr-unauthorized-message :where(hr):not(:where([class~="not-prose"] *)) {
+    margin-top: 2.8em;
+    margin-bottom: 2.8em;
+  }
+
+  .mepr-unauthorized-message :where(hr + *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .mepr-unauthorized-message :where(h2 + *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .mepr-unauthorized-message :where(h3 + *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .mepr-unauthorized-message :where(h4 + *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .mepr-unauthorized-message :where(table):not(:where([class~="not-prose"] *)) {
+    font-size: 0.9em;
+    line-height: 1.5555556;
+  }
+
+  .mepr-unauthorized-message :where(thead th):not(:where([class~="not-prose"] *)) {
+    padding-right: 0.6666667em;
+    padding-bottom: 0.8888889em;
+    padding-left: 0.6666667em;
+  }
+
+  .mepr-unauthorized-message :where(thead th:first-child):not(:where([class~="not-prose"] *)) {
+    padding-left: 0;
+  }
+
+  .mepr-unauthorized-message :where(thead th:last-child):not(:where([class~="not-prose"] *)) {
+    padding-right: 0;
+  }
+
+  .mepr-unauthorized-message :where(tbody td, tfoot td):not(:where([class~="not-prose"] *)) {
+    padding-top: 0.8888889em;
+    padding-right: 0.6666667em;
+    padding-bottom: 0.8888889em;
+    padding-left: 0.6666667em;
+  }
+
+  .mepr-unauthorized-message :where(tbody td:first-child, tfoot td:first-child):not(:where([class~="not-prose"] *)) {
+    padding-left: 0;
+  }
+
+  .mepr-unauthorized-message :where(tbody td:last-child, tfoot td:last-child):not(:where([class~="not-prose"] *)) {
+    padding-right: 0;
+  }
+
+  .mepr-unauthorized-message :where(.prose > :first-child):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .mepr-unauthorized-message :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
+    margin-bottom: 0;
+  }
 }
 
 #table_1_wrapper.wpDataTablesWrapper {
@@ -12175,12 +13199,12 @@ h7 {
   background-color: rgb(0 167 157 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-opacity-75:hover {
-  --tw-bg-opacity: 0.75;
-}
-
 .hover\:bg-opacity-80:hover {
   --tw-bg-opacity: 0.8;
+}
+
+.hover\:bg-opacity-75:hover {
+  --tw-bg-opacity: 0.75;
 }
 
 .hover\:text-white:hover {
@@ -12250,13 +13274,13 @@ h7 {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.focus\:border-transparent:focus {
+  border-color: transparent;
+}
+
 .focus\:border-neutral-200:focus {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
-}
-
-.focus\:border-transparent:focus {
-  border-color: transparent;
 }
 
 .focus\:opacity-100:focus {
@@ -17886,6 +18910,11 @@ h7 {
     padding-bottom: 4rem;
   }
 
+  .md\:py-14 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -18124,11 +19153,6 @@ h7 {
   .md\:py-11 {
     padding-top: 2.75rem;
     padding-bottom: 2.75rem;
-  }
-
-  .md\:py-14 {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
   }
 
   .md\:py-20 {
@@ -18796,14 +19820,14 @@ h7 {
     line-height: 2.25rem;
   }
 
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:text-lg {
@@ -20073,6 +21097,10 @@ h7 {
     margin-left: 7rem;
   }
 
+  .lg\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
   .lg\:mr-8 {
     margin-right: 2rem;
   }
@@ -20095,10 +21123,6 @@ h7 {
 
   .lg\:mt-8 {
     margin-top: 2rem;
-  }
-
-  .lg\:mb-8 {
-    margin-bottom: 2rem;
   }
 
   .lg\:mt-1 {
@@ -21389,6 +22413,10 @@ h7 {
     border-radius: 0.75rem;
   }
 
+  .lg\:p-8 {
+    padding: 2rem;
+  }
+
   .lg\:p-0 {
     padding: 0px;
   }
@@ -21419,10 +22447,6 @@ h7 {
 
   .lg\:p-7 {
     padding: 1.75rem;
-  }
-
-  .lg\:p-8 {
-    padding: 2rem;
   }
 
   .lg\:p-9 {
@@ -22443,13 +23467,8 @@ h7 {
     padding-left: 0.875rem;
   }
 
-  .lg\:pt-\[180px\] {
-    padding-top: 180px;
-  }
-
-  .lg\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+  .lg\:text-\[54px\] {
+    font-size: 54px;
   }
 
   .lg\:text-2xl {
@@ -22457,8 +23476,9 @@ h7 {
     line-height: 2rem;
   }
 
-  .lg\:text-\[54px\] {
-    font-size: 54px;
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .lg\:text-xl {
@@ -22683,6 +23703,220 @@ h7 {
   }
 
   .xl\:prose-lg :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
+    margin-bottom: 0;
+  }
+
+  .xl\:prose-xl {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+
+  .xl\:prose-xl :where(p):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+  }
+
+  .xl\:prose-xl :where([class~="lead"]):not(:where([class~="not-prose"] *)) {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .xl\:prose-xl :where(blockquote):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+    padding-left: 1.0666667em;
+  }
+
+  .xl\:prose-xl :where(h1):not(:where([class~="not-prose"] *)) {
+    font-size: 2.8em;
+    margin-top: 0;
+    margin-bottom: 0.8571429em;
+    line-height: 1;
+  }
+
+  .xl\:prose-xl :where(h2):not(:where([class~="not-prose"] *)) {
+    font-size: 1.8em;
+    margin-top: 1.5555556em;
+    margin-bottom: 0.8888889em;
+    line-height: 1.1111111;
+  }
+
+  .xl\:prose-xl :where(h3):not(:where([class~="not-prose"] *)) {
+    font-size: 1.5em;
+    margin-top: 1.6em;
+    margin-bottom: 0.6666667em;
+    line-height: 1.3333333;
+  }
+
+  .xl\:prose-xl :where(h4):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.8em;
+    margin-bottom: 0.6em;
+    line-height: 1.6;
+  }
+
+  .xl\:prose-xl :where(img):not(:where([class~="not-prose"] *)) {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .xl\:prose-xl :where(video):not(:where([class~="not-prose"] *)) {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .xl\:prose-xl :where(figure):not(:where([class~="not-prose"] *)) {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .xl\:prose-xl :where(figure > *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .xl\:prose-xl :where(figcaption):not(:where([class~="not-prose"] *)) {
+    font-size: 0.9em;
+    line-height: 1.5555556;
+    margin-top: 1em;
+  }
+
+  .xl\:prose-xl :where(code):not(:where([class~="not-prose"] *)) {
+    font-size: 0.9em;
+  }
+
+  .xl\:prose-xl :where(h2 code):not(:where([class~="not-prose"] *)) {
+    font-size: 0.8611111em;
+  }
+
+  .xl\:prose-xl :where(h3 code):not(:where([class~="not-prose"] *)) {
+    font-size: 0.9em;
+  }
+
+  .xl\:prose-xl :where(pre):not(:where([class~="not-prose"] *)) {
+    font-size: 0.9em;
+    line-height: 1.7777778;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 0.5rem;
+    padding-top: 1.1111111em;
+    padding-right: 1.3333333em;
+    padding-bottom: 1.1111111em;
+    padding-left: 1.3333333em;
+  }
+
+  .xl\:prose-xl :where(ol):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    padding-left: 1.6em;
+  }
+
+  .xl\:prose-xl :where(ul):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    padding-left: 1.6em;
+  }
+
+  .xl\:prose-xl :where(li):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+  }
+
+  .xl\:prose-xl :where(ol > li):not(:where([class~="not-prose"] *)) {
+    padding-left: 0.4em;
+  }
+
+  .xl\:prose-xl :where(ul > li):not(:where([class~="not-prose"] *)) {
+    padding-left: 0.4em;
+  }
+
+  .xl\:prose-xl :where(.prose > ul > li p):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+  }
+
+  .xl\:prose-xl :where(.prose > ul > li > *:first-child):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.2em;
+  }
+
+  .xl\:prose-xl :where(.prose > ul > li > *:last-child):not(:where([class~="not-prose"] *)) {
+    margin-bottom: 1.2em;
+  }
+
+  .xl\:prose-xl :where(.prose > ol > li > *:first-child):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.2em;
+  }
+
+  .xl\:prose-xl :where(.prose > ol > li > *:last-child):not(:where([class~="not-prose"] *)) {
+    margin-bottom: 1.2em;
+  }
+
+  .xl\:prose-xl :where(ul ul, ul ol, ol ul, ol ol):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+  }
+
+  .xl\:prose-xl :where(hr):not(:where([class~="not-prose"] *)) {
+    margin-top: 2.8em;
+    margin-bottom: 2.8em;
+  }
+
+  .xl\:prose-xl :where(hr + *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .xl\:prose-xl :where(h2 + *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .xl\:prose-xl :where(h3 + *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .xl\:prose-xl :where(h4 + *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .xl\:prose-xl :where(table):not(:where([class~="not-prose"] *)) {
+    font-size: 0.9em;
+    line-height: 1.5555556;
+  }
+
+  .xl\:prose-xl :where(thead th):not(:where([class~="not-prose"] *)) {
+    padding-right: 0.6666667em;
+    padding-bottom: 0.8888889em;
+    padding-left: 0.6666667em;
+  }
+
+  .xl\:prose-xl :where(thead th:first-child):not(:where([class~="not-prose"] *)) {
+    padding-left: 0;
+  }
+
+  .xl\:prose-xl :where(thead th:last-child):not(:where([class~="not-prose"] *)) {
+    padding-right: 0;
+  }
+
+  .xl\:prose-xl :where(tbody td, tfoot td):not(:where([class~="not-prose"] *)) {
+    padding-top: 0.8888889em;
+    padding-right: 0.6666667em;
+    padding-bottom: 0.8888889em;
+    padding-left: 0.6666667em;
+  }
+
+  .xl\:prose-xl :where(tbody td:first-child, tfoot td:first-child):not(:where([class~="not-prose"] *)) {
+    padding-left: 0;
+  }
+
+  .xl\:prose-xl :where(tbody td:last-child, tfoot td:last-child):not(:where([class~="not-prose"] *)) {
+    padding-right: 0;
+  }
+
+  .xl\:prose-xl :where(.prose > :first-child):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+  }
+
+  .xl\:prose-xl :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
     margin-bottom: 0;
   }
 
@@ -24860,10 +26094,6 @@ h7 {
     height: 700px;
   }
 
-  .xl\:h-\[57vh\] {
-    height: 57vh;
-  }
-
   .xl\:w-12 {
     width: 3rem;
   }
@@ -24874,10 +26104,6 @@ h7 {
 
   .xl\:w-16 {
     width: 4rem;
-  }
-
-  .xl\:w-full {
-    width: 100%;
   }
 
   .xl\:min-w-\[360px\] {
@@ -25084,6 +26310,11 @@ h7 {
   .xl\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .xl\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .xl\:py-10 {
@@ -25339,11 +26570,6 @@ h7 {
   .xl\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-
-  .xl\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 
   .xl\:py-28 {
@@ -26030,16 +27256,8 @@ h7 {
     line-height: 1;
   }
 
-  .xl\:text-\[50px\] {
-    font-size: 50px;
-  }
-
   .xl\:leading-\[1\.1em\] {
     line-height: 1.1em;
-  }
-
-  .xl\:opacity-100 {
-    opacity: 1;
   }
 }
 

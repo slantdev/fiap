@@ -22,7 +22,11 @@
       <?php endif; ?>
 
     <?php else : ?>
-      <?php echo $message; ?>
+      <?php if ($message) { ?>
+        <div class="text-center mb-8 prose lg:prose-lg xl:prose-xl mx-auto">
+          <?php echo $message; ?>
+        </div>
+      <?php } ?>
       <div class="login-form">
         <!-- mp-login-form-start --> <?php //DON'T GET RID OF THIS HTML COMMENT PLEASE IT'S USEFUL FOR SOME REGEX WE'RE DOING
                                       ?>
