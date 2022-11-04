@@ -121,9 +121,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "715"
+                "value": "templates\/template-account.php"
             }
         ]
     ],
@@ -143,7 +143,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1667533705,
+    "modified": 1667534699,
     "acfe_categories": {
         "settings": "Settings"
     }
