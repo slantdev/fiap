@@ -2,6 +2,15 @@
 /*
  * Page Settings
  */
+$breadcrumbs = $args['breadcrumbs'];
+if ($breadcrumbs !== true) {
+  $breadcrumbs = false;
+} else {
+  $breadcrumbs = true;
+}
+
+//echo $args['breadcrumbs'];
+
 $enabled = get_field('enable_page_header');
 
 if ($enabled) :
@@ -36,7 +45,7 @@ if ($enabled) :
           <div class="md:w-3/4 lg:w-3/5 text-white">
             <?php
             if ($hero_title) {
-              echo '<h1 class="text-4xl md:text-5xl lg:text-[54px] font-light leading-[1.1em] mb-4">' . $hero_title . '</h1>';
+              echo '<h1 class="text-4xl md:text-5xl lg:text-[54px] font-light tracking-tight leading-[1.1em] mb-4">' . $hero_title . '</h1>';
             }
             ?>
             <?php
@@ -50,14 +59,16 @@ if ($enabled) :
       <div class="absolute inset-0 z-0" style="<?php echo $hero_overlay_style ?>">
       </div>
     </div>
-    <div class="bg-fiap-light py-6">
-      <div class="container mx-auto">
-        <?php
-        if (function_exists('yoast_breadcrumb')) {
-          yoast_breadcrumb('<div class="breadcrumbs inline-block text-black text-base">', '</div>');
-        }
-        ?>
+    <?php if ($breadcrumbs) { ?>
+      <div class="bg-fiap-light py-6">
+        <div class="container mx-auto">
+          <?php
+          if (function_exists('yoast_breadcrumb')) {
+            yoast_breadcrumb('<div class="breadcrumbs inline-block text-black text-base">', '</div>');
+          }
+          ?>
+        </div>
       </div>
-    </div>
+    <?php } ?>
   </section>
 <?php endif; ?>

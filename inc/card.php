@@ -251,3 +251,25 @@ function card_team_member($atts = array())
 
   return $output;
 }
+
+function card_shortcut($atts = array())
+{
+  $atts = shortcode_atts(array(
+    'img_src'  => '',
+    'title'  => '',
+    'link'  => '#',
+  ), $atts);
+
+  $img_src = $atts['img_src'];
+  $title = $atts['title'];
+  $link = $atts['link'];
+
+  $output = '';
+  $output .= '<a href="' . $link . '" class="card-shortcut block relative w-full h-full rounded-lg aspect-square bg-slate-100 cursor-pointer shadow-md overflow-hidden">';
+  $output .= '<img class="h-full w-full object-cover rounded-xl transition-all duration-300" src="' . $img_src . '" alt="' . $title . '">';
+  $output .= '<div class="absolute w-full h-full inset-0 z-10 flex items-center justify-center bg-black/50 p-6 rounded-xl text-center">
+      <h3 class="text-white text-3xl">' . $title . '</h3>
+    </div>
+  </a>';
+  return $output;
+}

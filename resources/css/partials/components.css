@@ -328,6 +328,14 @@
   }
 }
 
+.card-shortcut {
+  &:hover {
+    > img {
+      @apply scale-105;
+    }
+  }
+}
+
 .filter-news,
 .filter-case-study,
 .filter-fiapmembers {

@@ -1,0 +1,8 @@
+[type='checkbox'],
+[type='radio'] {
+  @apply accent-fiap-teal text-fiap-teal border-slate-400 border-solid border;
+}
+
+[type='checkbox'] {
+  @apply rounded focus:ring-fiap-teal;
+}

@@ -7,7 +7,7 @@
  */
 get_header();
 
-get_template_part('template-parts/layouts/page-header');
+get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' => true));
 ?>
 
 <section class="py-24">
