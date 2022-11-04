@@ -22,10 +22,14 @@ get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' 
           </button>
           <ul class="dropdown-menu min-w-max w-full absolute bg-white text-base z-50 py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none" aria-labelledby="dropdownSelect">
             <li>
-              <a href="#" class="dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100 lg:px-8">Option 1</a>
-              <a href="#" class="dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100 lg:px-8">Option 1</a>
-              <a href="#" class="dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100 lg:px-8">Option 1</a>
-              <a href="#" class="dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100 lg:px-8">Option 1</a>
+              <?php
+              $im_looking_for_select = get_field('im_looking_for_select');
+              if ($im_looking_for_select) {
+                foreach ($im_looking_for_select as $option) {
+                  echo '<a href="' . $option['option_link']['url'] . '" class="dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100 lg:px-8">' . $option['option_link']['title'] . '</a>';
+                }
+              }
+              ?>
             </li>
           </ul>
         </div>
@@ -39,68 +43,23 @@ get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' 
   <div class="container mx-auto">
     <div class="flex lg:gap-x-6">
       <div class="w-full lg:w-2/3">
-        <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
-          <div>
-            <?php
+        <?php
+        $card_shortcut = get_field('card_shortcut');
+        if ($card_shortcut) {
+          echo '<div class="grid grid-cols-1 gap-6 lg:grid-cols-3">';
+          foreach ($card_shortcut as $card) {
+            echo '<div>';
             $atts = array(
-              'img_src' => 'http://fiap.local/wp-content/uploads/2022/09/ae946ffb-53fe-3ead-a770-38425e21321b.jpg',
-              'title' => 'MEMBER RESOURCES',
-              'link' => site_url() . '/resources',
+              'img_src' => $card['card_image']['url'],
+              'title' => $card['card_link']['title'],
+              'link' => $card['card_link']['url'],
             );
             echo card_shortcut($atts);
-            ?>
-          </div>
-          <div>
-            <?php
-            $atts = array(
-              'img_src' => 'http://fiap.local/wp-content/uploads/2022/09/ae946ffb-53fe-3ead-a770-38425e21321b.jpg',
-              'title' => 'COMMUNITY FORUM',
-              'link' => site_url() . '/forums',
-            );
-            echo card_shortcut($atts);
-            ?>
-          </div>
-          <div>
-            <?php
-            $atts = array(
-              'img_src' => 'http://fiap.local/wp-content/uploads/2022/09/ae946ffb-53fe-3ead-a770-38425e21321b.jpg',
-              'title' => 'ACTION PLANS',
-              'link' => site_url() . '/action-plans',
-            );
-            echo card_shortcut($atts);
-            ?>
-          </div>
-          <div>
-            <?php
-            $atts = array(
-              'img_src' => 'http://fiap.local/wp-content/uploads/2022/09/ae946ffb-53fe-3ead-a770-38425e21321b.jpg',
-              'title' => 'MEMBER DIRECTORY',
-              'link' => '#',
-            );
-            echo card_shortcut($atts);
-            ?>
-          </div>
-          <div>
-            <?php
-            $atts = array(
-              'img_src' => 'http://fiap.local/wp-content/uploads/2022/09/ae946ffb-53fe-3ead-a770-38425e21321b.jpg',
-              'title' => 'LATEST NEWS',
-              'link' => site_url() . '/news',
-            );
-            echo card_shortcut($atts);
-            ?>
-          </div>
-          <div>
-            <?php
-            $atts = array(
-              'img_src' => 'http://fiap.local/wp-content/uploads/2022/09/ae946ffb-53fe-3ead-a770-38425e21321b.jpg',
-              'title' => 'FAQS',
-              'link' => site_url() . '/faqs',
-            );
-            echo card_shortcut($atts);
-            ?>
-          </div>
-        </div>
+            echo '</div>';
+          }
+          echo '</div>';
+        }
+        ?>
       </div>
       <div class="w-full lg:w-1/3">
         <div class="flex flex-col gap-6">
