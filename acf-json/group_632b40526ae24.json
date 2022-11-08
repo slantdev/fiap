@@ -176,6 +176,35 @@
             "acfe_settings": "",
             "sub_fields": [
                 {
+                    "key": "field_6369f438ee797",
+                    "label": "Card Image",
+                    "name": "card_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "uploader": "",
+                    "acfe_thumbnail": 0,
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "library": "all"
+                },
+                {
                     "key": "field_632bbce58a089",
                     "label": "Card Content",
                     "name": "card_content",
@@ -184,10 +213,11 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "70",
                         "class": "",
                         "id": ""
                     },
+                    "acfe_permissions": "",
                     "default_value": "",
                     "placeholder": "",
                     "prepend": "",
@@ -267,7 +297,7 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1665714196,
+    "modified": 1667888744,
     "acfe_categories": {
         "layout": "Layout"
     }

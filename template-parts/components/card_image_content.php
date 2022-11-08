@@ -20,7 +20,7 @@ if ($cards_repeater) : ?>
       <div class="card-image-content h-full rounded-xl bg-white relative overflow-hidden shadow-md">
         <?php
         if ($card_image) {
-          echo '<div class="aspect-[16/11]"><img class="w-full h-full object-cover" src="' . $card_image['url'] . '" alt="' . $card_image['alt'] . '"></div>';
+          echo '<div class="aspect-w-16 aspect-h-11"><img class="w-full h-full object-center object-cover" src="' . $card_image['url'] . '" alt="' . $card_image['alt'] . '"></div>';
         }
         ?>
         <?php if ($card_title || $card_description || $card_check_list) : ?>

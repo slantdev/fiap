@@ -296,10 +296,12 @@
 
 .card-hover {
   .card-image {
-    @apply h-full w-full object-cover absolute inset-0;
+    /* @apply h-full w-full object-cover absolute inset-0; */
+    @apply h-full w-full object-cover;
   }
   .card-text {
-    @apply transition-all duration-300 bg-fiap-darkblue bg-opacity-80 p-4 h-full w-full text-white relative translate-y-3/4 xl:p-6;
+    @apply transition-all duration-300 bg-fiap-darkblue bg-opacity-80 p-4 h-full w-full text-white translate-y-3/4 xl:p-6;
+    @apply absolute inset-0;
   }
   .card-title {
     @apply text-lg text-white md:text-xl lg:text-lg xl:text-xl font-semibold line-clamp-2 leading-snug md:leading-snug lg:leading-snug xl:leading-snug;
@@ -355,7 +357,8 @@
 
 .single-fiap_members {
   .wp-post-image {
-    @apply object-contain aspect-square border border-solid border-slate-200;
+    /* @apply object-contain aspect-square border border-solid border-slate-200; */
+    @apply object-contain border border-solid border-slate-200;
   }
 }
 

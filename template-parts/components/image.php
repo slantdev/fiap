@@ -32,6 +32,22 @@ switch ($image_max_width) {
   default:
     $image_container_class = 'max-w-full';
 }
+
+$aspect_w = '';
+$aspect_h = '';
+$image_class = '';
+if (isset($args['aspect_w'])) {
+  $aspect_w = $args['aspect_w'];
+  $image_container_class .= ' aspect-w-' . $aspect_w;
+}
+if (isset($args['aspect_h'])) {
+  $aspect_h = $args['aspect_h'];
+  $image_container_class .= ' aspect-h-' . $aspect_h;
+}
+if (isset($args['class'])) {
+  $image_class = $args['class'];
+}
+
 $image_class = $args['class'];
 if ($image_id) {
   echo '<div class="mb-8 mx-auto xl:mb-12 ' . $image_container_class . '">';

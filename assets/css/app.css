@@ -4753,6 +4753,70 @@ textarea.form-control.is-invalid {
   margin-bottom: 0;
 }
 
+.aspect-w-16 {
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  --tw-aspect-w: 16;
+}
+
+.aspect-w-16 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.aspect-h-9 {
+  --tw-aspect-h: 9;
+}
+
+.aspect-h-11 {
+  --tw-aspect-h: 11;
+}
+
+.aspect-w-1 {
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  --tw-aspect-w: 1;
+}
+
+.aspect-w-1 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.aspect-h-1 {
+  --tw-aspect-h: 1;
+}
+
+.aspect-w-5 {
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  --tw-aspect-w: 5;
+}
+
+.aspect-w-5 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.aspect-h-4 {
+  --tw-aspect-h: 4;
+}
+
 .pointer-events-none {
   pointer-events: none;
 }
@@ -7063,28 +7127,12 @@ textarea.form-control.is-invalid {
   display: none;
 }
 
-.aspect-\[16\/11\] {
-  aspect-ratio: 16/11;
-}
-
-.aspect-square {
-  aspect-ratio: 1 / 1;
-}
-
-.aspect-\[5\/4\] {
-  aspect-ratio: 5/4;
-}
-
 .aspect-\[3\/4\] {
   aspect-ratio: 3/4;
 }
 
-.aspect-\[4\/3\] {
-  aspect-ratio: 4/3;
-}
-
-.aspect-\[4\/5\] {
-  aspect-ratio: 4/5;
+.aspect-\[16\/11\] {
+  aspect-ratio: 16/11;
 }
 
 .h-1 {
@@ -7407,6 +7455,10 @@ textarea.form-control.is-invalid {
 
 .max-w-\[360px\] {
   max-width: 360px;
+}
+
+.max-w-\[420px\] {
+  max-width: 420px;
 }
 
 .flex-none {
@@ -7954,6 +8006,11 @@ textarea.form-control.is-invalid {
 .object-scale-down {
   -o-object-fit: scale-down;
      object-fit: scale-down;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-3 {
@@ -10127,11 +10184,7 @@ h7 {
 }
 
 .card-hover .card-image {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  /* @apply h-full w-full object-cover absolute inset-0; */
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -10139,7 +10192,6 @@ h7 {
 }
 
 .card-hover .card-text {
-  position: relative;
   height: 100%;
   width: 100%;
   --tw-translate-y: 75%;
@@ -10158,6 +10210,14 @@ h7 {
   .card-hover .card-text {
     padding: 1.5rem;
   }
+}
+
+.card-hover .card-text {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .card-hover .card-title {
@@ -10267,7 +10327,7 @@ h7 {
 }
 
 .single-fiap_members .wp-post-image {
-  aspect-ratio: 1 / 1;
+  /* @apply object-contain aspect-square border border-solid border-slate-200; */
   border-width: 1px;
   border-style: solid;
   --tw-border-opacity: 1;
@@ -22237,10 +22297,6 @@ h7 {
     display: flex;
   }
 
-  .lg\:aspect-\[3\/4\] {
-    aspect-ratio: 3/4;
-  }
-
   .lg\:h-10 {
     height: 2.5rem;
   }
@@ -26110,6 +26166,22 @@ h7 {
     width: 4rem;
   }
 
+  .xl\:w-7\/12 {
+    width: 58.333333%;
+  }
+
+  .xl\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .xl\:w-3\/5 {
+    width: 60%;
+  }
+
+  .xl\:w-2\/5 {
+    width: 40%;
+  }
+
   .xl\:min-w-\[360px\] {
     min-width: 360px;
   }
@@ -26124,6 +26196,14 @@ h7 {
 
   .xl\:gap-16 {
     gap: 4rem;
+  }
+
+  .xl\:gap-12 {
+    gap: 3rem;
+  }
+
+  .xl\:gap-8 {
+    gap: 2rem;
   }
 
   .xl\:gap-x-32 {
@@ -30475,6 +30555,11 @@ h7 {
   .\33xl\:gap-x-36 {
     -moz-column-gap: 9rem;
          column-gap: 9rem;
+  }
+
+  .\33xl\:gap-x-24 {
+    -moz-column-gap: 6rem;
+         column-gap: 6rem;
   }
 
   .\33xl\:text-\[54px\] {

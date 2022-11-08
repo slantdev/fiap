@@ -17,7 +17,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
         <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'max-w-none xl:prose-lg')); ?>
       </div>
       <div class="w-full order-1 lg:order-2 lg:w-1/3 max-w-[360px] lg:max-w-none">
-        <?php get_template_part('template-parts/components/image', '', array('class' => 'aspect-square object-cover')); ?>
+        <?php get_template_part('template-parts/components/image', '', array('aspect_w' => '1', 'aspect_h' => '1', 'class' => 'h-full w-full object-center object-cover')); ?>
       </div>
     </div>
     <?php get_template_part('template-parts/components/card_numbers', '', array('field' => 'cards_number_repeater', 'class' => '')); ?>

@@ -2,7 +2,9 @@
   <div class="flex gap-x-36">
     <div class="w-1/3 lg:order-2">
       <?php if (has_post_thumbnail()) : ?>
-        <?php the_post_thumbnail('large', array('class' => 'rounded-xl aspect-[4/5] object-cover')); ?>
+        <div class="aspect-w-5 aspect-h-4 rounded-xl overflow-hidden">
+          <?php the_post_thumbnail('large', array('class' => 'rounded-xl h-full w-full object-center object-cover')); ?>
+        </div>
       <?php endif; ?>
     </div>
     <div class="w-2/3 lg:order-1">

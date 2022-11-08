@@ -12,7 +12,7 @@ function card_content($atts = array())
   $output = '';
   $output .= '<a class="card-article h-full rounded-xl bg-white relative overflow-hidden shadow-md">';
   if ($atts['image']) {
-    $output .= '<div class="aspect-[16/11]"><img class="w-full h-full object-cover" src="' . $atts['image'] . '" alt=""></div>';
+    $output .= '<div class="aspect-w-16 aspect-h-11"><img class="w-full h-full object-center object-cover" src="' . $atts['image'] . '" alt=""></div>';
   }
   if ($atts['title'] || $atts['text']) {
     $output .= '<div class="px-8 py-12">';
@@ -63,8 +63,10 @@ function card_hover($atts = array())
   $link = $atts['link'];
 
   $output = '';
-  $output .= '<a href="' . $link . '" class="card-hover h-full rounded-xl aspect-square bg-slate-100 relative overflow-hidden cursor-pointer shadow-md">';
-  $output .= '<img class="card-image" src="' . $img_src . '" alt="' . $title . '">';
+  $output .= '<a href="' . $link . '" class="card-hover h-full rounded-xl bg-slate-100 relative overflow-hidden cursor-pointer shadow-md">';
+  $output .= '<div class="aspect-w-1 aspect-h-1">';
+  $output .= '<img class="card-image object-center object-cover" src="' . $img_src . '" alt="' . $title . '">';
+  $output .= '</div>';
   $output .= '<div class="card-text">
       <h3 class="card-title">' . $title . '</h3>
       <div class="card-excerpt">
@@ -97,8 +99,8 @@ function card_article($atts = array())
 
   $output = '';
   $output .= '<a href="' . $link . '" class="card-article flex flex-col h-full rounded-xl bg-white relative overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition duration-300">';
-  $output .= '<div class="aspect-[16/11] flex-none">';
-  $output .= '<img class="w-full h-full object-cover" src="' . $img_src . '" alt="' . $title . '">';
+  $output .= '<div class="aspect-w-16 aspect-h-11 flex-none">';
+  $output .= '<img class="w-full h-full object-center object-cover" src="' . $img_src . '" alt="' . $title . '">';
   $output .= '</div>';
   $output .= '<div class="flex flex-col px-6 pt-8 pb-6 xl:pt-12 relative grow">';
   $output .= '<div class="bg-fiap-teal text-white rounded-full flex w-16 h-16 xl:w-[4.5rem] xl:h-[4.5rem] items-center justify-center p-4 absolute right-6 xl:right-8 -top-9">'
@@ -162,7 +164,7 @@ function card_fiap_members($atts = array())
   $link = $atts['link'];
 
   $output = '';
-  $output .= '<a href="' . $link . '" class="card-fiap-member h-full rounded-xl aspect-[5/4] bg-white relative overflow-hidden cursor-pointer border border-solid border-slate-200 shadow-md">';
+  $output .= '<a href="' . $link . '" class="card-fiap-member h-full rounded-xl aspect-w-5 aspect-h-4 bg-white relative overflow-hidden cursor-pointer border border-solid border-slate-200 shadow-md">';
   $output .= '<div class="w-full h-3/4 p-6">';
   $output .= '<img class="card-image h-full w-full object-scale-down" src="' . $img_src . '" alt="' . $title . '">';
   $output .= '</div>';
@@ -235,11 +237,18 @@ function card_team_member($atts = array())
                 </div>
                 <div class="overflow-y-auto text-base">' . $atts['team_bio'] . '</div>
                 <div class="mt-auto pt-6 md:pt-8">
-                  <ul class="flex items-center gap-x-4">
-                    <li><a href="' . $atts['team_linkedin'] . '" class="inline-block">' . fiap_icon(array('icon' => 'team-linkedin', 'group' => 'utility', 'size' => false, 'class' => 'text-black')) . '</a></li>
-                    <li><a href="' . $atts['team_email'] . '" class="inline-block">' . fiap_icon(array('icon' => 'team-email', 'group' => 'utility', 'size' => false, 'class' => 'text-black')) . '</a></li>
-                    <li><a href="' . $atts['team_mobile'] . '" class="inline-block">' . fiap_icon(array('icon' => 'team-mobile', 'group' => 'utility', 'size' => false, 'class' => 'text-black')) . '</a></li>
-                  </ul>
+                  <ul class="flex items-center gap-x-4">';
+  if ($atts['team_linkedin']) {
+    $output .= '<li><a href="' . $atts['team_linkedin'] . '" class="inline-block">' . fiap_icon(array('icon' => 'team-linkedin', 'group' => 'utility', 'size' => false, 'class' => 'text-black')) . '</a></li>';
+  }
+  if ($atts['team_email']) {
+    $output .= '<li><a href="' . $atts['team_email'] . '" class="inline-block">' . fiap_icon(array('icon' => 'team-email', 'group' => 'utility', 'size' => false, 'class' => 'text-black')) . '</a></li>';
+  }
+  if ($atts['team_mobile']) {
+    $output .= '<li><a href="' . $atts['team_mobile'] . '" class="inline-block">' . fiap_icon(array('icon' => 'team-mobile', 'group' => 'utility', 'size' => false, 'class' => 'text-black')) . '</a></li>';
+  }
+
+  $output .= '</ul>
                 </div>
               </div>
             </div>
@@ -265,8 +274,8 @@ function card_shortcut($atts = array())
   $link = $atts['link'];
 
   $output = '';
-  $output .= '<a href="' . $link . '" class="card-shortcut block relative w-full h-full rounded-lg aspect-square bg-slate-100 cursor-pointer shadow-md overflow-hidden">';
-  $output .= '<img class="h-full w-full object-cover rounded-xl transition-all duration-300" src="' . $img_src . '" alt="' . $title . '">';
+  $output .= '<a href="' . $link . '" class="card-shortcut block relative w-full h-full rounded-lg aspect-w-1 aspect-h-1 bg-slate-100 cursor-pointer shadow-md overflow-hidden">';
+  $output .= '<img class="h-full w-full object-center object-cover rounded-xl transition-all duration-300" src="' . $img_src . '" alt="' . $title . '">';
   $output .= '<div class="absolute w-full h-full inset-0 z-10 flex items-center justify-center bg-black/50 p-6 rounded-xl text-center">
       <h3 class="text-white text-3xl">' . $title . '</h3>
     </div>
