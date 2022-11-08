@@ -2,6 +2,10 @@
   die('You are not allowed to call this page directly.');
 } ?>
 
+<?php
+return;
+?>
+
 <div class="mp_wrapper">
   <div id="mepr-account-nav">
     <span class="mepr-nav-item <?php MeprAccountHelper::active_nav('home'); ?>">

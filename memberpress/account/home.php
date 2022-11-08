@@ -11,7 +11,7 @@ get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' 
       <div class="mb-4 md:mb-0 md:mr-6 lg:mr-8"><span class="text-fiap-darkblue text-xl lg:text-2xl font-semibold leading-tight">I'm looking for</span></div>
       <div class="flex justify-center items-center">
         <div class="dropdown relative mr-2 md:mr-6">
-          <button class="dropdown-toggle px-4 py-4 leading-none rounded-lg focus:outline-none focus:ring-0 transition duration-150 ease-in-out flex items-center justify-between whitespace-nowrap min-w-[200px] md:min-w-[300px] lg:min-w-[360px] text-lg bg-white border border-solid border-[#E3E3E3] text-[#868686] w-full max-w-[380px] tracking-wider font-light lg:px-8" type="button" id="dropdownSelect" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="dropdown-toggle px-2 py-4 leading-none focus:outline-none focus:ring-0 transition duration-150 ease-in-out flex items-center justify-between whitespace-nowrap min-w-[200px] md:min-w-[300px] lg:min-w-[360px] text-xl bg-white bg-opacity-0 border-b-2 border-solid border-fiap-darkblue text-[#868686] w-full max-w-[380px] tracking-wider font-light lg:px-2" type="button" id="dropdownSelect" data-bs-toggle="dropdown" aria-expanded="false">
             <span>Select</span>
             <svg class="w-4 ml-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" width="28.707" height="14.707" viewBox="0 0 28.707 14.707">
               <g id="Group_234" data-name="Group 234" transform="translate(-2908.146 -887.146)">
@@ -33,7 +33,6 @@ get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' 
             </li>
           </ul>
         </div>
-        <button type="button" class="bg-fiap-darkblue p-4 py-2 h-[52px] md:px-8 text-white text-lg lg:text-2xl rounded-lg leading-7 hover:brightness-125">Go</button>
       </div>
     </div>
   </div>
@@ -78,7 +77,7 @@ get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' 
               <li><a href="#" class="hover:text-fiap-teal">Edit your information</a></li>
               <li><a href="#" class="hover:text-fiap-teal">Change your password</a></li>
               <li><a href="#" class="hover:text-fiap-teal">Invite a member</a></li>
-              <li><a href="<?php echo wp_logout_url(home_url()); ?>" class="hover:text-fiap-teal">Logout</a></li>
+              <li><a href="<?php echo MeprUtils::logout_url(); ?>" class="hover:text-fiap-teal">Logout</a></li>
             </ul>
           </div>
         </div>
