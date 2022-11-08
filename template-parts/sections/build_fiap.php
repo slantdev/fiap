@@ -17,9 +17,9 @@ $build_fiap = get_sub_field('build_fiap');
     </div>
     <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'xl:prose-lg')); ?>
     <?php if ($build_fiap) { ?>
-      <div class="mt-12">
+      <div class="mt-12 build-fiap-table">
         <?php foreach ($build_fiap as $row) : ?>
-          <div class="flex flex-wrap md:flex-nowrap bg-fiap-light border-y -mt-px border-solid border-slate-300 transition duration-200 relative z-0 hover:bg-fiap-teal hover:text-white hover:shadow-lg hover:z-10">
+          <div class="flex flex-wrap md:flex-nowrap">
             <div class="w-full md:w-1/3 lg:w-1/5 px-6 pt-6 pb-0 lg:px-8 md:py-6 font-bold"><?php echo $row['title'] ?></div>
             <div class="w-full md:w-2/3 lg:w-4/5 px-6 pt-4 pb-6 lg:px-8 md:py-6"><?php echo $row['description'] ?></div>
           </div>

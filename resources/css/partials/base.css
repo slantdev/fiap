@@ -20,6 +20,11 @@ h7 {
   @apply text-[18px] font-medium leading-[1.1em];
 }
 
+b,
+strong {
+  @apply font-bold;
+}
+
 .prose :where([class~='lead']):not(:where([class~='not-prose'] *)) {
   @apply text-black font-medium;
 }

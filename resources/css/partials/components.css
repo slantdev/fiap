@@ -357,7 +357,6 @@
 
 .single-fiap_members {
   .wp-post-image {
-    /* @apply object-contain aspect-square border border-solid border-slate-200; */
     @apply object-contain border border-solid border-slate-200;
   }
 }
@@ -365,5 +364,14 @@
 .breadcrumbs {
   a {
     @apply hover:underline;
+  }
+}
+
+.build-fiap-table {
+  > div {
+    @apply bg-[#F5F7F8] border-y -mt-px border-solid border-slate-300 transition duration-200 relative z-0 hover:bg-white;
+    &:first-child {
+      @apply shadow-lg bg-fiap-teal text-white z-10;
+    }
   }
 }

@@ -75,6 +75,237 @@
             "acfe_clone_modal_size": "large"
         },
         {
+            "key": "field_636a7a1320938",
+            "label": "Card Contact",
+            "name": "card_contact",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "layout": "row",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_settings": "",
+            "sub_fields": [
+                {
+                    "key": "field_636a7a2f20939",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "acfe_settings": "",
+                    "acfe_validate": ""
+                },
+                {
+                    "key": "field_636a7a3d2093a",
+                    "label": "Phone",
+                    "name": "phone",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "acfe_settings": {
+                        "acfcloneindex": {
+                            "acfe_settings_location": "",
+                            "acfe_settings_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_setting_type": "required",
+                                    "acfe_settings_setting_name": "",
+                                    "acfe_settings_setting_operator": "true",
+                                    "acfe_settings_setting_value": ""
+                                }
+                            }
+                        }
+                    },
+                    "acfe_validate": {
+                        "acfcloneindex": {
+                            "acfe_validate_location": "",
+                            "acfe_validate_rules_and": {
+                                "acfcloneindex": {
+                                    "acfe_validate_function": "value",
+                                    "acfe_validate_operator": "==",
+                                    "acfe_validate_match": ""
+                                }
+                            },
+                            "acfe_validate_error": ""
+                        }
+                    }
+                },
+                {
+                    "key": "field_636a7a522093b",
+                    "label": "Email",
+                    "name": "email",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "acfe_settings": {
+                        "acfcloneindex": {
+                            "acfe_settings_location": "",
+                            "acfe_settings_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_setting_type": "required",
+                                    "acfe_settings_setting_name": "",
+                                    "acfe_settings_setting_operator": "true",
+                                    "acfe_settings_setting_value": ""
+                                }
+                            }
+                        }
+                    },
+                    "acfe_validate": {
+                        "acfcloneindex": {
+                            "acfe_validate_location": "",
+                            "acfe_validate_rules_and": {
+                                "acfcloneindex": {
+                                    "acfe_validate_function": "value",
+                                    "acfe_validate_operator": "==",
+                                    "acfe_validate_match": ""
+                                }
+                            },
+                            "acfe_validate_error": ""
+                        }
+                    }
+                },
+                {
+                    "key": "field_636a7a602093c",
+                    "label": "Address",
+                    "name": "address",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "acfe_settings": "",
+                    "acfe_validate": ""
+                }
+            ],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_636a7a6d2093d",
+            "label": "Card Book Meeting",
+            "name": "card_book_meeting",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "layout": "row",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_settings": "",
+            "sub_fields": [
+                {
+                    "key": "field_636a7a812093e",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "acfe_settings": "",
+                    "acfe_validate": ""
+                },
+                {
+                    "key": "field_636a7a862093f",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "acfe_settings": "",
+                    "acfe_validate": ""
+                },
+                {
+                    "key": "field_636a7a8b20940",
+                    "label": "Button",
+                    "name": "button",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "acfe_settings": "",
+                    "acfe_validate": ""
+                }
+            ],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
             "key": "field_632d3ace975d8",
             "label": "Section Settings",
             "name": "",
@@ -143,7 +374,7 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1663908583,
+    "modified": 1667922721,
     "acfe_categories": {
         "layout": "Layout"
     }
