@@ -20,7 +20,7 @@ if ($big_image_column) {
   <div class="relative container mx-auto <?php echo $section_padding_top . ' ' . $section_padding_bottom ?>">
     <div class="flex flex-wrap lg:flex-nowrap lg:gap-x-16 xl:gap-x-24 3xl:gap-x-36">
       <div class="w-full order-1 <?php echo $column_image_class ?>">
-        <?php get_template_part('template-parts/components/image', '', array('class' => 'aspect-square lg:aspect-[3/4] object-cover')); ?>
+        <?php get_template_part('template-parts/components/image', '', array('class' => 'aspect-[4/3] object-cover')); ?>
       </div>
       <div class="w-full order-2 <?php echo $column_text_class ?>">
         <?php get_template_part('template-parts/components/heading', '', array('field' => 'heading', 'class' => '')); ?>
