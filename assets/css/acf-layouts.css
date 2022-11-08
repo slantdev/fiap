@@ -10793,6 +10793,11 @@ strong {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.hover\:text-fiap-teal-hover:hover {
+  --tw-text-opacity: 1;
+  color: rgb(1 121 114 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;

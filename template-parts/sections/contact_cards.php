@@ -28,7 +28,7 @@ $card_book_meeting = get_sub_field('card_book_meeting');
                     <div>
                       <?php echo fiap_icon(array('icon' => 'phone', 'group' => 'brand', 'size' => '32', 'class' => 'text-fiap-teal flex-none mr-4 mt-1')) ?>
                     </div>
-                    <div><a href="<?php echo $card_contact['phone']['url'] ?>" target="<?php echo $card_contact['phone']['target'] ?>"><?php echo $card_contact['phone']['title'] ?></a>
+                    <div><a href="<?php echo $card_contact['phone']['url'] ?>" target="<?php echo $card_contact['phone']['target'] ?>" class="hover:text-fiap-teal-hover hover:underline"><?php echo $card_contact['phone']['title'] ?></a>
                     </div>
                   </li>
                 <?php } ?>
@@ -37,7 +37,7 @@ $card_book_meeting = get_sub_field('card_book_meeting');
                     <div>
                       <?php echo fiap_icon(array('icon' => 'contact', 'group' => 'brand', 'size' => '32', 'class' => 'text-fiap-teal flex-none mr-4 mt-1')) ?>
                     </div>
-                    <div><a href="<?php echo $card_contact['email']['url'] ?>" target="<?php echo $card_contact['email']['target'] ?>"><?php echo $card_contact['email']['title'] ?></a></div>
+                    <div><a href="<?php echo $card_contact['email']['url'] ?>" target="<?php echo $card_contact['email']['target'] ?>" class="hover:text-fiap-teal-hover hover:underline"><?php echo $card_contact['email']['title'] ?></a></div>
                   </li>
                 <?php } ?>
                 <?php if ($card_contact['address']) { ?>
