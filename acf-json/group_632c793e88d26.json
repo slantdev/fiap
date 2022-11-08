@@ -153,6 +153,30 @@
             "acfe_validate": ""
         },
         {
+            "key": "field_636a0784a2aae",
+            "label": "Show # of Posts",
+            "name": "posts_per_page",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": 9,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "acfe_settings": "",
+            "acfe_validate": ""
+        },
+        {
             "key": "field_632c793e981cc",
             "label": "(Column Endpoint)",
             "name": "",
@@ -238,7 +262,7 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1663859038,
+    "modified": 1667893881,
     "acfe_categories": {
         "layout": "Layout"
     }

@@ -3,17 +3,22 @@
 function filter_news()
 {
   $catID = $_POST['category'];
+  if (isset($_POST['postsperpage'])) {
+    $postsPerPage = $_POST['postsperpage'];
+  } else {
+    $postsPerPage = -1;
+  }
 
   if ($catID == 'all') {
     $ajaxposts = new WP_Query([
       'post_type' => 'news',
-      'posts_per_page' => -1,
+      'posts_per_page' => $postsPerPage,
       'orderby' => 'menu_order'
     ]);
   } else {
     $ajaxposts = new WP_Query([
       'post_type' => 'news',
-      'posts_per_page' => -1,
+      'posts_per_page' => $postsPerPage,
       'orderby' => 'menu_order',
       'tax_query' => array(
         array(
@@ -58,17 +63,22 @@ add_action('wp_ajax_nopriv_filter_news', 'filter_news');
 function filter_case_study()
 {
   $catID = $_POST['category'];
+  if (isset($_POST['postsperpage'])) {
+    $postsPerPage = $_POST['postsperpage'];
+  } else {
+    $postsPerPage = -1;
+  }
 
   if ($catID == 'all') {
     $ajaxposts = new WP_Query([
       'post_type' => 'case_study',
-      'posts_per_page' => -1,
+      'posts_per_page' => $postsPerPage,
       'orderby' => 'menu_order'
     ]);
   } else {
     $ajaxposts = new WP_Query([
       'post_type' => 'case_study',
-      'posts_per_page' => -1,
+      'posts_per_page' => $postsPerPage,
       'orderby' => 'menu_order',
       'tax_query' => array(
         array(
@@ -169,19 +179,24 @@ function filter_whitepapers()
 {
   $search_query = $_POST['query'];
   $search_filter = $_POST['filter'];
+  if (isset($_POST['postsperpage'])) {
+    $postsPerPage = $_POST['postsperpage'];
+  } else {
+    $postsPerPage = -1;
+  }
 
   if ($search_query) {
     if ($search_filter == 'all') {
       $args = array(
         'post_type' => 'white_paper',
-        'posts_per_page' => -1,
+        'posts_per_page' => $postsPerPage,
         'orderby' => 'term_order',
         's' => $search_query
       );
     } else {
       $args = array(
         'post_type' => 'white_paper',
-        'posts_per_page' => -1,
+        'posts_per_page' => $postsPerPage,
         'orderby' => 'term_order',
         's' => $search_query,
         'tax_query' => array(
@@ -197,13 +212,13 @@ function filter_whitepapers()
     if ($search_filter == 'all') {
       $args = array(
         'post_type' => 'white_paper',
-        'posts_per_page' => -1,
+        'posts_per_page' => $postsPerPage,
         'orderby' => 'term_order',
       );
     } else {
       $args = array(
         'post_type' => 'white_paper',
-        'posts_per_page' => -1,
+        'posts_per_page' => $postsPerPage,
         'orderby' => 'term_order',
         'tax_query' => array(
           array(

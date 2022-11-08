@@ -28,6 +28,7 @@ jQuery(function ($) {
       data: {
         action: 'filter_news',
         category: $(this).data('id'),
+        postsperpage: $(this).data('postsperpage'),
       },
       success: function (res) {
         $('.news-grid').html(res);
@@ -56,6 +57,7 @@ jQuery(function ($) {
       data: {
         action: 'filter_case_study',
         category: $(this).data('id'),
+        postsperpage: $(this).data('postsperpage'),
       },
       success: function (res) {
         $('.case-study-grid').html(res);

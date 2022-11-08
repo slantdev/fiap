@@ -19,6 +19,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
     $team_layout = get_sub_field('team_layout');
     $args = array(
       'post_type' => 'team',
+      'posts_per_page' => -1,
       'tax_query' => array(
         'relation' => 'AND',
         array(

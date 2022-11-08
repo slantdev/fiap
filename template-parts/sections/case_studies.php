@@ -7,6 +7,10 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
  * $section_padding_top
  * $section_padding_bottom
 */
+$posts_per_page = get_sub_field('posts_per_page');
+if (!$posts_per_page) {
+  $posts_per_page = -1;
+}
 ?>
 <section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>">
   <div class="relative container mx-auto <?php echo $section_padding_top . ' ' . $section_padding_bottom ?>">
@@ -38,9 +42,9 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
                 'orderby' => 'term_order'
               ));
               if (!empty($taxonomies)) :
-                $output = '<div class="swiper-slide w-auto"><button type="button" class="filter-case-study filter-active inline-block rounded-full px-6 py-1.5 h-9 lg:h-10 text-sm lg:text-base lg:px-10 lg:py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-id="all">All</button></div>';
+                $output = '<div class="swiper-slide w-auto"><button type="button" class="filter-case-study filter-active inline-block rounded-full px-6 py-1.5 h-9 lg:h-10 text-sm lg:text-base lg:px-10 lg:py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-id="all" data-postsperpage="' . $posts_per_page . '">All</button></div>';
                 foreach ($taxonomies as $category) {
-                  $output .= '<div class="swiper-slide w-auto"><button type="button" class="filter-case-study inline-block rounded-full px-6 py-1.5 h-9 lg:h-10 text-sm lg:text-base lg:px-10 lg:py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-id="' . esc_attr($category->term_id) . '">' . esc_attr($category->name) . '</button></div>';
+                  $output .= '<div class="swiper-slide w-auto"><button type="button" class="filter-case-study inline-block rounded-full px-6 py-1.5 h-9 lg:h-10 text-sm lg:text-base lg:px-10 lg:py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-id="' . esc_attr($category->term_id) . '" data-postsperpage="' . $posts_per_page . '">' . esc_attr($category->name) . '</button></div>';
                 }
                 echo $output;
               endif;
@@ -69,9 +73,9 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
                 'orderby' => 'term_order'
               ));
               if (!empty($taxonomies)) :
-                $output = '<div class="swiper-slide w-auto"><button type="button" class="filter-case-study filter-active inline-block rounded-full px-6 py-1.5 h-9 lg:h-auto text-sm lg:text-base lg:px-10 lg:py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-id="all">All</button></div>';
+                $output = '<div class="swiper-slide w-auto"><button type="button" class="filter-case-study filter-active inline-block rounded-full px-6 py-1.5 h-9 lg:h-auto text-sm lg:text-base lg:px-10 lg:py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-id="all" data-postsperpage="' . $posts_per_page . '">All</button></div>';
                 foreach ($taxonomies as $category) {
-                  $output .= '<div class="swiper-slide w-auto"><button type="button" class="filter-case-study inline-block rounded-full px-6 py-1.5 h-9 lg:h-auto text-sm lg:text-base lg:px-10 lg:py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-id="' . esc_attr($category->term_id) . '">' . esc_attr($category->name) . '</button></div>';
+                  $output .= '<div class="swiper-slide w-auto"><button type="button" class="filter-case-study inline-block rounded-full px-6 py-1.5 h-9 lg:h-auto text-sm lg:text-base lg:px-10 lg:py-2.5 bg-white border border-neutral-100 shadow-md hover:shadow-lg transition-all duration-200" data-id="' . esc_attr($category->term_id) . '" data-postsperpage="' . $posts_per_page . '">' . esc_attr($category->name) . '</button></div>';
                 }
                 echo $output;
               endif;
@@ -125,7 +129,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
       <?php
       $args = array(
         'post_type' => 'case_study',
-        'posts_per_page' => -1,
+        'posts_per_page' => $posts_per_page,
         'orderby' => 'menu_order'
       );
       $the_query = new WP_Query($args);
