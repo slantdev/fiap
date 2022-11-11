@@ -48,3 +48,9 @@
 .mepr-unauthorized-message {
   @apply py-4 text-center prose lg:prose-lg xl:prose-xl mx-auto;
 }
+
+.mepr-signup-form {
+  .mepr_price {
+    @apply hidden;
+  }
+}

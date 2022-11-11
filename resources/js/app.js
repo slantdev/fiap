@@ -148,6 +148,33 @@ jQuery(function ($) {
         // Animation complete.
       });
   });
+
+  const mediaQuery = window.matchMedia('(min-width: 1536px)');
+  mediaQuery.addListener(setHeroSliderHeight);
+
+  function setHeroSliderHeight(e) {
+    // Check if the media query is true
+    if (e.matches) {
+      // Then log the following message to the console
+      //console.log('Media Query Matched!');
+      if ($('.hero-slider').length) {
+        //let hero_slider = $('.hero-slider').outerHeight();
+        let site_header = $('#site-header').outerHeight();
+        let select_service = $('.select-service').outerHeight();
+        let window_height = $(window).outerHeight();
+        let hero_slider_height = window_height - site_header - select_service;
+        $('.hero-slider .swiper-slide').outerHeight(hero_slider_height);
+      }
+    }
+  }
+
+  setHeroSliderHeight(mediaQuery);
+
+  $(window)
+    .on('resize', function () {
+      setHeroSliderHeight(mediaQuery);
+    })
+    .trigger('resize');
 });
 
 jQuery(function ($) {

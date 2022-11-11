@@ -3,7 +3,7 @@
 } ?>
 
 <?php
-return;
+//return;
 ?>
 
 <div class="mp_wrapper">

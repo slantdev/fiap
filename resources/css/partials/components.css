@@ -1,11 +1,11 @@
 #site-header {
   .header-top {
-    @apply container mx-auto py-4 lg:py-6 xl:pt-11 xl:pb-6;
+    @apply container mx-auto py-4 lg:py-6 xl:pt-6 xl:pb-6;
     @apply transition-all duration-300;
   }
   .site-logo {
     img {
-      @apply w-auto h-14 lg:h-16 xl:h-20 transition-all duration-300;
+      @apply w-auto h-14 lg:h-16 xl:h-[4.25rem] transition-all duration-300;
     }
   }
   &.header-shrink {

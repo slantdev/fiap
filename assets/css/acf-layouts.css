@@ -7155,8 +7155,8 @@ textarea.form-control.is-invalid {
   height: 1.5rem;
 }
 
-.h-\[46px\] {
-  height: 46px;
+.h-\[42px\] {
+  height: 42px;
 }
 
 .h-full {
@@ -7209,10 +7209,6 @@ textarea.form-control.is-invalid {
 
 .h-0 {
   height: 0px;
-}
-
-.h-\[52px\] {
-  height: 52px;
 }
 
 .h-20 {
@@ -7279,8 +7275,8 @@ textarea.form-control.is-invalid {
   width: 1.5rem;
 }
 
-.w-\[46px\] {
-  width: 46px;
+.w-\[42px\] {
+  width: 42px;
 }
 
 .w-1\/4 {
@@ -7975,10 +7971,6 @@ textarea.form-control.is-invalid {
   --tw-bg-opacity: 0.2;
 }
 
-.bg-opacity-50 {
-  --tw-bg-opacity: 0.5;
-}
-
 .bg-opacity-0 {
   --tw-bg-opacity: 0;
 }
@@ -8269,6 +8261,11 @@ textarea.form-control.is-invalid {
   padding-bottom: 8rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -8277,11 +8274,6 @@ textarea.form-control.is-invalid {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .py-1\.5 {
@@ -9636,7 +9628,7 @@ strong {
 
 @media (min-width: 1280px) {
   #site-header .header-top {
-    padding-top: 2.75rem;
+    padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
 }
@@ -9663,7 +9655,7 @@ strong {
 
 @media (min-width: 1280px) {
   #site-header .site-logo img {
-    height: 5rem;
+    height: 4.25rem;
   }
 }
 
@@ -17419,6 +17411,10 @@ strong {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+
+  .md\:text-\[45px\] {
+    font-size: 45px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -20145,6 +20141,11 @@ strong {
     padding-bottom: 4rem;
   }
 
+  .lg\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
   .lg\:px-14 {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
@@ -20213,11 +20214,6 @@ strong {
   .lg\:px-1 {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
-  }
-
-  .lg\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
   }
 
   .lg\:px-3 {
@@ -23666,6 +23662,10 @@ strong {
     height: 700px;
   }
 
+  .xl\:h-\[600px\] {
+    height: 600px;
+  }
+
   .xl\:w-12 {
     width: 3rem;
   }
@@ -23688,6 +23688,14 @@ strong {
 
   .xl\:min-w-\[360px\] {
     min-width: 360px;
+  }
+
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+
+  .xl\:items-center {
+    align-items: center;
   }
 
   .xl\:gap-10 {
@@ -28035,6 +28043,10 @@ strong {
   .\32xl\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .\32xl\:text-\[45px\] {
+    font-size: 45px;
   }
 }
 

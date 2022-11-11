@@ -9,7 +9,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
 */
 ?>
 
-<section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>" class="relative">
+<section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>" class="hero-slider relative">
 
   <?php
   $slider_repeater = get_sub_field('slider_repeater');
@@ -27,7 +27,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
               <div class="flex flex-wrap lg:flex-nowrap items-center h-full">
                 <div class="w-full md:max-w-xl mx-auto lg:max-w-none lg:mx-0 lg:w-1/2 lg:pr-16 lg:pt-6 text-white relative z-20">
                   <?php if ($slider_repeater[0]['title']) { ?>
-                    <h3 class="text-[1.75rem] md:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-[54px] font-light text-white leading-[1.2em] xl:leading-[1.1em] mb-4 xl:mb-6"><?php echo $slider_repeater[0]['title'] ?></h3>
+                    <h3 class="text-[1.75rem] md:text-3xl xl:text-4xl 2xl:text-5xl font-light text-white leading-[1.2em] xl:leading-[1.1em] mb-4 xl:mb-6"><?php echo $slider_repeater[0]['title'] ?></h3>
                   <?php } ?>
                   <?php if ($slider_repeater[0]['description']) { ?>
                     <div class="prose text-sm max-w-none text-white md:text-base xl:text-lg mb-8"><?php echo $slider_repeater[0]['description'] ?></div>
@@ -85,17 +85,17 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
       <div class="swiper slider_two_columns">
         <div class="swiper-wrapper bg-fiap-teal">
           <?php foreach ($slider_repeater as $slide) : ?>
-            <div class="swiper-slide relative bg-fiap-teal h-[720px] lg:h-[600px] xl:h-[700px] overflow-hidden">
+            <div class="swiper-slide relative bg-fiap-teal h-[720px] lg:h-[600px] xl:h-[600px] overflow-hidden xl:flex xl:flex-row xl:items-center">
               <div class="absolute top-0 left-0 right-0 h-1/3 md:h-2/5 lg:inset-0 lg:h-full">
                 <div class="flex h-full">
                   <div class="w-full lg:w-1/2 ml-auto"><img class="object-cover h-full w-full" src="<?php echo $slide['image']['url'] ?>"></div>
                 </div>
               </div>
-              <div class="container mx-auto py-8 relative top-1/3 md:top-[40%] lg:py-20 xl:py-32 lg:top-0">
+              <div class="container mx-auto py-8 relative top-1/3 md:top-[40%] lg:py-20 xl:py-20 lg:top-0">
                 <div class="flex flex-wrap lg:flex-nowrap items-center h-full">
                   <div class="w-full md:max-w-xl mx-auto lg:max-w-none lg:mx-0 lg:w-1/2 lg:pr-16 lg:pt-6 text-white relative z-20">
                     <?php if ($slide['title']) { ?>
-                      <h2 class="text-[1.75rem] md:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-[54px] font-light text-white leading-[1.2em] xl:leading-[1.1em] mb-4 xl:mb-6"><?php echo $slide['title'] ?></h2>
+                      <h2 class="text-[1.75rem] md:text-3xl xl:text-4xl 2xl:text-[45px] font-light text-white leading-[1.2em] xl:leading-[1.1em] mb-4 xl:mb-6"><?php echo $slide['title'] ?></h2>
                     <?php } ?>
                     <?php if ($slide['description']) { ?>
                       <div class="prose text-sm max-w-none text-white md:text-base xl:text-lg mb-8"><?php echo $slide['description'] ?></div>

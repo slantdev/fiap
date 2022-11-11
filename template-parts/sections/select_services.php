@@ -9,7 +9,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
 */
 ?>
 
-<section class="bg-fiap-light py-10 md:py-12 lg:py-16" style="<?php echo $section_style ?>">
+<section class="select-service bg-fiap-light pt-9 pb-10" style="<?php echo $section_style ?>">
   <div class="container mx-auto">
     <div class="flex flex-wrap justify-center items-center">
       <div class="mb-4 md:mb-0 md:mr-6 lg:mr-8"><span class="text-fiap-darkblue text-xl lg:text-2xl font-semibold leading-tight"><?php echo get_sub_field('intro_text') ?></span></div>
