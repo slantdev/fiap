@@ -202,7 +202,12 @@
         @apply absolute top-[68px] -z-20 bg-fiap-darkblue flex flex-col divide-y divide-white divide-opacity-20 opacity-0 invisible transition-all duration-300;
         > li {
           > a {
-            @apply block leading-[48px] px-6 whitespace-nowrap hover:text-[#01CEC2] transition-all duration-200;
+            @apply block leading-[48px] pl-4 pr-6 whitespace-nowrap border-b-0 border-l-4 hover:border-[#01CEC2] hover:text-[#01CEC2] transition-all duration-200;
+          }
+          &.current-menu-item {
+            > a {
+              @apply border-transparent hover:border-[#01CEC2];
+            }
           }
         }
       }

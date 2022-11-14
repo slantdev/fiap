@@ -7211,8 +7211,8 @@ textarea.form-control.is-invalid {
   height: 0px;
 }
 
-.h-20 {
-  height: 5rem;
+.h-\[88px\] {
+  height: 88px;
 }
 
 .h-96 {
@@ -7247,12 +7247,12 @@ textarea.form-control.is-invalid {
   height: 432px;
 }
 
-.h-\[6rem\] {
-  height: 6rem;
+.h-20 {
+  height: 5rem;
 }
 
-.h-\[88px\] {
-  height: 88px;
+.h-\[6rem\] {
+  height: 6rem;
 }
 
 .max-h-\[512px\] {
@@ -7355,8 +7355,8 @@ textarea.form-control.is-invalid {
   width: 235px;
 }
 
-.w-20 {
-  width: 5rem;
+.w-\[88px\] {
+  width: 88px;
 }
 
 .w-10 {
@@ -7367,16 +7367,16 @@ textarea.form-control.is-invalid {
   width: 2.25rem;
 }
 
+.w-20 {
+  width: 5rem;
+}
+
 .w-48 {
   width: 12rem;
 }
 
 .w-\[6rem\] {
   width: 6rem;
-}
-
-.w-\[88px\] {
-  width: 88px;
 }
 
 .min-w-\[260px\] {
@@ -7655,6 +7655,11 @@ textarea.form-control.is-invalid {
   row-gap: 0.75rem;
 }
 
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
 .gap-x-4 {
   -moz-column-gap: 1rem;
        column-gap: 1rem;
@@ -7699,11 +7704,6 @@ textarea.form-control.is-invalid {
 
 .gap-y-1 {
   row-gap: 0.25rem;
-}
-
-.gap-x-2 {
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
 }
 
 .gap-y-0 {
@@ -10088,7 +10088,9 @@ strong {
 #desktop-menu ul > .menu-item-has-children .sub-menu > li > a {
   display: block;
   white-space: nowrap;
-  padding-left: 1.5rem;
+  border-bottom-width: 0px;
+  border-left-width: 4px;
+  padding-left: 1rem;
   padding-right: 1.5rem;
   line-height: 48px;
   transition-property: all;
@@ -10097,8 +10099,19 @@ strong {
 }
 
 #desktop-menu ul > .menu-item-has-children .sub-menu > li > a:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(1 206 194 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
   color: rgb(1 206 194 / var(--tw-text-opacity));
+}
+
+#desktop-menu ul > .menu-item-has-children .sub-menu > li.current-menu-item > a {
+  border-color: transparent;
+}
+
+#desktop-menu ul > .menu-item-has-children .sub-menu > li.current-menu-item > a:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(1 206 194 / var(--tw-border-opacity));
 }
 
 #desktop-menu ul > .menu-item-has-children:hover > .sub-menu {
