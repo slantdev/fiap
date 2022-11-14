@@ -28,7 +28,13 @@
       <div class="w-full lg:w-1/2">
         <div class="py-12 lg:py-20">
           <div class="prose max-w-md">
-            We acknowledge Aboriginal and Torres Strait Islander people as the traditional custodians of this land and pay our respects to their history, their living culture and to Elders past and present.
+            <?php
+            $footer_text = get_field('footer_text', 'option');
+            if ($footer_text) {
+              echo $footer_text;
+            } else {
+              echo 'We acknowledge Aboriginal and Torres Strait Islander people as the traditional custodians of this land and pay our respects to their history, their living culture and to Elders past and present.';
+            } ?>
           </div>
           <div class="mt-10 lg:mt-24">
             <div class="flex items-center my-4 gap-4">
@@ -96,14 +102,47 @@
       <div class="flex flex-col items-center gap-y-6 md:flex-row md:items-start md:justify-between text-sm">
         <div class="md:whitespace-nowrap">&copy;<?php echo date_i18n('Y'); ?> Good Shepherd AU & NZ</div>
         <div class="flex flex-col items-center gap-y-6 md:items-end lg:flex-row">
-          <div>
-            <ul class="flex flex-col gap-y-3 text-center whitespace-nowrap md:flex-row md:gap-x-10 lg:gap-x-10 xl:gap-x-16 items-center">
-              <li><a href="#">Terms and Conditions</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Sitemap</a></li>
-            </ul>
+
+          <?php
+          $footer_links = get_field('footer_links', 'options');
+          if ($footer_links) {
+            echo '<div>';
+            echo '<ul class="flex flex-col gap-y-3 text-center whitespace-nowrap md:flex-row md:gap-x-10 lg:gap-x-10 xl:gap-x-16 items-center">';
+            foreach ($footer_links as $link) {
+              echo '<li><a href="' . $link['link']['url'] . '" target="' . $link['link']['url'] . '">' . $link['link']['title'] . '</a></li>';
+            }
+            echo '</ul>';
+            echo '</div>';
+          }
+          ?>
+          <div class="ml-0 lg:ml-28 xl:ml-48 whitespace-nowrap">
+            <div class="flex gap-x-2">
+              <?php
+              $social_links = get_field('social_links', 'options');
+              $facebook = $social_links['facebook'];
+              $instagram = $social_links['instagram'];
+              $twitter = $social_links['twitter'];
+              $linked_in = $social_links['linked_in'];
+              $youtube = $social_links['youtube'];
+
+              if ($facebook) {
+                echo '<a href="' . $facebook['url'] . '" class="inline-block">' . fiap_icon(array('icon' => 'facebook', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
+              }
+              if ($instagram) {
+                echo '<a href="' . $instagram['url'] . '" class="inline-block">' . fiap_icon(array('icon' => 'instagram', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
+              }
+              if ($twitter) {
+                echo '<a href="' . $twitter['url'] . '" class="inline-block">' . fiap_icon(array('icon' => 'twitter', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
+              }
+              if ($linked_in) {
+                echo '<a href="' . $linked_in['url'] . '" class="inline-block">' . fiap_icon(array('icon' => 'linkedin', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
+              }
+              if ($youtube) {
+                echo '<a href="' . $youtube['url'] . '" class="inline-block">' . fiap_icon(array('icon' => 'youtube', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
+              }
+              ?>
+            </div>
           </div>
-          <div class="ml-0 lg:ml-28 xl:ml-48 whitespace-nowrap">Social Icons</div>
         </div>
       </div>
     </div>
