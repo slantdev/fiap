@@ -45,7 +45,7 @@ if ($enabled) :
           <div class="md:w-3/4 lg:w-3/5 text-white">
             <?php
             if ($hero_title) {
-              echo '<h1 class="text-4xl md:text-[45px] font-light tracking-tight leading-[1.1em] mb-4">' . $hero_title . '</h1>';
+              echo '<h1 class="text-4xl md:text-[45px] font-light leading-[1.1em] mb-4">' . $hero_title . '</h1>';
             }
             ?>
             <?php
