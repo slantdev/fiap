@@ -118,20 +118,38 @@ if (!$posts_per_page) {
         </script>
       <?php } ?>
     <?php } ?>
-    <div class="filter-case-study-loader pt-2 pb-4">
-      <div class="flex items-center justify-center">
-        <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 text-fiap-teal rounded-full opacity-0" role="status">
-          <span class="visually-hidden">Loading...</span>
+    <?php if (get_sub_field('show_filter_nav')) { ?>
+      <div class="filter-case-study-loader pt-2 pb-4">
+        <div class="flex items-center justify-center">
+          <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 text-fiap-teal rounded-full opacity-0" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
         </div>
       </div>
-    </div>
+    <?php } ?>
     <div class="case-study-grid relative">
       <?php
-      $args = array(
-        'post_type' => 'case_study',
-        'posts_per_page' => $posts_per_page,
-        'orderby' => 'menu_order'
-      );
+      $limit_by_category = get_sub_field('limit_by_category');
+      if ($limit_by_category) {
+        $args = array(
+          'post_type' => 'case_study',
+          'posts_per_page' => $posts_per_page,
+          'orderby' => 'menu_order',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'case_study_category',
+              'field'    => 'term_id',
+              'terms'    => $limit_by_category,
+            ),
+          ),
+        );
+      } else {
+        $args = array(
+          'post_type' => 'case_study',
+          'posts_per_page' => $posts_per_page,
+          'orderby' => 'menu_order'
+        );
+      }
       $the_query = new WP_Query($args);
       if ($the_query->have_posts()) {
         echo '<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8 2xl:gap-10">';
