@@ -14,8 +14,8 @@ if ($cards_number_repeater) : ?>
       <div class="rounded-xl bg-white px-8 pt-8 pb-8 shadow-lg border border-neutral-200">
         <?php
         if ($card['card_image']) {
-          echo '<div class="h-20 w-20 rounded-full overflow-hidden mb-6">';
-          echo '<img class="rounded-full h-full w-full object-center object-cover" src="' . $card['card_image']['url'] . '" />';
+          echo '<div class="h-[88px] w-[88px] rounded-md overflow-hidden mb-6">';
+          echo '<img class="rounded-md h-full w-full object-center object-cover" src="' . $card['card_image']['url'] . '" />';
           echo '</div>';
         }
         ?>
