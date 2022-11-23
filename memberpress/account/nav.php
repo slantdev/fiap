@@ -6,7 +6,7 @@
 //return;
 ?>
 
-<div class="mp_wrapper">
+<div class="mp_wrapper hidden">
   <div id="mepr-account-nav">
     <span class="mepr-nav-item <?php MeprAccountHelper::active_nav('home'); ?>">
       <a href="<?php echo MeprHooks::apply_filters('mepr-account-nav-home-link', $account_url . $delim . 'action=home'); ?>" id="mepr-account-home"><?php echo MeprHooks::apply_filters('mepr-account-nav-home-label', _x('Home', 'ui', 'memberpress')); ?></a>

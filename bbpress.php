@@ -13,7 +13,6 @@ get_header();
       ?>
         <div id="post-<?php the_ID(); ?>" class="mx-auto">
           <div class="max-w-screen-xl mx-auto">
-            <h3 class="text-2xl xl:text-3xl"><?php the_title(); ?></h3>
             <?php the_content(); ?>
           </div>
         </div>

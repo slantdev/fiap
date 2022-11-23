@@ -142,6 +142,7 @@ require get_template_directory() . '/inc/breadcrumb.php';
 require get_template_directory() . '/inc/filters.php';
 require get_template_directory() . '/inc/walker-nav.php';
 require get_template_directory() . '/inc/memberpress.php';
+require get_template_directory() . '/inc/bbpress.php';
 //require get_template_directory() . '/inc/acf-debug.php';
 
 function fiap_add_arrow_to_parent_menu_item($sorted_menu_items, $args)

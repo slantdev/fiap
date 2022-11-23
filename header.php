@@ -74,16 +74,29 @@
         <div class="mx-auto container">
           <div class="flex justify-between items-end">
             <?php
-            wp_nav_menu(
-              array(
-                'container_id'    => 'desktop-menu',
-                'container_class' => '',
-                'menu_class'      => 'flex text-white items-end gap-x-8 text-base 2xl:gap-x-14',
-                'theme_location'  => 'primary',
-                'li_class'        => '',
-                'fallback_cb'     => false,
-              )
-            );
+            if (is_user_logged_in()) {
+              wp_nav_menu(
+                array(
+                  'container_id'    => 'desktop-menu',
+                  'container_class' => '',
+                  'menu'            => 'member-main-menu',
+                  'menu_class'      => 'flex text-white items-end gap-x-8 text-base 2xl:gap-x-14',
+                  'li_class'        => '',
+                  'fallback_cb'     => false,
+                )
+              );
+            } else {
+              wp_nav_menu(
+                array(
+                  'container_id'    => 'desktop-menu',
+                  'container_class' => '',
+                  'menu_class'      => 'flex text-white items-end gap-x-8 text-base 2xl:gap-x-14',
+                  'theme_location'  => 'primary',
+                  'li_class'        => '',
+                  'fallback_cb'     => false,
+                )
+              );
+            }
             ?>
             <div class="py-3 pl-6">
               <!-- <form class="relative">
