@@ -277,7 +277,7 @@ function card_shortcut($atts = array())
   $output .= '<a href="' . $link . '" class="card-shortcut block relative w-full h-full rounded-lg aspect-w-1 aspect-h-1 bg-slate-100 cursor-pointer shadow-md overflow-hidden">';
   $output .= '<img class="h-full w-full object-center object-cover rounded-xl transition-all duration-300" src="' . $img_src . '" alt="' . $title . '">';
   $output .= '<div class="absolute w-full h-full inset-0 z-10 flex items-center justify-center bg-black/50 p-6 rounded-xl text-center">
-      <h3 class="text-white text-3xl">' . $title . '</h3>
+      <h3 class="text-white text-xl lg:text-3xl">' . $title . '</h3>
     </div>
   </a>';
   return $output;

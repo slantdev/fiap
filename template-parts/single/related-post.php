@@ -33,9 +33,9 @@ $args = array(
 $related_query = new WP_Query($args);
 if ($related_query->have_posts()) {
   echo '<section class="bg-gray-100">';
-  echo '<div class="container mx-auto relative py-36">';
-  echo '<h3 class="mb-8">Related ' . $post_type_title . '</h3>';
-  echo '<div class="grid grid-cols-3 gap-10 mt-12">';
+  echo '<div class="container mx-auto relative py-12 lg:py-24 xl:py-36">';
+  echo '<h3 class="mb-6 lg:mb-8">Related ' . $post_type_title . '</h3>';
+  echo '<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-10 mt-6 lg:mt-12">';
   while ($related_query->have_posts()) {
     $related_query->the_post();
     if ($post_type == 'news') {

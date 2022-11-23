@@ -265,3 +265,88 @@ function filter_whitepapers()
 }
 add_action('wp_ajax_filter_whitepapers', 'filter_whitepapers');
 add_action('wp_ajax_nopriv_filter_whitepapers', 'filter_whitepapers');
+
+function filter_faqs()
+{
+  $catID = $_POST['category'];
+
+  if ($catID == 'all') {
+    $ajaxposts = new WP_Query([
+      'post_type' => 'faq',
+      'posts_per_page' => -1,
+      'orderby' => 'menu_order',
+    ]);
+  } else {
+    $ajaxposts = new WP_Query([
+      'post_type' => 'faq',
+      'posts_per_page' => -1,
+      'orderby' => 'menu_order',
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'faq_category',
+          'field'    => 'term_id',
+          'terms'    => $catID,
+        ),
+      ),
+    ]);
+  }
+
+  $response = '';
+
+  if ($ajaxposts->have_posts()) {
+
+    $uniqueid = uniqid('accordion-');
+    $response .= '<div class="accordion" id="' . $uniqueid . '">';
+    $row_index = 0;
+    $state_class = '';
+
+    while ($ajaxposts->have_posts()) : $ajaxposts->the_post();
+
+      $row_index++;
+      if ($row_index == 1) {
+        $state_class = '';
+      } else {
+        $state_class = '';
+      }
+
+      $response .= '<div class="accordion-item bg-gray-100 border border-gray-300 mb-4 rounded-lg lg:mb-6">
+          <h2 class="accordion-header mb-0" id="heading-' . $row_index . '">
+            <button class="accordion-button relative flex justify-between w-full py-4 px-4 text-lg font-semibold text-gray-500 leading-tight text-left bg-white border-0 focus:outline-none rounded-lg md:text-xl md:py-5 md:pl-6 md:pr-4 lg:text-xl lg:py-5 lg:pl-8 lg:pr-6 collapsed ' . $state_class . '" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-' . $row_index . '" aria-expanded="true" aria-controls="collapse-' . $row_index . '">
+              ' . get_the_title() . '
+              <svg class="collapsed-arrow text-fiap-teal flex-none mt-0.5 ml-4 w-5 h-5 lg:w-7 lg:h-7 xl:ml-8" xmlns="http://www.w3.org/2000/svg" width="27.455" height="27.456" viewBox="0 0 27.455 27.456">
+                <g id="Group_2008" data-name="Group 2008" transform="translate(13.728 1) rotate(45)">
+                  <line id="Line_9" data-name="Line 9" x1="18" y2="18" transform="translate(0 0)" fill="none" stroke="currentColor" stroke-width="2" />
+                  <line id="Line_10" data-name="Line 10" x2="18" y2="18" transform="translate(0 0)" fill="none" stroke="currentColor" stroke-width="2" />
+                </g>
+              </svg>
+              <svg class="not-collapsed-arrow text-fiap-teal flex-none mt-0.5 ml-4 w-5 h-5 lg:w-7 lg:h-7 xl:ml-8" xmlns="http://www.w3.org/2000/svg" width="27.455" height="27.456" viewBox="0 0 27.455 27.456">
+                <g id="Group_2009" data-name="Group 2009" transform="translate(13.728 1) rotate(45)">
+                  <line id="Line_9" data-name="Line 9" x1="18" y2="18" transform="translate(0 0)" fill="none" stroke="currentColor" stroke-width="2" />
+                </g>
+              </svg>
+            </button>
+          </h2>
+          <div id="collapse-' . $row_index . '" class="accordion-collapse collapse ' . $state_class . '" aria-labelledby="heading-' . $row_index . '" data-bs-parent="#' . $uniqueid . '">
+            <div class="accordion-body py-4 px-5 lg:px-8 lg:py-8">
+              <div class="prose">
+                ' . get_the_content() . '
+              </div>
+            </div>
+          </div>
+        </div>';
+
+    endwhile;
+
+    $response .= '</div>';
+  } else {
+    $response = '<div class="text-center py-4 px-8">No FAQs Found</div>';
+  }
+
+
+  $response .= '<div class="blocker absolute inset-0 bg-white bg-opacity-40" style="display: none;"></div>';
+
+  echo $response;
+  exit;
+}
+add_action('wp_ajax_filter_faqs', 'filter_faqs');
+add_action('wp_ajax_nopriv_filter_faqs', 'filter_faqs');

@@ -13,15 +13,79 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
   <div class="<?php echo $section_container_class ?>">
     <?php get_template_part('template-parts/components/heading', '', array('field' => 'heading', 'class' => 'text-center')); ?>
     <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'xl:prose-lg')); ?>
-
     <?php
+    echo '<div class="max-w-screen-md mx-auto mt-10">';
 
-    echo '<div class="max-w-screen-md mx-auto mt-10"><div class="faq-container">';
+    $faq_settings = get_sub_field('faq_settings');
+    $show_faq_filter = $faq_settings['show_faq_filter'];
+    $limit_by_faq_category = $faq_settings['limit_by_faq_category'];
 
-    $args = array(
-      'post_type' => 'faq',
-      'posts_per_page' => -1
-    );
+    if ($show_faq_filter) {
+    ?>
+      <div class="flex justify-center relative mb-6 lg:mb-8">
+        <div class="faq-dropdown dropdown relative">
+          <button class="dropdown-toggle px-10 py-3 lg:px-8 lg:py-4 bg-white border border-solid border-gray-300 font-medium text-base leading-tight rounded-full focus:outline-none focus:ring-0 transition duration-150 ease-in-out flex items-center justify-between whitespace-nowrap xl:min-w-[360px]" type="button" id="dropdownSelect" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="dropdown-label">Filter</span>
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-3 ml-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+              <path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+            </svg>
+          </button>
+          <ul class="dropdown-menu max-h-96 overflow-y-auto min-w-max w-full absolute bg-white text-base z-50 py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none" aria-labelledby="dropdownSelect">
+            <?php
+            if (!$limit_by_faq_category) {
+              $limit_by_faq_category = 'all';
+            }
+            $taxonomies = get_terms(array(
+              'taxonomy' => 'faq_category',
+              'hide_empty' => true,
+              'include' => $limit_by_faq_category
+            ));
+            if (!empty($taxonomies)) :
+              $output = '';
+              foreach ($taxonomies as $category) {
+                $output .= '<a class="faq-dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#!" data-id="' . esc_attr($category->term_id) . '">' . esc_attr($category->name) . '</a>';
+              }
+              echo $output;
+            endif;
+            ?>
+            <hr class="h-0 my-2 border border-solid border-t-0 border-gray-700 opacity-10" />
+            <li>
+              <a href="#!" data-id="all" class="faq-dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">Show All</a>
+            </li>
+          </ul>
+          <div class="filter-faq-loader absolute -right-8 top-1/2 -translate-y-1/2">
+            <div class="flex items-center justify-center">
+              <div class="spinner-border animate-spin inline-block w-6 h-6 border-4 text-fiap-teal rounded-full opacity-0" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <?php
+    }
+
+    if ($limit_by_faq_category) {
+      $args = array(
+        'post_type' => 'faq',
+        'posts_per_page' => -1,
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'faq_category',
+            'field'    => 'term_id',
+            'terms'    => $limit_by_faq_category,
+          ),
+        ),
+      );
+    } else {
+      $args = array(
+        'post_type' => 'faq',
+        'posts_per_page' => -1
+      );
+    }
+
+    echo '<div class="faq-container relative">';
 
     $the_query = new WP_Query($args);
 
@@ -41,7 +105,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
         } else {
           $state_class = '';
         }
-    ?>
+      ?>
         <div class="accordion-item bg-gray-100 border border-gray-300 mb-4 rounded-lg lg:mb-6">
           <h2 class="accordion-header mb-0" id="heading-<?php echo $row_index ?>">
             <button class="accordion-button relative flex justify-between w-full py-4 px-4 text-lg font-semibold text-gray-500 leading-tight text-left bg-white border-0 focus:outline-none rounded-lg md:text-xl md:py-5 md:pl-6 md:pr-4 lg:text-xl lg:py-5 lg:pl-8 lg:pr-6 collapsed <?php echo $state_class ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo $row_index ?>" aria-expanded="true" aria-controls="collapse-<?php echo $row_index ?>">
@@ -69,8 +133,13 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
         </div>
     <?php
       }
-      echo '</div></div>';
+      echo '</div>';
     }
+
+    echo '<div class="blocker absolute inset-0 bg-white bg-opacity-40" style="display: none;"></div>';
+
+    echo '</div>';
+
     wp_reset_postdata();
     echo '</div>';
     ?>

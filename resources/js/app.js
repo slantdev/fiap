@@ -96,6 +96,32 @@ jQuery(function ($) {
     });
   });
 
+  // FAQ Filter
+  $('.faq-dropdown-item').on('click', function (event) {
+    //console.log('clicked');
+    $('.filter-faq-loader .spinner-border')
+      .removeClass('opacity-0')
+      .addClass('opacity-100');
+    $('.faq-container .blocker').show();
+    event.preventDefault();
+    $(this).closest('.dropdown').find('.dropdown-label').html($(this).text());
+    $.ajax({
+      type: 'POST',
+      url: '/wp-admin/admin-ajax.php',
+      dataType: 'html',
+      data: {
+        action: 'filter_faqs',
+        category: $(this).data('id'),
+      },
+      success: function (res) {
+        $('.faq-container').html(res);
+        $('.filter-faq-loader .spinner-border')
+          .removeClass('opacity-100')
+          .addClass('opacity-0');
+      },
+    });
+  });
+
   // White Papers Search
   $('#whitepaper-search-button').on('click', function (event) {
     let search_query = $('#whitepaper-search').val();

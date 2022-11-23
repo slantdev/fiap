@@ -380,3 +380,11 @@
     }
   }
 }
+
+.slider_two_columns {
+  .prose {
+    a {
+      @apply text-white hover:text-white;
+    }
+  }
+}

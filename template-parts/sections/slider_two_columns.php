@@ -98,7 +98,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
                       <h2 class="text-[1.75rem] md:text-3xl xl:text-4xl 2xl:text-[45px] font-light text-white leading-[1.2em] xl:leading-[1.1em] mb-4 xl:mb-6"><?php echo $slide['title'] ?></h2>
                     <?php } ?>
                     <?php if ($slide['description']) { ?>
-                      <div class="prose text-sm max-w-none text-white md:text-base xl:text-lg mb-8"><?php echo $slide['description'] ?></div>
+                      <div class="prose prose-a:text-white text-sm max-w-none text-white md:text-base xl:text-lg mb-8"><?php echo $slide['description'] ?></div>
                     <?php } ?>
                     <?php
                     $button = $slide['button'];

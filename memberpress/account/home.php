@@ -40,12 +40,12 @@ get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' 
 
 <section class="bg-white py-12 md:py-12 lg:py-24">
   <div class="container mx-auto">
-    <div class="flex lg:gap-x-6">
-      <div class="w-full lg:w-2/3">
+    <div class="flex flex-wrap lg:flex-nowrap lg:gap-x-6">
+      <div class="w-full lg:w-2/3 mb-8 lg:mb-0">
         <?php
         $card_shortcut = get_field('card_shortcut');
         if ($card_shortcut) {
-          echo '<div class="grid grid-cols-1 gap-6 lg:grid-cols-3">';
+          echo '<div class="grid grid-cols-2 gap-2 md:gap-6 md:grid-cols-3">';
           foreach ($card_shortcut as $card) {
             echo '<div>';
             $atts = array(
