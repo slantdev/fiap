@@ -14,7 +14,7 @@ do_action('bbp_template_before_user_profile'); ?>
 
 <div id="bbp-user-profile" class="bbp-user-profile bg-white rounded-xl border border-solid border-neutral-300">
   <div class="bbp-user-section">
-    <div class="p-4 lg:p-8 border-b border-solid border-neutral-300">
+    <div class="p-4 lg:p-8">
       <h2 class="entry-title hidden">@<?php bbp_displayed_user_field('user_nicename'); ?></h2>
       <h3 class="hidden"><?php esc_html_e('Profile', 'bbpress'); ?></h3>
 

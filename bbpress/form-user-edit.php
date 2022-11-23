@@ -20,8 +20,8 @@ defined('ABSPATH') || exit;
     <fieldset class="bbp-form">
       <legend class="block font-bold text-2xl mb-4"><?php esc_html_e('Name', 'bbpress') ?></legend>
       <?php do_action('bbp_user_edit_before_name'); ?>
-      <div class="w-full flex lg:flex-nowrap gap-x-4 mb-4">
-        <div class="w-full lg:w-1/2">
+      <div class="w-full flex flex-wrap lg:flex-nowrap gap-x-4 mb-4">
+        <div class="w-full mb-2 lg:mb-0 lg:w-1/2">
           <label class="block" for="first_name"><?php esc_html_e('First Name', 'bbpress') ?></label>
           <input type="text" name="first_name" id="first_name" value="<?php bbp_displayed_user_field('first_name', 'edit'); ?>" class="regular-text w-full border border-solid border-slate-400 rounded-md" />
         </div>
@@ -87,13 +87,13 @@ defined('ABSPATH') || exit;
     <fieldset class="bbp-form">
       <legend class="block font-bold text-2xl mb-4"><?php esc_html_e('Account', 'bbpress') ?></legend>
       <?php do_action('bbp_user_edit_before_account'); ?>
-      <div class="flex gap-x-4 mb-4">
-        <label class="w-1/4" for="user_login"><?php esc_html_e('Username', 'bbpress'); ?></label>
+      <div class="flex gap-x-4 flex-wrap lg:flex-nowrap mb-4">
+        <label class="w-full lg:w-1/4" for="user_login"><?php esc_html_e('Username', 'bbpress'); ?></label>
         <input type="text" name="user_login" id="user_login" value="<?php bbp_displayed_user_field('user_login', 'edit'); ?>" disabled="disabled" class="regular-text w-3/4 border border-solid border-slate-400 rounded-md" />
       </div>
-      <div class="flex gap-x-4 mb-4">
-        <label class="w-1/4" for="email"><?php esc_html_e('Email', 'bbpress'); ?></label>
-        <input class="w-3/4 border border-solid border-slate-400 rounded-md" type="text" name="email" id="email" value="<?php bbp_displayed_user_field('user_email', 'edit'); ?>" class="regular-text" autocomplete="off" />
+      <div class="flex gap-x-4 flex-wrap lg:flex-nowrap mb-4">
+        <label class="w-full lg:w-1/4" for="email"><?php esc_html_e('Email', 'bbpress'); ?></label>
+        <input class="w-full lg:w-3/4 border border-solid border-slate-400 rounded-md" type="text" name="email" id="email" value="<?php bbp_displayed_user_field('user_email', 'edit'); ?>" class="regular-text" autocomplete="off" />
       </div>
 
       <?php bbp_get_template_part('form', 'user-passwords'); ?>

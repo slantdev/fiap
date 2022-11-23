@@ -12,7 +12,7 @@ defined('ABSPATH') || exit;
 
 ?>
 
-<div class="bbpress-wrapper max-w-screen-lg mx-auto px-4">
+<div class="bbpress-wrapper max-w-screen-lg mx-auto">
 
   <?php do_action('bbp_template_notices'); ?>
 

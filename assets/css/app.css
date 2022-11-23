@@ -13737,10 +13737,28 @@ strong {
 }
 
 #bbp-single-user-details {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  #bbp-single-user-details {
+    flex-direction: column;
+  }
 }
 
 #bbp-user-avatar {
   margin-bottom: 1rem;
+  max-width: 80px;
+}
+
+@media (min-width: 1024px) {
+  #bbp-user-avatar {
+    max-width: none;
+  }
 }
 
 #bbp-user-avatar img {
@@ -13748,9 +13766,16 @@ strong {
 }
 
 #bbp-user-navigation ul {
+  margin-top: 0.75rem;
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  #bbp-user-navigation ul {
+    margin-top: 0px;
+  }
 }
 
 #bbp-user-navigation ul a {

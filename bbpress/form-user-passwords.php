@@ -17,9 +17,9 @@ if (apply_filters('show_password_fields', true, bbpress()->displayed_user)) : ?>
     document.body.className = document.body.className.replace('no-js', 'js');
   </script>
 
-  <div class="flex gap-x-4">
-    <label class="w-1/4 block" for="user_login"><?php esc_html_e('Password', 'bbpress'); ?></label>
-    <div class="w-3/4">
+  <div class="flex flex-wrap lg:flex-nowrap gap-x-4">
+    <label class="w-full lg:w-1/4 block" for="user_login"><?php esc_html_e('Password', 'bbpress'); ?></label>
+    <div class="w-full lg:w-3/4">
       <div id="password" class="user-pass1-wrap">
 
         <button type="button" class="button wp-generate-pw hide-if-no-js text-sm text-slate-800 bg-slate-100 border border-solid border-slate-400 shadow rounded-md px-4 py-2 hover:bg-slate-50"><?php esc_html_e('Set New Password', 'bbpress'); ?></button>

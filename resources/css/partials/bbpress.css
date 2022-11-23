@@ -317,16 +317,17 @@
 }
 
 #bbp-single-user-details {
+  @apply mb-4 flex flex-row gap-x-4 lg:flex-col;
 }
 #bbp-user-avatar {
-  @apply mb-4;
+  @apply mb-4 max-w-[80px] lg:max-w-none;
   img {
     @apply rounded-full;
   }
 }
 #bbp-user-navigation {
   ul {
-    @apply flex flex-col gap-y-2;
+    @apply flex flex-col gap-y-2 mt-3 lg:mt-0;
     a {
       @apply text-slate-700 hover:text-fiap-teal-hover;
     }
