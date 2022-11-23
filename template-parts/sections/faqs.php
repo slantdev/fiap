@@ -20,6 +20,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
     $show_faq_filter = $faq_settings['show_faq_filter'];
     $limit_by_faq_category = $faq_settings['limit_by_faq_category'];
 
+
     if ($show_faq_filter) {
     ?>
       <div class="flex justify-center relative mb-6 lg:mb-8">
@@ -66,6 +67,11 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
       <?php
     }
 
+    $limit_by_faq_category = $faq_settings['limit_by_faq_category'];
+    $args = array(
+      'post_type' => 'faq',
+      'posts_per_page' => -1
+    );
     if ($limit_by_faq_category) {
       $args = array(
         'post_type' => 'faq',
@@ -77,11 +83,6 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
             'terms'    => $limit_by_faq_category,
           ),
         ),
-      );
-    } else {
-      $args = array(
-        'post_type' => 'faq',
-        'posts_per_page' => -1
       );
     }
 
