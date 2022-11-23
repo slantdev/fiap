@@ -54,18 +54,32 @@
       <div id="mobilemenuDrawer" class="">
         <div class="px-6 pt-24 pb-6">
           <?php
-          wp_nav_menu(
-            array(
-              'container_id'    => 'mobile-menu',
-              'container_class' => '',
-              'menu_id'         => 'menu-mobile-menu',
-              'menu_class'      => '',
-              'theme_location'  => 'primary',
-              'li_class'        => '',
-              'fallback_cb'     => false,
-              'walker' => new Mobile_Menu_Walker(),
-            )
-          );
+          if (is_user_logged_in()) {
+            wp_nav_menu(
+              array(
+                'container_id'    => 'mobile-menu',
+                'container_class' => '',
+                'menu'            => 'member-main-menu',
+                'menu_class'      => '',
+                'li_class'        => '',
+                'fallback_cb'     => false,
+                'walker' => new Mobile_Menu_Walker(),
+              )
+            );
+          } else {
+            wp_nav_menu(
+              array(
+                'container_id'    => 'mobile-menu',
+                'container_class' => '',
+                'menu_id'         => 'menu-mobile-menu',
+                'menu_class'      => '',
+                'theme_location'  => 'primary',
+                'li_class'        => '',
+                'fallback_cb'     => false,
+                'walker' => new Mobile_Menu_Walker(),
+              )
+            );
+          }
           ?>
         </div>
       </div>

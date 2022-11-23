@@ -53,4 +53,38 @@
   .mepr_price {
     @apply hidden;
   }
+  .mp-form-label {
+    @apply block mb-1;
+  }
+  &.mepr-form {
+    [type='text'],
+    [type='url'],
+    [type='email'],
+    [type='tel'],
+    [type='number'],
+    [type='password'] {
+      @apply w-full h-[46px] rounded-md shadow-inner py-3 px-6 bg-neutral-100 border border-neutral-200 focus:ring-0 focus:outline-none focus:border-neutral-200;
+    }
+    input.invalid,
+    select.invalid,
+    textarea.invalid,
+    label.mepr-checkbox-field.invalid,
+    div.mepr-checkboxes-field.invalid,
+    div.mepr-radios-field.invalid {
+      @apply border-2 border-solid !border-red-500 !bg-red-300;
+    }
+    .cc-error,
+    .mepr-validation-error {
+      @apply text-red-500;
+    }
+    .mepr-form-has-errors {
+      @apply pl-0 mt-3;
+    }
+  }
+
+  .mp-form-submit {
+    .mepr-submit {
+      @apply px-8 py-2 rounded-md bg-fiap-teal text-white shadow hover:bg-fiap-teal-hover hover:shadow-lg transition-all cursor-pointer;
+    }
+  }
 }
