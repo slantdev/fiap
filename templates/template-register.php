@@ -7,8 +7,6 @@
  */
 get_header();
 
-get_header();
-
 get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' => true));
 
 /* Start the Loop */

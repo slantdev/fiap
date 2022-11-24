@@ -47,3 +47,6 @@
     }
   }
 }
+.frm_insert_form svg {
+  @apply inline-block;
+}

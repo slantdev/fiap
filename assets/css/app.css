@@ -22906,6 +22906,10 @@ strong {
     height: 6rem;
   }
 
+  .lg\:h-16 {
+    height: 4rem;
+  }
+
   .lg\:min-h-\[256px\] {
     min-height: 256px;
   }
@@ -23029,6 +23033,10 @@ strong {
 
   .lg\:gap-10 {
     gap: 2.5rem;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
   }
 
   .lg\:gap-x-24 {
@@ -24187,6 +24195,17 @@ strong {
 
   .lg\:text-\[34px\] {
     font-size: 34px;
+  }
+
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .lg\:shadow-md {
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
 
