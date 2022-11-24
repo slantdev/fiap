@@ -140,6 +140,7 @@ require get_template_directory() . '/inc/card.php';
 require get_template_directory() . '/inc/acf.php';
 require get_template_directory() . '/inc/breadcrumb.php';
 require get_template_directory() . '/inc/filters.php';
+require get_template_directory() . '/inc/shortcodes.php';
 require get_template_directory() . '/inc/walker-nav.php';
 require get_template_directory() . '/inc/memberpress.php';
 require get_template_directory() . '/inc/bbpress.php';
