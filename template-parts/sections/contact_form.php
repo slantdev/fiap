@@ -19,6 +19,12 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
         <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'xl:prose-lg')); ?>
       </div>
       <div class="w-full lg:w-1/2">
+        <?php
+        $form_shortcode = get_sub_field('form_shortcode');
+        if ($form_shortcode) {
+          echo do_shortcode($form_shortcode);
+        }
+        ?>
         <div class="flex flex-col gap-y-4">
           <div>
             <label class="block mb-1" for="">Name <span class="text-red-500">*</span></label>
