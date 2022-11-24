@@ -63,19 +63,34 @@ get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' 
       <div class="w-full lg:w-1/3">
         <div class="flex flex-col gap-6">
           <div class="bg-fiap-teal text-white p-6 rounded-lg lg:min-h-[256px] flex flex-col">
-            <h3 class="text-3xl mb-4">FEATURED</h3>
-            <div class="mb-6 lg:w-3/4 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor sit amet.</div>
-            <div class="mt-auto"><a href="#" class="inline-flex px-6 py-2 rounded bg-white text-fiap-darkblue text-sm shadow hover:shadow-md font-medium">Explore</a></div>
+            <?php
+            $args = array(
+              'post_type' => 'news',
+              'posts_per_page' => 1,
+              'orderby' => 'date'
+            );
+            $the_query = new WP_Query($args);
+            if ($the_query->have_posts()) {
+              while ($the_query->have_posts()) {
+                $the_query->the_post();
+                $excerpt = wp_trim_words(get_the_excerpt(), $num_words = 30, $more = null);
+                echo '<h3 class="text-3xl mb-4">' . get_the_title() . '</h3>';
+                echo '<div class="mb-6 text-base">' . $excerpt . '</div>';
+                echo '<div class="mt-auto"><a href="' . get_the_permalink() . '" class="inline-flex px-6 py-2 rounded bg-white text-fiap-darkblue text-sm shadow hover:shadow-md font-medium">Explore</a></div>';
+              }
+            }
+            wp_reset_postdata();
+            ?>
           </div>
           <div>
-            <a href="#" class="inline-flex w-full py-5 px-6 hover:shadow-md text-white bg-fiap-darkblue rounded-lg uppercase font-medium">Ask a Question</a>
+            <a href="/get-involved" class="inline-flex w-full py-5 px-6 hover:shadow-lg text-white bg-fiap-darkblue hover:brightness-125 transition-all rounded-lg uppercase font-medium">Ask a Question</a>
           </div>
           <div>
             <div class="py-4 px-6 bg-[#E8E8E8] rounded-lg font-medium">ACCOUNT MANAGEMENT</div>
             <ul class="p-6 flex flex-col gap-y-1">
               <li><a href="<?php echo bbp_get_user_profile_url(get_current_user_id()); ?>" class="hover:text-fiap-teal">My Profile</a></li>
               <li><a href="<?php echo bbp_get_user_profile_edit_url(get_current_user_id()) ?>" class="hover:text-fiap-teal">Edit your information</a></li>
-              <li><a href="#" class="hover:text-fiap-teal">Invite a member</a></li>
+              <li><a href="/invite-member" class="hover:text-fiap-teal">Invite a member</a></li>
               <li><a href="<?php echo MeprUtils::logout_url(); ?>" class="hover:text-fiap-teal">Logout</a></li>
             </ul>
           </div>
