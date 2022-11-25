@@ -13,13 +13,15 @@ function filter_news()
     $ajaxposts = new WP_Query([
       'post_type' => 'news',
       'posts_per_page' => $postsPerPage,
-      'orderby' => 'menu_order'
+      'orderby' => 'date',
+      'order' => 'DESC'
     ]);
   } else {
     $ajaxposts = new WP_Query([
       'post_type' => 'news',
       'posts_per_page' => $postsPerPage,
-      'orderby' => 'menu_order',
+      'orderby' => 'date',
+      'order' => 'DESC',
       'tax_query' => array(
         array(
           'taxonomy' => 'news_category',
@@ -73,13 +75,15 @@ function filter_case_study()
     $ajaxposts = new WP_Query([
       'post_type' => 'case_study',
       'posts_per_page' => $postsPerPage,
-      'orderby' => 'menu_order'
+      'orderby' => 'date',
+      'order' => 'DESC'
     ]);
   } else {
     $ajaxposts = new WP_Query([
       'post_type' => 'case_study',
       'posts_per_page' => $postsPerPage,
-      'orderby' => 'menu_order',
+      'orderby' => 'date',
+      'order' => 'DESC',
       'tax_query' => array(
         array(
           'taxonomy' => 'case_study_category',
@@ -190,14 +194,16 @@ function filter_whitepapers()
       $args = array(
         'post_type' => 'white_paper',
         'posts_per_page' => $postsPerPage,
-        'orderby' => 'term_order',
+        'orderby' => 'date',
+        'order' => 'DESC',
         's' => $search_query
       );
     } else {
       $args = array(
         'post_type' => 'white_paper',
         'posts_per_page' => $postsPerPage,
-        'orderby' => 'term_order',
+        'orderby' => 'date',
+        'order' => 'DESC',
         's' => $search_query,
         'tax_query' => array(
           array(
@@ -213,13 +219,15 @@ function filter_whitepapers()
       $args = array(
         'post_type' => 'white_paper',
         'posts_per_page' => $postsPerPage,
-        'orderby' => 'term_order',
+        'orderby' => 'date',
+        'order' => 'DESC',
       );
     } else {
       $args = array(
         'post_type' => 'white_paper',
         'posts_per_page' => $postsPerPage,
-        'orderby' => 'term_order',
+        'orderby' => 'date',
+        'order' => 'DESC',
         'tax_query' => array(
           array(
             'taxonomy' => 'white_paper_category',

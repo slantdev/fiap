@@ -130,7 +130,8 @@ if (!$posts_per_page) {
       $args = array(
         'post_type' => 'news',
         'posts_per_page' => $posts_per_page,
-        'orderby' => 'term_order'
+        'orderby' => 'date',
+        'order' => 'DESC'
       );
       $the_query = new WP_Query($args);
       if ($the_query->have_posts()) {

@@ -4160,13 +4160,13 @@ textarea.form-control.is-invalid {
 }
 
 .prose :where(a):not(:where([class~="not-prose"] *)) {
-  color: #00A79D;
+  color: #335978;
   text-decoration: underline;
   font-weight: 500;
 }
 
 .prose :where(a):not(:where([class~="not-prose"] *)):hover {
-  color: #00A79D;
+  color: #002f56;
 }
 
 .prose :where(strong):not(:where([class~="not-prose"] *)) {
@@ -10648,13 +10648,13 @@ strong {
 }
 
 .mepr-unauthorized-message :where(a):not(:where([class~="not-prose"] *)) {
-  color: #00A79D;
+  color: #335978;
   text-decoration: underline;
   font-weight: 500;
 }
 
 .mepr-unauthorized-message :where(a):not(:where([class~="not-prose"] *)):hover {
-  color: #00A79D;
+  color: #002f56;
 }
 
 .mepr-unauthorized-message :where(strong):not(:where([class~="not-prose"] *)) {
@@ -12618,7 +12618,7 @@ strong {
 #bbpress-forums div.bbp-forum-content :where(a):not(:where([class~="not-prose"] *)), 
   #bbpress-forums div.bbp-reply-content :where(a):not(:where([class~="not-prose"] *)), 
   #bbpress-forums div.bbp-topic-content :where(a):not(:where([class~="not-prose"] *)) {
-  color: #00A79D;
+  color: #335978;
   text-decoration: underline;
   font-weight: 500;
 }
@@ -12626,7 +12626,7 @@ strong {
 #bbpress-forums div.bbp-forum-content :where(a):not(:where([class~="not-prose"] *)):hover, 
   #bbpress-forums div.bbp-reply-content :where(a):not(:where([class~="not-prose"] *)):hover, 
   #bbpress-forums div.bbp-topic-content :where(a):not(:where([class~="not-prose"] *)):hover {
-  color: #00A79D;
+  color: #002f56;
 }
 
 #bbpress-forums div.bbp-forum-content :where(strong):not(:where([class~="not-prose"] *)), 
@@ -13825,6 +13825,11 @@ strong {
   background-color: rgb(0 167 157 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-opacity-80:hover {
   --tw-bg-opacity: 0.8;
 }
@@ -13851,6 +13856,11 @@ strong {
 .hover\:text-fiap-teal-hover:hover {
   --tw-text-opacity: 1;
   color: rgb(1 121 114 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
