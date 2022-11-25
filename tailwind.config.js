@@ -55,6 +55,9 @@ module.exports = {
                 color: '#002f56',
               },
             },
+            h1: {
+              fontWeight: '700',
+            },
           },
         },
       },
