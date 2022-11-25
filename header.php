@@ -37,7 +37,7 @@
             }
             ?>
             <a href="<?php echo home_url() ?>/get-involved" class="inline-block bg-white text-fiap-darkblue text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-fiap-darkblue shadow-md hover:border-transparent hover:bg-fiap-darkblue hover:text-white hover:shadow-lg transition-all duration-300">Contact Us</a>
-            <button type="button" class="text-white bg-fiap-darkblue rounded-full p-3 shadow-md hover:shadow-lg transition-all duration-300"><?php echo fiap_icon(array('icon' => 'accessibility', 'group' => 'utility', 'size' => '24', 'class' => '')) ?></button>
+            <!-- <button type="button" class="text-white bg-fiap-darkblue rounded-full p-3 shadow-md hover:shadow-lg transition-all duration-300"><?php echo fiap_icon(array('icon' => 'accessibility', 'group' => 'utility', 'size' => '24', 'class' => '')) ?></button> -->
             <?php
             if (is_user_logged_in()) {
               echo '<a href="' . home_url() . '/account" class="inline-block text-fiap-darkblue transition-all duration-300">' . fiap_icon(array('icon' => 'account', 'group' => 'utility', 'size' => '32', 'class' => 'text-fiap-darkblue')) . '</a>';

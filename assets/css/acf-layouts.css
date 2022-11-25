@@ -7898,6 +7898,11 @@ textarea.form-control.is-invalid {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
+.border-slate-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
+}
+
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -7926,11 +7931,6 @@ textarea.form-control.is-invalid {
 .border-gray-700 {
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
-}
-
-.border-slate-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(203 213 225 / var(--tw-border-opacity));
 }
 
 .bg-slate-50 {
@@ -9361,11 +9361,6 @@ textarea.form-control.is-invalid {
 .text-\[\#868686\] {
   --tw-text-opacity: 1;
   color: rgb(134 134 134 / var(--tw-text-opacity));
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .text-gray-600 {
@@ -18775,6 +18770,14 @@ strong {
     margin-bottom: 1.5rem;
   }
 
+  .lg\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
+  .lg\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
   .lg\:mr-8 {
     margin-right: 2rem;
   }
@@ -18801,10 +18804,6 @@ strong {
 
   .lg\:mt-16 {
     margin-top: 4rem;
-  }
-
-  .lg\:mt-2 {
-    margin-top: 0.5rem;
   }
 
   .lg\:-ml-0 {
@@ -19383,10 +19382,6 @@ strong {
     margin-bottom: 2.75rem;
   }
 
-  .lg\:mb-12 {
-    margin-bottom: 3rem;
-  }
-
   .lg\:mb-14 {
     margin-bottom: 3.5rem;
   }
@@ -19903,6 +19898,10 @@ strong {
     height: 1.75rem;
   }
 
+  .lg\:h-16 {
+    height: 4rem;
+  }
+
   .lg\:h-\[24rem\] {
     height: 24rem;
   }
@@ -19925,10 +19924,6 @@ strong {
 
   .lg\:h-\[6rem\] {
     height: 6rem;
-  }
-
-  .lg\:h-16 {
-    height: 4rem;
   }
 
   .lg\:min-h-\[256px\] {
@@ -19963,6 +19958,10 @@ strong {
     width: 1.75rem;
   }
 
+  .lg\:w-16 {
+    width: 4rem;
+  }
+
   .lg\:w-6 {
     width: 1.5rem;
   }
@@ -19993,10 +19992,6 @@ strong {
 
   .lg\:w-\[6rem\] {
     width: 6rem;
-  }
-
-  .lg\:w-16 {
-    width: 4rem;
   }
 
   .lg\:min-w-\[360px\] {
@@ -20048,16 +20043,16 @@ strong {
     gap: 2rem;
   }
 
+  .lg\:gap-12 {
+    gap: 3rem;
+  }
+
   .lg\:gap-16 {
     gap: 4rem;
   }
 
   .lg\:gap-10 {
     gap: 2.5rem;
-  }
-
-  .lg\:gap-12 {
-    gap: 3rem;
   }
 
   .lg\:gap-x-24 {
@@ -21209,18 +21204,18 @@ strong {
     font-size: 1.25rem;
   }
 
-  .lg\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .lg\:text-\[34px\] {
     font-size: 34px;
   }
 
-  .lg\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .lg\:shadow-md {
