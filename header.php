@@ -37,7 +37,6 @@
             }
             ?>
             <a href="<?php echo home_url() ?>/get-involved" class="inline-block bg-white text-fiap-darkblue text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-fiap-darkblue shadow-md hover:border-transparent hover:bg-fiap-darkblue hover:text-white hover:shadow-lg transition-all duration-300">Contact Us</a>
-            <!-- <button type="button" class="text-white bg-fiap-darkblue rounded-full p-3 shadow-md hover:shadow-lg transition-all duration-300"><?php echo fiap_icon(array('icon' => 'accessibility', 'group' => 'utility', 'size' => '24', 'class' => '')) ?></button> -->
             <?php
             if (is_user_logged_in()) {
               echo '<a href="' . home_url() . '/account" class="inline-block text-fiap-darkblue transition-all duration-300">' . fiap_icon(array('icon' => 'account', 'group' => 'utility', 'size' => '32', 'class' => 'text-fiap-darkblue')) . '</a>';
@@ -54,32 +53,18 @@
       <div id="mobilemenuDrawer" class="">
         <div class="px-6 pt-24 pb-6">
           <?php
-          if (is_user_logged_in()) {
-            wp_nav_menu(
-              array(
-                'container_id'    => 'mobile-menu',
-                'container_class' => '',
-                'menu'            => 'member-main-menu',
-                'menu_class'      => '',
-                'li_class'        => '',
-                'fallback_cb'     => false,
-                'walker' => new Mobile_Menu_Walker(),
-              )
-            );
-          } else {
-            wp_nav_menu(
-              array(
-                'container_id'    => 'mobile-menu',
-                'container_class' => '',
-                'menu_id'         => 'menu-mobile-menu',
-                'menu_class'      => '',
-                'theme_location'  => 'primary',
-                'li_class'        => '',
-                'fallback_cb'     => false,
-                'walker' => new Mobile_Menu_Walker(),
-              )
-            );
-          }
+          wp_nav_menu(
+            array(
+              'container_id'    => 'mobile-menu',
+              'container_class' => '',
+              'menu_id'         => 'menu-mobile-menu',
+              'menu_class'      => '',
+              'theme_location'  => 'primary',
+              'li_class'        => '',
+              'fallback_cb'     => false,
+              'walker' => new Mobile_Menu_Walker(),
+            )
+          );
           ?>
         </div>
       </div>
@@ -88,37 +73,25 @@
         <div class="mx-auto container">
           <div class="flex justify-between items-end">
             <?php
-            if (is_user_logged_in()) {
-              wp_nav_menu(
-                array(
-                  'container_id'    => 'desktop-menu',
-                  'container_class' => '',
-                  'menu'            => 'member-main-menu',
-                  'menu_class'      => 'flex text-white items-end gap-x-8 text-base 2xl:gap-x-14',
-                  'li_class'        => '',
-                  'fallback_cb'     => false,
-                )
-              );
-            } else {
-              wp_nav_menu(
-                array(
-                  'container_id'    => 'desktop-menu',
-                  'container_class' => '',
-                  'menu_class'      => 'flex text-white items-end gap-x-8 text-base 2xl:gap-x-14',
-                  'theme_location'  => 'primary',
-                  'li_class'        => '',
-                  'fallback_cb'     => false,
-                )
-              );
-            }
+            wp_nav_menu(
+              array(
+                'container_id'    => 'desktop-menu',
+                'container_class' => 'grow',
+                'menu_id'         => 'menu-desktop-menu',
+                'menu_class'      => 'flex text-white items-end justify-between text-base',
+                'theme_location'  => 'primary',
+                'li_class'        => '',
+                'fallback_cb'     => false,
+              )
+            );
             ?>
-            <div class="py-3 pl-6">
+            <div class="py-3 pl-10 flex-none">
               <!-- <form class="relative">
                 <input type="text" placeholder="Search" class="rounded-md px-3 py-2.5 w-full min-w-[260px] border-transparent" />
                 <?php echo fiap_icon(array('icon' => 'search', 'group' => 'utility', 'size' => '20', 'class' => 'absolute right-3 top-3 text-fiap-dark-blue')) ?>
               </form> -->
               <form id="header-searchform" class="flex relative bg-white border border-gray-100 shadow-xl rounded-md" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-                <input id="searchform-input" type="text" class="text-gray-700 px-3 py-2 w-full min-w-[260px] bg-transparent border-transparent focus:outline-none focus:border-transparent focus:ring-0" name="s" placeholder="Search" value="<?php echo get_search_query(); ?>">
+                <input id="searchform-input" type="text" class="text-gray-700 px-3 py-2 w-full min-w-[180px] bg-transparent border-transparent focus:outline-none focus:border-transparent focus:ring-0" name="s" placeholder="Search" value="<?php echo get_search_query(); ?>">
                 <button class="flex-none w-[42px] h-[42px] flex items-center justify-center text-sm rounded-full bg-primary font-semibold text-fiap-dark-blue hover:bg-opacity-80 whitespace-nowrap cursor-pointer" type="submit">
                   <?php echo fiap_icon(array('icon' => 'search', 'group' => 'utility', 'size' => '20', 'class' => 'text-fiap-dark-blue')) ?>
                 </button>
