@@ -127,7 +127,7 @@ get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' 
                 <?php MeprHooks::do_action('mepr-account-home-before-name', $mepr_current_user); ?>
 
                 <?php if ($mepr_options->show_fname_lname) : ?>
-                  <div class="w-full flex flex-wrap lg:flex-nowrap gap-x-4 mb-4">
+                  <div class="w-full flex flex-wrap lg:flex-nowrap gap-x-4">
                     <div class="w-full mb-2 lg:mb-0 lg:w-1/2">
                       <div class="mp-form-row mepr_first_name<?php echo ($mepr_options->require_fname_lname) ? ' mepr-field-required' : ''; ?>">
                         <div class="mp-form-label">

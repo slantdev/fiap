@@ -11867,6 +11867,10 @@ strong {
   }
 }
 
+.mp_wrapper .mp-form-row {
+  margin-bottom: 1rem;
+}
+
 #table_1_wrapper.wpDataTablesWrapper {
   overflow: hidden;
   border-radius: 0.5rem;

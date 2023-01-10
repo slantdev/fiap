@@ -106,3 +106,7 @@
 .mepr_error {
   @apply text-sm lg:text-base;
 }
+
+.mp_wrapper .mp-form-row {
+  @apply mb-4;
+}
