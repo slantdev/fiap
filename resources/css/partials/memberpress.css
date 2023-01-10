@@ -102,3 +102,7 @@
 .mp_wrapper .mp-form-row label {
   @apply !text-base !mb-1 !inline-block;
 }
+
+.mepr_error {
+  @apply text-sm lg:text-base;
+}

@@ -131,11 +131,11 @@ get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' 
                     <div class="w-full mb-2 lg:mb-0 lg:w-1/2">
                       <div class="mp-form-row mepr_first_name<?php echo ($mepr_options->require_fname_lname) ? ' mepr-field-required' : ''; ?>">
                         <div class="mp-form-label">
-                          <label for="user_first_name" class="!text-base !mb-1 !inline-block"><?php _ex('First Name:', 'ui', 'memberpress');
-                                                                                              echo ($mepr_options->require_fname_lname) ? ' *' : ''; ?></label>
+                          <label for="user_first_name"><?php _ex('First Name:', 'ui', 'memberpress');
+                                                        echo ($mepr_options->require_fname_lname) ? ' *' : ''; ?></label>
                           <span class="cc-error"><?php _ex('First Name Required', 'ui', 'memberpress'); ?></span>
                         </div>
-                        <input type="text" name="user_first_name" id="user_first_name" class="mepr-form-input border border-solid border-slate-400 rounded-md" value="<?php echo $mepr_current_user->first_name; ?>" <?php echo ($mepr_options->require_fname_lname) ? 'required' : ''; ?> />
+                        <input type="text" name="user_first_name" id="user_first_name" class="mepr-form-input" value="<?php echo $mepr_current_user->first_name; ?>" <?php echo ($mepr_options->require_fname_lname) ? 'required' : ''; ?> />
                       </div>
                     </div>
                     <div class="w-full lg:w-1/2">
