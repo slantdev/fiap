@@ -7095,6 +7095,10 @@ textarea.form-control.is-invalid {
   margin-left: -0.875rem;
 }
 
+.\!mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
 .box-content {
   box-sizing: content-box;
 }
@@ -7105,6 +7109,10 @@ textarea.form-control.is-invalid {
 
 .inline-block {
   display: inline-block;
+}
+
+.\!inline-block {
+  display: inline-block !important;
 }
 
 .inline {
@@ -7399,6 +7407,10 @@ textarea.form-control.is-invalid {
   min-width: 260px;
 }
 
+.min-w-\[180px\] {
+  min-width: 180px;
+}
+
 .min-w-max {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
@@ -7407,10 +7419,6 @@ textarea.form-control.is-invalid {
 
 .min-w-\[200px\] {
   min-width: 200px;
-}
-
-.min-w-\[180px\] {
-  min-width: 180px;
 }
 
 .max-w-none {
@@ -7689,11 +7697,6 @@ textarea.form-control.is-invalid {
        column-gap: 1rem;
 }
 
-.gap-x-8 {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-}
-
 .gap-x-1 {
   -moz-column-gap: 0.25rem;
        column-gap: 0.25rem;
@@ -7706,6 +7709,11 @@ textarea.form-control.is-invalid {
 .gap-x-36 {
   -moz-column-gap: 9rem;
        column-gap: 9rem;
+}
+
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 
 .gap-y-24 {
@@ -8578,8 +8586,12 @@ textarea.form-control.is-invalid {
   padding-bottom: 1.5rem;
 }
 
-.pl-6 {
-  padding-left: 1.5rem;
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
 }
 
 .pt-8 {
@@ -8602,10 +8614,6 @@ textarea.form-control.is-invalid {
   padding-top: 0px;
 }
 
-.pt-6 {
-  padding-top: 1.5rem;
-}
-
 .pt-14 {
   padding-top: 3.5rem;
 }
@@ -8616,10 +8624,6 @@ textarea.form-control.is-invalid {
 
 .pr-10 {
   padding-right: 2.5rem;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
 }
 
 .pr-16 {
@@ -9022,6 +9026,10 @@ textarea.form-control.is-invalid {
   padding-left: 1.25rem;
 }
 
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
 .pl-7 {
   padding-left: 1.75rem;
 }
@@ -9216,6 +9224,16 @@ textarea.form-control.is-invalid {
 
 .text-\[1\.75rem\] {
   font-size: 1.75rem;
+}
+
+.\!text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+
+.\!text-base {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
 }
 
 .font-light {
@@ -16384,6 +16402,10 @@ strong {
     align-items: flex-end;
   }
 
+  .md\:items-center {
+    align-items: center;
+  }
+
   .md\:justify-between {
     justify-content: space-between;
   }
@@ -21230,6 +21252,11 @@ strong {
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .lg\:shadow-md {
@@ -27158,21 +27185,6 @@ strong {
 
   .\32xl\:gap-10 {
     gap: 2.5rem;
-  }
-
-  .\32xl\:gap-x-14 {
-    -moz-column-gap: 3.5rem;
-         column-gap: 3.5rem;
-  }
-
-  .\32xl\:gap-x-8 {
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-  }
-
-  .\32xl\:gap-x-10 {
-    -moz-column-gap: 2.5rem;
-         column-gap: 2.5rem;
   }
 
   .\32xl\:p-0 {

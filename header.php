@@ -67,6 +67,13 @@
           );
           ?>
         </div>
+        <div class="px-6 pt-6 border-t border-solid border-slate-200">
+          <?php
+          if (!is_user_logged_in()) {
+            echo '<a href="' . home_url() . '/login" class="block bg-fiap-teal text-white text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-transparent shadow-md hover:bg-fiap-teal-hover hover:shadow-lg transition-all duration-300">Member Login</a>';
+          }
+          ?>
+        </div>
       </div>
 
       <div class="site-nav hidden xl:block bg-fiap-darkblue">

@@ -88,3 +88,17 @@
     }
   }
 }
+
+.mp_wrapper textarea,
+.mp_wrapper select,
+.mp_wrapper input[type='text'],
+.mp_wrapper input[type='url'],
+.mp_wrapper input[type='email'],
+.mp_wrapper input[type='tel'],
+.mp_wrapper input[type='number'],
+.mp_wrapper input[type='password'] {
+  @apply w-full h-[46px] rounded-md py-3 px-4 border border-slate-300 focus:ring-0 focus:outline-none;
+}
+.mp_wrapper .mp-form-row label {
+  @apply !text-base !mb-1 !inline-block;
+}
