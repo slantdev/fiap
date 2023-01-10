@@ -13,7 +13,7 @@ function add_member_link($items, $args)
         <li class="menu-item"><a href="/account">Portal Home</a></li>
         <li class="menu-item"><a href="/forums">Member Forum</a></li>
         <li class="menu-item"><a href="/member-directory">Directory</a></li>
-        <li class="menu-item"><a href="' . bbp_get_user_profile_url(get_current_user_id()) . '">My Profile</a></li>
+        <li class="menu-item"><a href="/account/my-profile">My Profile</a></li>
         <li class="menu-item"><a href="' . MeprUtils::logout_url() . '">Logout</a></li>
       </ul>';
       $items .= '</li>';
@@ -28,7 +28,7 @@ function add_member_link($items, $args)
         <li class="menu-item"><a href="/account">Portal Home</a></li>
         <li class="menu-item"><a href="/forums">Member Forum</a></li>
         <li class="menu-item"><a href="/member-directory">Directory</a></li>
-        <li class="menu-item"><a href="' . bbp_get_user_profile_url(get_current_user_id()) . '">My Profile</a></li>
+        <li class="menu-item"><a href="/account/my-profile">My Profile</a></li>
         <li class="menu-item"><a href="' . MeprUtils::logout_url() . '">Logout</a></li>
       </ul>';
       $items .= '</li>';

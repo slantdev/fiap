@@ -89,8 +89,7 @@ get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' 
             <div>
               <div class="py-4 px-6 bg-[#E8E8E8] rounded-lg font-medium">ACCOUNT MANAGEMENT</div>
               <ul class="p-6 flex flex-col gap-y-1">
-                <li><a href="<?php echo bbp_get_user_profile_url(get_current_user_id()); ?>" class="hover:text-fiap-teal">My Profile</a></li>
-                <li><a href="<?php echo bbp_get_user_profile_edit_url(get_current_user_id()) ?>" class="hover:text-fiap-teal">Edit your information</a></li>
+                <li><a href="/account/my-profile" class="hover:text-fiap-teal">My Profile</a></li>
                 <li><a href="/invite-member" class="hover:text-fiap-teal">Invite a member</a></li>
                 <li><a href="<?php echo MeprUtils::logout_url(); ?>" class="hover:text-fiap-teal">Logout</a></li>
               </ul>
