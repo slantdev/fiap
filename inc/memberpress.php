@@ -1,6 +1,19 @@
 <?php
 
 /**
+ * Hide CPT Access Column
+ * https://docs.memberpress.com/article/329-filter-hooks-in-memberpress#mepr-hide-cpt-access-column
+ */
+add_filter('mepr-hide-cpt-access-column', 'mepr_hide_cpt_access_column');
+function mepr_hide_cpt_access_column($except)
+{
+  // Do what you need
+  $except = ['post', 'page', 'case_study', 'news', 'faq', 'fiap_members', 'team', 'white_paper', 'topic', 'reply'];
+  return $except;
+}
+
+
+/**
  * Add a custom link to the end of a specific menu that uses the wp_nav_menu() function
  */
 add_filter('wp_nav_menu_items', 'add_member_link', 10, 2);

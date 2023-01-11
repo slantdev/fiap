@@ -46,12 +46,29 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
     <?php } ?>
     <div class="whitepapers-grid relative">
       <?php
-      $args = array(
-        'post_type' => 'white_paper',
-        'posts_per_page' => -1,
-        'orderby' => 'date',
-        'order' => 'DESC'
-      );
+      if (is_user_logged_in()) {
+        $args = array(
+          'post_type' => 'white_paper',
+          'posts_per_page' => -1,
+          'orderby' => 'date',
+          'order' => 'DESC'
+        );
+      } else {
+        $args = array(
+          'post_type' => 'white_paper',
+          'posts_per_page' => -1,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'member_only',
+              'field'    => 'slug',
+              'terms'    => 'member-only',
+              'operator' => 'NOT IN',
+            ),
+          ),
+        );
+      }
       $the_query = new WP_Query($args);
       if ($the_query->have_posts()) {
         echo '<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8 2xl:gap-10">';

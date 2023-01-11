@@ -68,22 +68,62 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
     }
 
     $limit_by_faq_category = $faq_settings['limit_by_faq_category'];
-    $args = array(
-      'post_type' => 'faq',
-      'posts_per_page' => -1
-    );
-    if ($limit_by_faq_category) {
+    if (is_user_logged_in()) {
       $args = array(
         'post_type' => 'faq',
         'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+      );
+    } else {
+      $args = array(
+        'post_type' => 'faq',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
         'tax_query' => array(
           array(
-            'taxonomy' => 'faq_category',
-            'field'    => 'term_id',
-            'terms'    => $limit_by_faq_category,
+            'taxonomy' => 'member_only',
+            'field'    => 'slug',
+            'terms'    => 'member-only',
+            'operator' => 'NOT IN',
           ),
         ),
       );
+    }
+    if ($limit_by_faq_category) {
+      if (is_user_logged_in()) {
+        $args = array(
+          'post_type' => 'faq',
+          'posts_per_page' => -1,
+          'orderby' => 'menu_order',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'faq_category',
+              'field'    => 'term_id',
+              'terms'    => $limit_by_faq_category,
+            ),
+          ),
+        );
+      } else {
+        $args = array(
+          'post_type' => 'faq',
+          'posts_per_page' => -1,
+          'orderby' => 'menu_order',
+          'tax_query' => array(
+            'relation' => 'AND',
+            array(
+              'taxonomy' => 'member_only',
+              'field'    => 'slug',
+              'terms'    => 'member-only',
+              'operator' => 'NOT IN',
+            ),
+            array(
+              'taxonomy' => 'faq_category',
+              'field'    => 'term_id',
+              'terms'    => $limit_by_faq_category,
+            ),
+          ),
+        );
+      }
     }
 
     echo '<div class="faq-container relative">';

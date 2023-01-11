@@ -10,26 +10,66 @@ function filter_news()
   }
 
   if ($catID == 'all') {
-    $ajaxposts = new WP_Query([
-      'post_type' => 'news',
-      'posts_per_page' => $postsPerPage,
-      'orderby' => 'date',
-      'order' => 'DESC'
-    ]);
-  } else {
-    $ajaxposts = new WP_Query([
-      'post_type' => 'news',
-      'posts_per_page' => $postsPerPage,
-      'orderby' => 'date',
-      'order' => 'DESC',
-      'tax_query' => array(
-        array(
-          'taxonomy' => 'news_category',
-          'field'    => 'term_id',
-          'terms'    => $catID,
+    if (is_user_logged_in()) {
+      $ajaxposts = new WP_Query([
+        'post_type' => 'news',
+        'posts_per_page' => $postsPerPage,
+        'orderby' => 'date',
+        'order' => 'DESC'
+      ]);
+    } else {
+      $ajaxposts = new WP_Query([
+        'post_type' => 'news',
+        'posts_per_page' => $postsPerPage,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'member_only',
+            'field'    => 'slug',
+            'terms'    => 'member-only',
+            'operator' => 'NOT IN',
+          ),
         ),
-      ),
-    ]);
+      ]);
+    }
+  } else {
+    if (is_user_logged_in()) {
+      $ajaxposts = new WP_Query([
+        'post_type' => 'news',
+        'posts_per_page' => $postsPerPage,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'news_category',
+            'field'    => 'term_id',
+            'terms'    => $catID,
+          ),
+        ),
+      ]);
+    } else {
+      $ajaxposts = new WP_Query([
+        'post_type' => 'news',
+        'posts_per_page' => $postsPerPage,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'tax_query' => array(
+          'relation' => 'AND',
+          array(
+            'taxonomy' => 'member_only',
+            'field'    => 'slug',
+            'terms'    => 'member-only',
+            'operator' => 'NOT IN',
+          ),
+          array(
+            'taxonomy' => 'news_category',
+            'field'    => 'term_id',
+            'terms'    => $catID,
+          ),
+        ),
+      ]);
+    }
   }
 
   $response = '';
@@ -191,51 +231,133 @@ function filter_whitepapers()
 
   if ($search_query) {
     if ($search_filter == 'all') {
-      $args = array(
-        'post_type' => 'white_paper',
-        'posts_per_page' => $postsPerPage,
-        'orderby' => 'date',
-        'order' => 'DESC',
-        's' => $search_query
-      );
-    } else {
-      $args = array(
-        'post_type' => 'white_paper',
-        'posts_per_page' => $postsPerPage,
-        'orderby' => 'date',
-        'order' => 'DESC',
-        's' => $search_query,
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'white_paper_category',
-            'field'    => 'term_id',
-            'terms'    => $search_filter,
+      if (is_user_logged_in()) {
+        $args = array(
+          'post_type' => 'white_paper',
+          'posts_per_page' => $postsPerPage,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          's' => $search_query
+        );
+      } else {
+        $args = array(
+          'post_type' => 'white_paper',
+          'posts_per_page' => $postsPerPage,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          's' => $search_query,
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'member_only',
+              'field'    => 'slug',
+              'terms'    => 'member-only',
+              'operator' => 'NOT IN',
+            ),
           ),
-        ),
-      );
+        );
+      }
+    } else {
+      if (is_user_logged_in()) {
+        $args = array(
+          'post_type' => 'white_paper',
+          'posts_per_page' => $postsPerPage,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          's' => $search_query,
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'white_paper_category',
+              'field'    => 'term_id',
+              'terms'    => $search_filter,
+            ),
+          ),
+        );
+      } else {
+        $args = array(
+          'post_type' => 'white_paper',
+          'posts_per_page' => $postsPerPage,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          's' => $search_query,
+          'tax_query' => array(
+            'relation' => 'AND',
+            array(
+              'taxonomy' => 'member_only',
+              'field'    => 'slug',
+              'terms'    => 'member-only',
+              'operator' => 'NOT IN',
+            ),
+            array(
+              'taxonomy' => 'white_paper_category',
+              'field'    => 'term_id',
+              'terms'    => $search_filter,
+            ),
+          ),
+        );
+      }
     }
   } else {
     if ($search_filter == 'all') {
-      $args = array(
-        'post_type' => 'white_paper',
-        'posts_per_page' => $postsPerPage,
-        'orderby' => 'date',
-        'order' => 'DESC',
-      );
-    } else {
-      $args = array(
-        'post_type' => 'white_paper',
-        'posts_per_page' => $postsPerPage,
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'white_paper_category',
-            'field'    => 'term_id',
-            'terms'    => $search_filter,
+      if (is_user_logged_in()) {
+        $args = array(
+          'post_type' => 'white_paper',
+          'posts_per_page' => $postsPerPage,
+          'orderby' => 'date',
+          'order' => 'DESC',
+        );
+      } else {
+        $args = array(
+          'post_type' => 'white_paper',
+          'posts_per_page' => $postsPerPage,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'member_only',
+              'field'    => 'slug',
+              'terms'    => 'member-only',
+              'operator' => 'NOT IN',
+            ),
           ),
-        ),
-      );
+        );
+      }
+    } else {
+      if (is_user_logged_in()) {
+        $args = array(
+          'post_type' => 'white_paper',
+          'posts_per_page' => $postsPerPage,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'white_paper_category',
+              'field'    => 'term_id',
+              'terms'    => $search_filter,
+            ),
+          ),
+        );
+      } else {
+        $args = array(
+          'post_type' => 'white_paper',
+          'posts_per_page' => $postsPerPage,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          'tax_query' => array(
+            'relation' => 'AND',
+            array(
+              'taxonomy' => 'member_only',
+              'field'    => 'slug',
+              'terms'    => 'member-only',
+              'operator' => 'NOT IN',
+            ),
+            array(
+              'taxonomy' => 'white_paper_category',
+              'field'    => 'term_id',
+              'terms'    => $search_filter,
+            ),
+          ),
+        );
+      }
     }
   }
 
@@ -279,24 +401,63 @@ function filter_faqs()
   $catID = $_POST['category'];
 
   if ($catID == 'all') {
-    $ajaxposts = new WP_Query([
-      'post_type' => 'faq',
-      'posts_per_page' => -1,
-      'orderby' => 'menu_order',
-    ]);
-  } else {
-    $ajaxposts = new WP_Query([
-      'post_type' => 'faq',
-      'posts_per_page' => -1,
-      'orderby' => 'menu_order',
-      'tax_query' => array(
-        array(
-          'taxonomy' => 'faq_category',
-          'field'    => 'term_id',
-          'terms'    => $catID,
+    if (is_user_logged_in()) {
+      $ajaxposts = new WP_Query([
+        'post_type' => 'faq',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+      ]);
+    } else {
+      $ajaxposts = new WP_Query([
+        'post_type' => 'faq',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'member_only',
+            'field'    => 'slug',
+            'terms'    => 'member-only',
+            'operator' => 'NOT IN',
+          ),
         ),
-      ),
-    ]);
+      ]);
+    }
+  } else {
+    if (is_user_logged_in()) {
+      $ajaxposts = new WP_Query([
+        'post_type' => 'faq',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+        'tax_query' => array(
+          'relation' => 'AND',
+          array(
+            'taxonomy' => 'faq_category',
+            'field'    => 'term_id',
+            'terms'    => $catID,
+          ),
+        ),
+      ]);
+    } else {
+      $ajaxposts = new WP_Query([
+        'post_type' => 'faq',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+        'tax_query' => array(
+          'relation' => 'AND',
+          array(
+            'taxonomy' => 'member_only',
+            'field'    => 'slug',
+            'terms'    => 'member-only',
+            'operator' => 'NOT IN',
+          ),
+          array(
+            'taxonomy' => 'faq_category',
+            'field'    => 'term_id',
+            'terms'    => $catID,
+          ),
+        ),
+      ]);
+    }
   }
 
   $response = '';
