@@ -44,7 +44,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
             if (!empty($taxonomies)) :
               $output = '';
               foreach ($taxonomies as $category) {
-                $output .= '<a class="faq-dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#!" data-id="' . esc_attr($category->term_id) . '">' . esc_attr($category->name) . '</a>';
+                $output .= '<li><a class="faq-dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#!" data-id="' . esc_attr($category->term_id) . '">' . esc_attr($category->name) . '</a></li>';
               }
               echo $output;
             endif;

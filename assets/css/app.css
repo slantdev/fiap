@@ -7403,6 +7403,14 @@ textarea.form-control.is-invalid {
   width: 3rem;
 }
 
+.w-40 {
+  width: 10rem;
+}
+
+.w-36 {
+  width: 9rem;
+}
+
 .min-w-\[260px\] {
   min-width: 260px;
 }

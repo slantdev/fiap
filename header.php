@@ -39,7 +39,17 @@
             <a href="<?php echo home_url() ?>/get-involved" class="inline-block bg-white text-fiap-darkblue text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-fiap-darkblue shadow-md hover:border-transparent hover:bg-fiap-darkblue hover:text-white hover:shadow-lg transition-all duration-300">Contact Us</a>
             <?php
             if (is_user_logged_in()) {
-              echo '<a href="' . home_url() . '/account" class="inline-block text-fiap-darkblue transition-all duration-300">' . fiap_icon(array('icon' => 'account', 'group' => 'utility', 'size' => '32', 'class' => 'text-fiap-darkblue')) . '</a>';
+            ?>
+              <div class="faq-dropdown dropdown relative">
+                <button class="dropdown-toggle focus:outline-none focus:ring-0 transition duration-150 ease-in-out flex items-center justify-between whitespace-nowrap" type="button" id="dropdownAccount" data-bs-toggle="dropdown" aria-expanded="false">
+                  <?php echo fiap_icon(array('icon' => 'account', 'group' => 'utility', 'size' => '32', 'class' => 'text-fiap-darkblue')); ?>
+                </button>
+                <ul class="dropdown-menu max-h-96 overflow-y-auto min-w-max w-36 absolute bg-white text-base z-50 py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none" aria-labelledby="dropdownAccount">
+                  <li><a class="text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="/account/my-profile">My Profile</a></li>
+                  <li><a class="text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="<?php echo MeprUtils::logout_url(); ?>">Logout</a></li>
+                </ul>
+              </div>
+            <?php
             }
             ?>
           </div>
