@@ -6,6 +6,7 @@
             "key": "field_63648af969429",
             "label": "I'm looking for Select",
             "name": "im_looking_for_select",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -21,11 +22,13 @@
             "max": 0,
             "layout": "block",
             "button_label": "Add Option",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_63648b1d6942a",
                     "label": "Option Link",
                     "name": "option_link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -35,7 +38,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_63648af969429"
                 }
             ]
         },
@@ -43,6 +47,7 @@
             "key": "field_6364887d135a0",
             "label": "Card Shortcut",
             "name": "card_shortcut",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -58,11 +63,13 @@
             "max": 0,
             "layout": "row",
             "button_label": "Add Card",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_6364888b135a1",
                     "label": "Card Image",
                     "name": "card_image",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -83,12 +90,14 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "",
-                    "library": "all"
+                    "library": "all",
+                    "parent_repeater": "field_6364887d135a0"
                 },
                 {
                     "key": "field_636488aa135a3",
                     "label": "Card Link",
                     "name": "card_link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -98,7 +107,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_6364887d135a0"
                 }
             ]
         },
@@ -106,6 +116,7 @@
             "key": "field_636488cb135a4",
             "label": "Ask a Question Link",
             "name": "ask_a_question_link",
+            "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -116,6 +127,48 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_63bfc09a028d7",
+            "label": "Links Button",
+            "name": "links_button",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 1,
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Link Button",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_63bfc0c3028d8",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_63bfc09a028d7"
+                }
+            ]
         }
     ],
     "location": [
@@ -143,7 +196,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1667534699,
+    "modified": 1673511243,
     "acfe_categories": {
         "settings": "Settings"
     }

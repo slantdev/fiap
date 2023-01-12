@@ -8,32 +8,35 @@ get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' 
 <?php if (is_page('1071')) { ?>
   <section class="bg-fiap-light py-10 md:py-12 lg:py-16">
     <div class="container mx-auto">
-      <div class="flex flex-wrap justify-center items-center">
-        <div class="mb-4 md:mb-0 md:mr-6 lg:mr-8"><span class="text-fiap-darkblue text-xl lg:text-2xl font-semibold leading-tight">I'm looking for</span></div>
-        <div class="flex justify-center items-center">
-          <div class="dropdown relative mr-2 md:mr-6">
-            <button class="dropdown-toggle px-2 py-4 leading-none focus:outline-none focus:ring-0 transition duration-150 ease-in-out flex items-center justify-between whitespace-nowrap min-w-[200px] md:min-w-[300px] lg:min-w-[360px] text-xl bg-white bg-opacity-0 border-b-2 border-solid border-fiap-darkblue text-[#868686] w-full max-w-[380px] tracking-wider font-light lg:px-2" type="button" id="dropdownSelect" data-bs-toggle="dropdown" aria-expanded="false">
-              <span>Select</span>
-              <svg class="w-4 ml-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" width="28.707" height="14.707" viewBox="0 0 28.707 14.707">
-                <g id="Group_234" data-name="Group 234" transform="translate(-2908.146 -887.146)">
-                  <line id="Line_3" data-name="Line 3" x2="14" y2="14" transform="translate(2908.5 887.5)" fill="none" stroke="currentColor" stroke-width="1" />
-                  <line id="Line_4" data-name="Line 4" x1="14" y2="14" transform="translate(2922.5 887.5)" fill="none" stroke="currentColor" stroke-width="1" />
-                </g>
-              </svg>
-            </button>
-            <ul class="dropdown-menu min-w-max w-full absolute bg-white text-base z-50 py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none" aria-labelledby="dropdownSelect">
-              <li>
+      <div class="flex flex-wrap justify-between items-center">
+        <div class="flex flex-wrap justify-center lg:justify-start items-center">
+          <div class="mb-4 md:mb-0 md:mr-6 lg:mr-8"><span class="text-fiap-darkblue text-xl lg:text-2xl font-semibold leading-tight">I'm looking for</span></div>
+          <div class="flex justify-center items-center">
+            <div class="dropdown relative mr-2 md:mr-6">
+              <button class="dropdown-toggle px-2 py-4 leading-none focus:outline-none focus:ring-0 transition duration-150 ease-in-out flex items-center justify-between whitespace-nowrap min-w-[200px] md:min-w-[300px] lg:min-w-[360px] text-xl bg-white bg-opacity-0 border-b-2 border-solid border-fiap-darkblue text-[#868686] w-full max-w-[380px] tracking-wider font-light lg:px-2" type="button" id="dropdownSelect" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Select</span>
+                <svg class="w-4 ml-6 lg:w-6" xmlns="http://www.w3.org/2000/svg" width="28.707" height="14.707" viewBox="0 0 28.707 14.707">
+                  <g id="Group_234" data-name="Group 234" transform="translate(-2908.146 -887.146)">
+                    <line id="Line_3" data-name="Line 3" x2="14" y2="14" transform="translate(2908.5 887.5)" fill="none" stroke="currentColor" stroke-width="1" />
+                    <line id="Line_4" data-name="Line 4" x1="14" y2="14" transform="translate(2922.5 887.5)" fill="none" stroke="currentColor" stroke-width="1" />
+                  </g>
+                </svg>
+              </button>
+              <ul class="dropdown-menu min-w-max w-full absolute bg-white text-base z-50 py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none" aria-labelledby="dropdownSelect">
                 <?php
                 $im_looking_for_select = get_field('im_looking_for_select');
                 if ($im_looking_for_select) {
                   foreach ($im_looking_for_select as $option) {
-                    echo '<a href="' . $option['option_link']['url'] . '" class="dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100 lg:px-8">' . $option['option_link']['title'] . '</a>';
+                    echo '<li><a href="' . $option['option_link']['url'] . '" class="dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100 lg:px-8">' . $option['option_link']['title'] . '</a></li>';
                   }
                 }
                 ?>
-              </li>
-            </ul>
+              </ul>
+            </div>
           </div>
+        </div>
+        <div class="hidden md:flex gap-x-6">
+          <a href="/account/?action=newpassword" class="hover:text-fiap-teal">Change Password</a><a href="<?php echo MeprUtils::logout_url(); ?>" class="hover:text-fiap-teal">Logout</a>
         </div>
       </div>
     </div>
@@ -83,14 +86,21 @@ get_template_part('template-parts/layouts/page-header', '', array('breadcrumbs' 
               wp_reset_postdata();
               ?>
             </div>
-            <div>
-              <a href="/get-involved" class="inline-flex w-full py-5 px-6 hover:shadow-lg text-white bg-fiap-darkblue hover:brightness-125 transition-all rounded-lg uppercase font-medium">Ask a Question</a>
-            </div>
+            <?php
+            $links_button = get_field('links_button');
+            if ($links_button) {
+              echo '<div class="flex flex-col gap-y-4">';
+              foreach ($links_button as $link) {
+                echo '<a href="' . $link['link']['url'] . '" class="inline-flex w-full py-5 px-6 hover:shadow-lg text-white bg-fiap-darkblue hover:brightness-125 transition-all rounded-lg uppercase font-medium">' . $link['link']['title'] . '</a>';
+              }
+              echo '</div>';
+            }
+            ?>
             <div>
               <div class="py-4 px-6 bg-[#E8E8E8] rounded-lg font-medium">ACCOUNT MANAGEMENT</div>
               <ul class="p-6 flex flex-col gap-y-1">
                 <li><a href="/account/my-profile" class="hover:text-fiap-teal">My Profile</a></li>
-                <li><a href="/invite-member" class="hover:text-fiap-teal">Invite a member</a></li>
+                <li><a href="/account/invite-a-member" class="hover:text-fiap-teal">Invite a member</a></li>
                 <li><a href="<?php echo MeprUtils::logout_url(); ?>" class="hover:text-fiap-teal">Logout</a></li>
               </ul>
             </div>

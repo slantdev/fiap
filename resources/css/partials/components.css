@@ -189,7 +189,7 @@
     > li {
       @apply relative;
       > a {
-        @apply block leading-[56px] border-b-4 border-transparent px-1 whitespace-nowrap hover:border-[#01CEC2] hover:text-[#01CEC2] transition-all duration-200;
+        @apply block leading-10 border-b-4 border-transparent pt-4 pb-2 px-1 whitespace-nowrap hover:border-[#01CEC2] hover:text-[#01CEC2] transition-all duration-200;
       }
     }
     .current-menu-item {
@@ -199,10 +199,10 @@
     }
     > .menu-item-has-children {
       .sub-menu {
-        @apply absolute top-[68px] -z-20 bg-fiap-darkblue flex flex-col divide-y divide-white divide-opacity-20 opacity-0 invisible transition-all duration-300;
+        @apply absolute top-[76px] -z-20 bg-fiap-darkblue flex flex-col divide-y divide-white divide-opacity-20 opacity-0 invisible transition-all duration-300;
         > li {
           > a {
-            @apply block leading-[48px] pl-4 pr-6 whitespace-nowrap border-b-0 border-l-4 hover:border-[#01CEC2] hover:text-[#01CEC2] transition-all duration-200;
+            @apply block leading-[48px] py-1.5 pl-4 pr-6 whitespace-nowrap border-b-0 border-l-4 hover:border-[#01CEC2] hover:text-[#01CEC2] transition-all duration-200;
           }
           &.current-menu-item {
             > a {
@@ -213,7 +213,7 @@
       }
       &:hover {
         > .sub-menu {
-          @apply opacity-100 visible z-20 top-[60px];
+          @apply opacity-100 visible z-20 top-[68px];
         }
       }
     }
