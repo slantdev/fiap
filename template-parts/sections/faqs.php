@@ -79,6 +79,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
         'post_type' => 'faq',
         'posts_per_page' => -1,
         'orderby' => 'menu_order',
+        'post_status' => 'publish',
         'tax_query' => array(
           array(
             'taxonomy' => 'member_only',

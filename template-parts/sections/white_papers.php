@@ -51,7 +51,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
           'post_type' => 'white_paper',
           'posts_per_page' => -1,
           'orderby' => 'date',
-          'order' => 'DESC'
+          'order' => 'DESC',
         );
       } else {
         $args = array(
@@ -59,6 +59,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
           'posts_per_page' => -1,
           'orderby' => 'date',
           'order' => 'DESC',
+          'post_status' => 'publish',
           'tax_query' => array(
             array(
               'taxonomy' => 'member_only',

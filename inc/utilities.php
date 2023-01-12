@@ -69,3 +69,15 @@ function fiap_video_container($html)
 }
 add_filter('embed_oembed_html', 'cl_video_container', 10, 3);
 add_filter('video_embed_html', 'cl_video_container'); // Jetpack
+
+
+/**
+ * Change Private Posts Prefix
+ *
+ * @refer  https://www.wpbeginner.com/wp-tutorials/how-to-change-private-and-protected-posts-prefix-in-wordpress/
+ */
+function fiap_change_private_title_prefix()
+{
+  return 'Member Only: %s';
+}
+add_filter('private_title_format', 'fiap_change_private_title_prefix');

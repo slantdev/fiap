@@ -23,6 +23,7 @@ function filter_news()
         'posts_per_page' => $postsPerPage,
         'orderby' => 'date',
         'order' => 'DESC',
+        'post_status' => 'publish',
         'tax_query' => array(
           array(
             'taxonomy' => 'member_only',
@@ -54,6 +55,7 @@ function filter_news()
         'posts_per_page' => $postsPerPage,
         'orderby' => 'date',
         'order' => 'DESC',
+        'post_status' => 'publish',
         'tax_query' => array(
           'relation' => 'AND',
           array(
@@ -246,6 +248,7 @@ function filter_whitepapers()
           'orderby' => 'date',
           'order' => 'DESC',
           's' => $search_query,
+          'post_status' => 'publish',
           'tax_query' => array(
             array(
               'taxonomy' => 'member_only',
@@ -279,6 +282,7 @@ function filter_whitepapers()
           'orderby' => 'date',
           'order' => 'DESC',
           's' => $search_query,
+          'post_status' => 'publish',
           'tax_query' => array(
             'relation' => 'AND',
             array(
@@ -311,6 +315,7 @@ function filter_whitepapers()
           'posts_per_page' => $postsPerPage,
           'orderby' => 'date',
           'order' => 'DESC',
+          'post_status' => 'publish',
           'tax_query' => array(
             array(
               'taxonomy' => 'member_only',
@@ -342,6 +347,7 @@ function filter_whitepapers()
           'posts_per_page' => $postsPerPage,
           'orderby' => 'date',
           'order' => 'DESC',
+          'post_status' => 'publish',
           'tax_query' => array(
             'relation' => 'AND',
             array(
@@ -412,6 +418,7 @@ function filter_faqs()
         'post_type' => 'faq',
         'posts_per_page' => -1,
         'orderby' => 'menu_order',
+        'post_status' => 'publish',
         'tax_query' => array(
           array(
             'taxonomy' => 'member_only',
@@ -442,6 +449,7 @@ function filter_faqs()
         'post_type' => 'faq',
         'posts_per_page' => -1,
         'orderby' => 'menu_order',
+        'post_status' => 'publish',
         'tax_query' => array(
           'relation' => 'AND',
           array(

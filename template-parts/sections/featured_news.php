@@ -140,6 +140,7 @@ if (!$posts_per_page) {
           'posts_per_page' => $posts_per_page,
           'orderby' => 'date',
           'order' => 'DESC',
+          'post_status' => 'publish',
           'tax_query' => array(
             array(
               'taxonomy' => 'member_only',
