@@ -113,22 +113,6 @@
             ]
         },
         {
-            "key": "field_636488cb135a4",
-            "label": "Ask a Question Link",
-            "name": "ask_a_question_link",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
             "key": "field_63bfc09a028d7",
             "label": "Links Button",
             "name": "links_button",
@@ -196,7 +180,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1673511243,
+    "modified": 1673518324,
     "acfe_categories": {
         "settings": "Settings"
     }
