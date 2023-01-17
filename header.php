@@ -36,7 +36,7 @@
               echo '<a href="' . home_url() . '/login" class="inline-block bg-fiap-teal text-white text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-transparent shadow-md hover:bg-fiap-teal-hover hover:shadow-lg transition-all duration-300">Member Login</a>';
             }
             ?>
-            <a href="<?php echo home_url() ?>/get-involved" class="inline-block bg-white text-fiap-darkblue text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-fiap-darkblue shadow-md hover:border-transparent hover:bg-fiap-darkblue hover:text-white hover:shadow-lg transition-all duration-300">Contact Us</a>
+            <a href="<?php echo home_url() ?>/contact-us" class="inline-block bg-white text-fiap-darkblue text-sm font-semibold leading-none text-center rounded-lg py-3 px-8 border border-fiap-darkblue shadow-md hover:border-transparent hover:bg-fiap-darkblue hover:text-white hover:shadow-lg transition-all duration-300">Contact Us</a>
             <?php
             if (is_user_logged_in()) {
             ?>
