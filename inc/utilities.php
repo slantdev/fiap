@@ -81,3 +81,9 @@ function fiap_change_private_title_prefix()
   return 'Member Only: %s';
 }
 add_filter('private_title_format', 'fiap_change_private_title_prefix');
+
+function fiap_change_protected_title_prefix()
+{
+  return 'Member Registration: %s';
+}
+add_filter('protected_title_format', 'fiap_change_protected_title_prefix');
