@@ -109,7 +109,7 @@
             echo '<div>';
             echo '<ul class="flex flex-col gap-y-3 text-center whitespace-nowrap md:flex-row md:gap-x-10 lg:gap-x-10 xl:gap-x-16 items-center">';
             foreach ($footer_links as $link) {
-              echo '<li><a href="' . $link['link']['url'] . '" target="' . $link['link']['url'] . '">' . $link['link']['title'] . '</a></li>';
+              echo '<li><a href="' . $link['link']['url'] . '" target="' . $link['link']['target'] . '">' . $link['link']['title'] . '</a></li>';
             }
             echo '</ul>';
             echo '</div>';
@@ -126,19 +126,19 @@
               $youtube = $social_links['youtube'];
 
               if ($facebook) {
-                echo '<a href="' . $facebook['url'] . '" class="inline-block">' . fiap_icon(array('icon' => 'facebook', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
+                echo '<a href="' . $facebook['url'] . '" class="inline-block" target="_blank">' . fiap_icon(array('icon' => 'facebook', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
               }
               if ($instagram) {
-                echo '<a href="' . $instagram['url'] . '" class="inline-block">' . fiap_icon(array('icon' => 'instagram', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
+                echo '<a href="' . $instagram['url'] . '" class="inline-block" target="_blank">' . fiap_icon(array('icon' => 'instagram', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
               }
               if ($twitter) {
-                echo '<a href="' . $twitter['url'] . '" class="inline-block">' . fiap_icon(array('icon' => 'twitter', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
+                echo '<a href="' . $twitter['url'] . '" class="inline-block" target="_blank">' . fiap_icon(array('icon' => 'twitter', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
               }
               if ($linked_in) {
-                echo '<a href="' . $linked_in['url'] . '" class="inline-block">' . fiap_icon(array('icon' => 'linkedin', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
+                echo '<a href="' . $linked_in['url'] . '" class="inline-block" target="_blank">' . fiap_icon(array('icon' => 'linkedin', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
               }
               if ($youtube) {
-                echo '<a href="' . $youtube['url'] . '" class="inline-block">' . fiap_icon(array('icon' => 'youtube', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
+                echo '<a href="' . $youtube['url'] . '" class="inline-block" target="_blank">' . fiap_icon(array('icon' => 'youtube', 'group' => 'social', 'size' => '24', 'class' => 'text-fiap-dark-blue')) . '</a>';
               }
               ?>
             </div>

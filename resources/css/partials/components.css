@@ -388,3 +388,9 @@
     }
   }
 }
+
+.post-password-form {
+  [type='submit'] {
+    @apply px-3 py-2 bg-fiap-teal rounded-md text-white inline-block;
+  }
+}
