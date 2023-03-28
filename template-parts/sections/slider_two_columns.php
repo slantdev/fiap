@@ -168,7 +168,11 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
       <script>
         const slider_two_columns = new Swiper('.slider_two_columns', {
           slidesPerView: 1,
-          loop: false,
+          loop: true,
+          autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+          },
           watchOverflow: true,
           effect: 'fade',
           fadeEffect: {
