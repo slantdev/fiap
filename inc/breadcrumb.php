@@ -8,9 +8,9 @@ function fiap_breadcrumb()
     echo '<li class="px-4 text-xs leading-5">/</li>';
     echo '<a href="' . site_url() . '/news" class="hover:underline hover:text-fiap-teal">News</a>';
   }
-  if (get_post_type() == 'case_study') {
+  if (get_post_type() == 'impact-story') {
     echo '<li class="px-4 text-xs leading-5">/</li>';
-    echo 'Case Studies';
+    echo 'Impact Stories';
   }
   if (get_post_type() == 'white_paper') {
     echo '<li class="px-4 text-xs leading-5">/</li>';

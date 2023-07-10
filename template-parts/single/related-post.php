@@ -7,9 +7,9 @@ if ($post_type == 'news') {
   $taxonomy = 'news_category';
   $post_type_title = 'News';
 }
-if ($post_type == 'case_study') {
-  $taxonomy = 'case_study_category';
-  $post_type_title = 'Case Studies';
+if ($post_type == 'impact-story') {
+  $taxonomy = 'impact-categories';
+  $post_type_title = 'Impact Stories';
 }
 if ($post_type == 'white_paper') {
   $taxonomy = 'white_paper_category';
@@ -49,7 +49,7 @@ if ($related_query->have_posts()) {
       );
       echo card_article($atts);
     }
-    if ($post_type == 'case_study') {
+    if ($post_type == 'impact-story') {
       $excerpt = wp_trim_words(get_the_excerpt(), $num_words = 30, $more = null);
       $atts = array(
         'img_src' => get_the_post_thumbnail_url(get_the_ID(), 'large'),

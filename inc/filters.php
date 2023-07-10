@@ -115,20 +115,20 @@ function filter_case_study()
 
   if ($catID == 'all') {
     $ajaxposts = new WP_Query([
-      'post_type' => 'case_study',
+      'post_type' => 'impact-story',
       'posts_per_page' => $postsPerPage,
       'orderby' => 'date',
       'order' => 'DESC'
     ]);
   } else {
     $ajaxposts = new WP_Query([
-      'post_type' => 'case_study',
+      'post_type' => 'impact-story',
       'posts_per_page' => $postsPerPage,
       'orderby' => 'date',
       'order' => 'DESC',
       'tax_query' => array(
         array(
-          'taxonomy' => 'case_study_category',
+          'taxonomy' => 'impact-categories',
           'field'    => 'term_id',
           'terms'    => $catID,
         ),

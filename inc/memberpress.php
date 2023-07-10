@@ -8,7 +8,7 @@ add_filter('mepr-hide-cpt-access-column', 'mepr_hide_cpt_access_column');
 function mepr_hide_cpt_access_column($except)
 {
   // Do what you need
-  $except = ['post', 'page', 'case_study', 'news', 'faq', 'fiap_members', 'team', 'white_paper', 'topic', 'reply'];
+  $except = ['post', 'page', 'impact-story', 'news', 'faq', 'fiap_members', 'team', 'white_paper', 'topic', 'reply'];
   return $except;
 }
 
