@@ -37,7 +37,7 @@ if (!$posts_per_page) {
             <div class="swiper-wrapper filter-case-study-buttons overflow-x-auto overflow-y-visible flex flex-nowrap gap-x-4">
               <?php
               $taxonomies = get_terms(array(
-                'taxonomy' => 'case_study_category',
+                'taxonomy' => '_category',
                 'hide_empty' => false,
                 'orderby' => 'term_order'
               ));
@@ -68,7 +68,7 @@ if (!$posts_per_page) {
             <div class="swiper-wrapper filter-case-study-buttons">
               <?php
               $taxonomies = get_terms(array(
-                'taxonomy' => 'case_study_category',
+                'taxonomy' => 'impact-categories',
                 'hide_empty' => false,
                 'orderby' => 'term_order'
               ));
@@ -132,12 +132,12 @@ if (!$posts_per_page) {
       $limit_by_category = get_sub_field('limit_by_category');
       if ($limit_by_category) {
         $args = array(
-          'post_type' => 'case_study',
+          'post_type' => 'impact-story',
           'posts_per_page' => $posts_per_page,
           'orderby' => 'menu_order',
           'tax_query' => array(
             array(
-              'taxonomy' => 'case_study_category',
+              'taxonomy' => 'impact-categories',
               'field'    => 'term_id',
               'terms'    => $limit_by_category,
             ),
@@ -145,7 +145,7 @@ if (!$posts_per_page) {
         );
       } else {
         $args = array(
-          'post_type' => 'case_study',
+          'post_type' => 'impact-story',
           'posts_per_page' => $posts_per_page,
           'orderby' => 'menu_order'
         );
